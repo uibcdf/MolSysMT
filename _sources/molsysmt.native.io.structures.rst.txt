@@ -1,0 +1,101 @@
+molsysmt.native.io.structures package
+=====================================
+
+Submodules
+----------
+
+molsysmt.native.io.structures.XYZ module
+----------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.XYZ
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.file\_h5 module
+---------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.file_h5
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.file\_mmtf module
+-----------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.file_mmtf
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.file\_msmpk module
+------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.file_msmpk
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.mdanalysis\_Universe module
+---------------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.mdanalysis_Universe
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.openexplorer\_Explorer module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.openexplorer_Explorer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.openexplorer\_OpenExplorerReporter module
+-----------------------------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.openexplorer_OpenExplorerReporter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.openmm\_Context module
+----------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.openmm_Context
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.openmm\_Modeller module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.openmm_Modeller
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.pdbfixer\_PDBFixer module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.pdbfixer_PDBFixer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.structures.pytraj\_Trajectory module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.native.io.structures.pytraj_Trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.native.io.structures
+   :members:
+   :undoc-members:
+   :show-inheritance:

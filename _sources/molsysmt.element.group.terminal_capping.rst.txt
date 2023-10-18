@@ -1,0 +1,29 @@
+molsysmt.element.group.terminal\_capping package
+================================================
+
+Submodules
+----------
+
+molsysmt.element.group.terminal\_capping.is\_terminal\_capping module
+---------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.terminal_capping.is_terminal_capping
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.terminal\_capping.names module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.element.group.terminal_capping.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.group.terminal_capping
+   :members:
+   :undoc-members:
+   :show-inheritance:

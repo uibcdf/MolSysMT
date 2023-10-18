@@ -1,0 +1,29 @@
+molsysmt.element.group.small\_molecule package
+==============================================
+
+Submodules
+----------
+
+molsysmt.element.group.small\_molecule.is\_small\_molecule module
+-----------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.small_molecule.is_small_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.small\_molecule.small\_molecule\_names module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.small_molecule.small_molecule_names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.group.small_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:

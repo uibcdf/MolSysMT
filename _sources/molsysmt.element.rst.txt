@@ -1,0 +1,23 @@
+molsysmt.element package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   molsysmt.element.atom
+   molsysmt.element.chain
+   molsysmt.element.component
+   molsysmt.element.entity
+   molsysmt.element.group
+   molsysmt.element.molecule
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element
+   :members:
+   :undoc-members:
+   :show-inheritance:

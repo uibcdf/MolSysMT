@@ -1,0 +1,10 @@
+molsysmt.native.io.trajectory\_file package
+===========================================
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.native.io.trajectory_file
+   :members:
+   :undoc-members:
+   :show-inheritance:

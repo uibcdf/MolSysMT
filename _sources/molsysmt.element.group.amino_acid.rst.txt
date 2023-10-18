@@ -1,0 +1,53 @@
+molsysmt.element.group.amino\_acid package
+==========================================
+
+Submodules
+----------
+
+molsysmt.element.group.amino\_acid.get\_1\_letter\_code\_from\_name module
+--------------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.amino_acid.get_1_letter_code_from_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.amino\_acid.get\_amino\_acid\_type\_from\_name module
+----------------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.amino_acid.get_amino_acid_type_from_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.amino\_acid.is\_amino\_acid module
+---------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.amino_acid.is_amino_acid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.amino\_acid.names module
+-----------------------------------------------
+
+.. automodule:: molsysmt.element.group.amino_acid.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.amino\_acid.types module
+-----------------------------------------------
+
+.. automodule:: molsysmt.element.group.amino_acid.types
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.group.amino_acid
+   :members:
+   :undoc-members:
+   :show-inheritance:

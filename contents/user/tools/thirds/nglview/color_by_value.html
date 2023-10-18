@@ -1,0 +1,860 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <link href="../../../../../_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-124x124.png" sizes="124x124" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-128x128.png" sizes="128x128" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-192x192.png" sizes="192x192" rel="icon" type="image/png">
+    <link href="../../../../../_static/icon.svg" rel="icon" type="image/svg+xml">
+    <title>Color by value &#8212; MolSysMT 0.8.3+0.g5c78ab65.dirty documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx_tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script src="../../../../../_static/design-tabs.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="OpenMM" href="../openmm/index.html" />
+    <link rel="prev" title="Add hbonds" href="add_hbonds.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../../_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../showcase/index.html">
+                        Showcase
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../index.html">
+                        User guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../developer/index.html">
+                        Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../api/index.html">
+                        API documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../showcase/index.html">
+                        Showcase
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../../../index.html">
+                        User guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../developer/index.html">
+                        Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../../api/index.html">
+                        API documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../intro/index.html"><strong>Introduction</strong></a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/molsysmt.html">What’s MolSysMT?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/installation.html">Installation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../intro/molecular_systems/index.html">Molecular systems</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/molecular_systems/description.html">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/molecular_systems/items.html">Items and forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/molecular_systems/forms.html">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/molecular_systems/elements.html">Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/molecular_systems/attributes.html">Attributes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/demo_systems.html">Demo systems</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../intro/native_forms/index.html">Native forms</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../intro/native_forms/MolSys.html">MolSysMT.MolSys</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/selection_syntaxes.html">Selection syntaxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/viewers.html">Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/supported.html">Supported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/memory_management.html">Memory management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/quantities_and_units.html">Quantities and units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../intro/configuration_options.html">Configuration options</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html"><strong>Tools</strong></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../basic/index.html">Basic</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/append_structures.html">Append structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/are_multiple_molecular_systems.html">Are multiple molecular systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/compare.html">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/concatenate_structures.html">Concatenate structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/contains.html">Contains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/convert.html">Convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/copy.html">Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/extract.html">Extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/get_attributes.html">Get attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/get_form.html">Get form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/get_label.html">Get label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/has_attribute.html">Has attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/is_a_molecular_system.html">Is a molecular system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/is_composed_of.html">Is composed of</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/iterator.html">Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/merge.html">Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/remove.html">Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/select.html">Select</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/set.html">Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/view.html">View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../basic/where_is_attribute.html">Where is attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../build/index.html">Build</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../build/add_missing_bonds.html">Add missing bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/add_missing_heavy_atoms.html">Add missing heavy atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/add_missing_hydrogens.html">Add missing hydrogens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/add_missing_terminal_cappings.html">Add missing terminal cappings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/build_peptide.html">Build peptide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/define_new_chain.html">Define new chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/get_missing_bonds.html">Get missing bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/get_missing_heavy_atoms.html">Get missing heavy atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/get_missing_residues.html">Get missing residues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/get_missing_terminal_cappings.html">Get missing terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/get_non_standard_residues.html">Get non standard residues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/is_solvated.html">Is solvated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/make_bioassembly.html">Make bioassembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/model_loop.html">Model loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/mutate.html">Mutate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/solvate.html">Solvate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../build/solve_atoms_with_alternate_locations.html">Solve atoms with alternate locations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../topology/index.html">Topology</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_bondgraph.html">Get bondgraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_covalent_blocks.html">Get covalent blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_covalent_chains.html">Get covalent chains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_dihedral_quartets.html">Get dihedral quartets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_sequence_alignment.html">Get sequence alignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topology/get_sequence_identity.html">Get sequence identity</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../structure/index.html">Structure</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/center.html">Center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/flip.html">Flip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_center_of_mass.html">Get center of mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_center.html">Get center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_contacts.html">Get contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_dihedral_angles.html">Get dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_distances.html">Get distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_geometric_center.html">Get geometric center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_least_rmsd.html">Get least RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_maximum_distances.html">Get maximum distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_minimum_distances.html">Get minimum distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_neighbors.html">Get neighbors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_principal_axes.html">Get geometric axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_radius_of_gyration.html">Get radius of gyration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/get_rmsd.html">Get RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/least_rmsd_align.html">Least RMSD align</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/least_rmsd_fit.html">Least RMSD fit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/move_away.html">Move away</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/principal_component_analysis.html">Principal component analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/rotate.html">Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/set_dihedral_angles.html">Set dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/shift_dihedral_angles.html">Shift dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure/translate.html">Translate</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../pbc/index.html">Periodic boundary conditions</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_angles_from_box.html">Get angles from vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_box_from_lengths_and_angles.html">Get boxfrom lengths and angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_lengths_and_angles_from_box.html">Get lengths and angles from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_lengths_from_box.html">Get lengths from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_shape_from_box.html">Get shape from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_shape_from_lengths_and_angles.html">Shape from angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_volume_from_box.html">Angles from vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/get_volume_from_lengths_and_angles.html">Angles from vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/unwrap.html">Unwrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/wrap_to_mic.html">Wrap to MIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pbc/wrap_to_pbc.html">Wrap to PBC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../physchem/index.html">Physical and chemical properties</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_area_buried.html">Get area buried</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_atomic_radius.html">Get atomic radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_buried_fraction.html">Get buried fraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_charge.html">Get charge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_hydrophobicity.html">Get hydrophobicity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_mass.html">Get mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_polarity.html">Get polarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_sasa.html">Get SASA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_surface_area.html">Get surface area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_transmembrane_tendency.html">Get transmembrane tendency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../physchem/get_volume.html">Get volume</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../molecular_mechanics/index.html">Molecular mechanics</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../molecular_mechanics/get_forces.html">Get forces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../molecular_mechanics/potential_energy_minimization.html">Potential energy minimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../molecular_mechanics/get_non_bonded_potential_energy.html">Get non bonded potential energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../molecular_mechanics/get_potential_energy.html">Get potential energy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../element/index.html">Element</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../form/index.html">Form</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../form/get_attributes.html">Get attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../form/has_attribute.html">Has attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Thirds</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">NGLView</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="add_hbonds.html">Add hbonds</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Color by value</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../openmm/index.html">OpenMM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../cookbook/index.html"><strong>Cookbook</strong></a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cookbook/Barnase_Barstar.html">Barnase-Barstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cookbook/OpenMM.html">Working with OpenMM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cookbook/NGLView.html">Working with NGLView</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">User guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">NGLView</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Color by value</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "99cbf29f4c0041efbff75f05674fb495"}</script></div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="color-by-value">
+<span id="userguide-thirds-nglview-colorbyvalue"></span><h1>Color by value<a class="headerlink" href="#color-by-value" title="Permalink to this heading">#</a></h1>
+<p><em>Coloring elements by scalar values</em></p>
+<p><a class="reference external" href="https://github.com/nglviewer/nglview">NGLView</a> is a very flexible and versatile tool. Just have a look to <a class="reference external" href="http://nglviewer.org/nglview/latest/">its documentation</a>, or to the wonderful <a class="reference external" href="https://github.com/nglviewer/nglview/discussions">Q&amp;A discussion in the GitHub repository</a>. Nervertheless, and in spite of being strictly unnecessary, MolSysMT wants to contribute with some shortcuts and tools. For instance, the color of elements such as atoms, or groups, can be set in a representation according to their scalar values in a list and a color map. The function <a class="reference internal" href="../../../../../molsysmt.thirds.nglview.html#module-molsysmt.thirds.nglview.color_by_value" title="molsysmt.thirds.nglview.color_by_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.thirds.nglview.color_by_value()</span></code></a> is helpful for this purpose. Let’s see a couple of examples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">molsysmt</span> <span class="k">as</span> <span class="nn">msm</span>
+
+<span class="n">molecular_system</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;181L&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_type==&quot;protein&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we have a protein, the charge of its aminoacids can be obtained with the function <code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.physchem.charge()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charge_residues</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">physchem</span><span class="o">.</span><span class="n">charge</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">definition</span><span class="o">=</span><span class="s1">&#39;physical_pH7&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">charge_residues</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">physchem</span><span class="o">.</span><span class="n">charge</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">definition</span><span class="o">=</span><span class="s1">&#39;physical_pH7&#39;</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: module &#39;molsysmt.physchem&#39; has no attribute &#39;charge&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">charge_residues</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[0.0 0.0 0.0 0.0 -1.0 0.0 0.0 1.0 0.0 -1.0 -1.0 0.0 0.0 1.0 0.0 1.0 0.0<br> 0.0 1.0 -1.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.1 0.0 0.0 0.0 1.0<br> 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 -1.0 0.0 -1.0 1.0 0.0 0.0 0.0 1.0 0.0<br> 0.0 0.0 0.0 0.0 0.0 0.0 1.0 -1.0 -1.0 0.0 -1.0 1.0 0.0 0.0 0.0 0.0 -1.0<br> 0.0 -1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0<br> -1.0 0.0 0.0 -1.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0<br> 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0<br> 1.0 0.0 -1.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0<br> 0.0 0.0 1.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 -1.0 0.0<br> 0.0 1.0]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>elementary_charge</td></tr></tbody></table></div></div>
+</div>
+<p>Let’s make an NGLView view with a cartoon representation colored according to the amino acids charge. The first step is choosing, or making your own, matplotlib color map:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">colormaps</span>
+<span class="n">blue_white_red</span> <span class="o">=</span> <span class="n">colormaps</span><span class="p">[</span><span class="s1">&#39;bwr&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">blue_white_red</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="vertical-align: middle;"><strong>bwr</strong> </div><div class="cmap"><img alt="bwr colormap" title="bwr" style="border: 1px solid #555;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAABACAYAAABsv8+/AAAAEnRFWHRUaXRsZQBid3IgY29sb3JtYXC/MXXiAAAAGHRFWHREZXNjcmlwdGlvbgBid3IgY29sb3JtYXCzGQe4AAAAMHRFWHRBdXRob3IATWF0cGxvdGxpYiB2My42LjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmfhqHMCAAAAMnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHYzLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZ88O7CUAAAFUSURBVHic7dY7DoMwEEDBdbj/kYEUpM+ningzzSLZK1FZb82c58zM4zFTnmtdc9ua59/es3+P/TXn9XEc/z33/Zrnj/9r/7P9d/ec3+r89QwAACUCAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAECQAACAIAEAAEECAACCBAAABAkAAAgSAAAQJAAAIEgAAEDQE4wMAY3mb2DSAAAAAElFTkSuQmCC"></div><div style="vertical-align: middle; max-width: 514px; display: flex; justify-content: space-between;"><div style="float: left;"><div title="#0000ffff" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #0000ffff;"></div> under</div><div style="margin: 0 auto; display: inline-block;">bad <div title="#00000000" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #00000000;"></div></div><div style="float: right;">over <div title="#ff0000ff" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #ff0000ff;"></div></div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Have a look to the Matplotlib documentation: <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">Choosing Colormaps in Matplotlib</a> and <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormap-manipulation.html">Creating Colormaps in Matplotlib</a>.</p>
+</div>
+<p>The second step is getting an NGLWidget object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+<p>The colored representation can be then added to the view:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">thirds</span><span class="o">.</span><span class="n">nglview</span><span class="o">.</span><span class="n">color_by_value</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">charge_residues</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">blue_white_red</span><span class="p">,</span> <span class="n">representation</span><span class="o">=</span><span class="s1">&#39;cartoon&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And finally, the NGLView can be shown:</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="320vh"
+            src="../../../../_static/nglview/user/thirds/nglview/color_by_value/charge.html"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>Let’s illustrate the use of <a class="reference internal" href="../../../../../molsysmt.thirds.nglview.html#module-molsysmt.thirds.nglview.color_by_value" title="molsysmt.thirds.nglview.color_by_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.thirds.nglview.color_by_value()</span></code></a> with another example. This time, let’s color a licorice representation with the b-factor of each atom:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b_factors</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">b_factor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">white_blue_purple</span> <span class="o">=</span> <span class="n">colormaps</span><span class="p">[</span><span class="s1">&#39;BuPu&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">white_blue_purple</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="vertical-align: middle;"><strong>BuPu</strong> </div><div class="cmap"><img alt="BuPu colormap" title="BuPu" style="border: 1px solid #555;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAABACAYAAABsv8+/AAAAE3RFWHRUaXRsZQBCdVB1IGNvbG9ybWFw3zEO0AAAABl0RVh0RGVzY3JpcHRpb24AQnVQdSBjb2xvcm1hcFSDnkgAAAAwdEVYdEF1dGhvcgBNYXRwbG90bGliIHYzLjYuMCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZ+GocwIAAAAydEVYdFNvZnR3YXJlAE1hdHBsb3RsaWIgdjMuNi4wLCBodHRwczovL21hdHBsb3RsaWIub3Jnzw7sJQAAAfZJREFUeJzt1kFOwzAURVHD/vfLBBwGTSr8U8uhIIH0zplUTlzbKbS6L2/vH1trrW3b1m6v7fbadsf1cbi8f1yp81f3n91va+PE6+eZrFc/j9O81f1n1xmf5+o6fbbOb5179v7TOb+77tXnL885Pc9zz9nquD9+/2nesW4fF57N3/psnav7j9frvLr/ed7kC1LO/++u99m5f3a9ft7f/Vzq3+XLF/Jv9j/Nr+cp+9frZXy/f5rXH8+r69T/u6v7TdZZzlueexz3/Yvb7783s/H+ev8dGcfH/a2MT/Mn+xznuLrucp/V+/d9XxsAEEcAAEAgAQAAgQQAAAQSAAAQSAAAQCABAACBBAAABBIAABBIAABAIAEAAIEEAAAEEgAAEEgAAEAgAQAAgQQAAAQSAAAQSAAAQCABAACBBAAABBIAABBIAABAIAEAAIEEAAAEEgAAEEgAAEAgAQAAgQQAAAQSAAAQSAAAQCABAACBBAAABBIAABBIAABAIAEAAIEEAAAEEgAAEEgAAEAgAQAAgQQAAAQSAAAQSAAAQCABAACBBAAABBIAABBIAABAIAEAAIEEAAAEEgAAEEgAAEAgAQAAgQQAAAQSAAAQSAAAQCABAACBBAAABBIAABBIAABAIAEAAIEEAAAEEgAAEEgAAEAgAQAAgT4B0+gFNVvewLkAAAAASUVORK5CYII="></div><div style="vertical-align: middle; max-width: 514px; display: flex; justify-content: space-between;"><div style="float: left;"><div title="#f7fcfdff" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #f7fcfdff;"></div> under</div><div style="margin: 0 auto; display: inline-block;">bad <div title="#00000000" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #00000000;"></div></div><div style="float: right;">over <div title="#4d004bff" style="display: inline-block; width: 1em; height: 1em; margin: 0; vertical-align: middle; border: 1px solid #555; background-color: #4d004bff;"></div></div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">msm</span><span class="o">.</span><span class="n">thirds</span><span class="o">.</span><span class="n">nglview</span><span class="o">.</span><span class="n">color_by_value</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">b_factors</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">white_blue_purple</span><span class="p">,</span> <span class="n">representation</span><span class="o">=</span><span class="s1">&#39;ball_and_stick&#39;</span><span class="p">,</span>
+                                 <span class="n">min_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">b_factors</span><span class="p">))</span>
+<span class="n">view</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="100%"
+            height="320vh"
+            src="../../../../_static/nglview/user/thirds/nglview/color_by_value/b_factors.html"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../../../../molsysmt.thirds.nglview.html#module-molsysmt.thirds.nglview.color_by_value" title="molsysmt.thirds.nglview.color_by_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.thirds.nglview.color_by_value()</span></code></a>, <a class="reference internal" href="../../../../../molsysmt.basic.html#module-molsysmt.basic.convert" title="molsysmt.basic.convert"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.basic.convert()</span></code></a>, <code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.physchem.charge()</span></code>, <a class="reference internal" href="../../../../../molsysmt.basic.html#module-molsysmt.basic.get" title="molsysmt.basic.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.basic.get()</span></code></a>, <a class="reference internal" href="../../../../../molsysmt.basic.html#module-molsysmt.basic.view" title="molsysmt.basic.view"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.basic.view()</span></code></a></p>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="add_hbonds.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Add hbonds</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../openmm/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OpenMM</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+	&copy; 2023, <a href=contents/about/who.html>Liliana M. Moreno Vargas, Diego Prada Gracia
+		and contributors</a> | <a href="https://www.uibcdf.org/">UIBCDF Lab</a> 
+	at the <a href="http://himfg.com.mx">Children's Hospital of Mexico Federico Gómez</a><br />
+	<a href="https://github.com/uibcdf/MolSysMT">MolSysMT is an open source project</a> shared
+	under <a href="https://github.com/uibcdf/MolSysMT/blob/main/LICENSE">an MIT license</a>
+	with a structure based on the
+	<a href="https://github.com/MolSSI/cookiecutter-cms">Computational Molecular Science
+		Python Cookiecutter</a> version 1.5
+</div></div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0
+     | 
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1
+    <br/>
+  </p>
+
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a href= "mailto:uibcdf@gmail.com">Contact us</a><br /></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

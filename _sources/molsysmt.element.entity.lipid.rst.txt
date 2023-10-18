@@ -1,0 +1,29 @@
+molsysmt.element.entity.lipid package
+=====================================
+
+Submodules
+----------
+
+molsysmt.element.entity.lipid.get\_name\_from\_mmtf\_name module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.lipid.get_name_from_mmtf_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.lipid.names module
+------------------------------------------
+
+.. automodule:: molsysmt.element.entity.lipid.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity.lipid
+   :members:
+   :undoc-members:
+   :show-inheritance:

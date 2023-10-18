@@ -1,0 +1,125 @@
+molsysmt.form.file\_dcd package
+===============================
+
+Submodules
+----------
+
+molsysmt.form.file\_dcd.add module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.append\_structures module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.attributes module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.copy module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.extract module
+--------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.get module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.has\_attribute module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.is\_form module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.iterators module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.merge module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.set module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.to\_mdtraj\_DCDTrajectoryFile module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.to_mdtraj_DCDTrajectoryFile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.to\_molsysmt\_MolSys module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_dcd.to\_molsysmt\_Structures module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_dcd.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_dcd
+   :members:
+   :undoc-members:
+   :show-inheritance:

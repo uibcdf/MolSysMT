@@ -1,0 +1,29 @@
+molsysmt.element.entity.rna package
+===================================
+
+Submodules
+----------
+
+molsysmt.element.entity.rna.get\_name\_from\_mmtf\_name module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.rna.get_name_from_mmtf_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.rna.names module
+----------------------------------------
+
+.. automodule:: molsysmt.element.entity.rna.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity.rna
+   :members:
+   :undoc-members:
+   :show-inheritance:

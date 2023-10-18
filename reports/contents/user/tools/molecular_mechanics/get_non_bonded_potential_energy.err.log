@@ -1,0 +1,134 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+U1nb2 = msm.molecular_mechanics.get_non_bonded_potential_energy(molecular_system,
+                                                              selection='molecule_name=="Barnase"',
+                                                              selection_2='molecule_name=="Barstar"')
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mOpenMMException[0m                           Traceback (most recent call last)
+[0;32m/tmp/ipykernel_5026/3292531756.py[0m in [0;36m?[0;34m()[0m
+[0;32m----> 1[0;31m U1nb2 = msm.molecular_mechanics.get_non_bonded_potential_energy(molecular_system,
+[0m[1;32m      2[0m                                                               [0mselection[0m[0;34m=[0m[0;34m'molecule_name=="Barnase"'[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m                                                               selection_2='molecule_name=="Barstar"')
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py[0m in [0;36m?[0;34m(*args, **kwargs)[0m
+[1;32m    115[0m [0;34m[0m[0m
+[1;32m    116[0m             [0;32mif[0m [0;34m'self'[0m [0;32min[0m [0mall_args[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    117[0m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0mall_args[0m[0;34m[[0m[0;34m'self'[0m[0;34m][0m[0;34m,[0m [0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 119[0;31m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/molecular_mechanics/get_non_bonded_potential_energy.py[0m in [0;36m?[0;34m(molecular_system, selection, selection_2, platform, engine, syntax)[0m
+[1;32m     53[0m             [0;32mfor[0m [0matt[0m [0;32min[0m [0mpossible_missing_attributes[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     54[0m                 [0;32mif[0m [0;32mnot[0m [0mhas_attribute[0m[0;34m([0m[0mmolecular_system[0m[0;34m,[0m [0matt[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     55[0m                     [0mextra_conversion_arguments[0m[0;34m[[0m[0matt[0m[0;34m][0m[0;34m=[0m[0mdefault_attribute[0m[0;34m[[0m[0matt[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     56[0m [0;34m[0m[0m
+[0;32m---> 57[0;31m             context = convert(molecular_system, to_form='openmm.Context',
+[0m[1;32m     58[0m                     **extra_conversion_arguments, platform=platform)
+[1;32m     59[0m [0;34m[0m[0m
+[1;32m     60[0m         [0mtmp_system[0m [0;34m=[0m [0mcontext[0m[0;34m.[0m[0mgetSystem[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py[0m in [0;36m?[0;34m(*args, **kwargs)[0m
+[1;32m    115[0m [0;34m[0m[0m
+[1;32m    116[0m             [0;32mif[0m [0;34m'self'[0m [0;32min[0m [0mall_args[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    117[0m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0mall_args[0m[0;34m[[0m[0;34m'self'[0m[0;34m][0m[0;34m,[0m [0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 119[0;31m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/basic/convert.py[0m in [0;36m?[0;34m(molecular_system, to_form, selection, structure_indices, syntax, verbose, **kwargs)[0m
+[1;32m    505[0m     [0;31m# If one to one[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    506[0m [0;34m[0m[0m
+[1;32m    507[0m     [0;32mif[0m [0;32mnot[0m [0misinstance[0m[0;34m([0m[0mfrom_form[0m[0;34m,[0m [0;34m([0m[0mlist[0m[0;34m,[0m [0mtuple[0m[0;34m)[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    508[0m [0;34m[0m[0m
+[0;32m--> 509[0;31m         output = _convert_one_to_one(molecular_system, to_form=to_form, selection=selection, structure_indices=structure_indices,
+[0m[1;32m    510[0m                 syntax=syntax, verbose=verbose, **kwargs)
+[1;32m    511[0m [0;34m[0m[0m
+[1;32m    512[0m [0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/basic/convert.py[0m in [0;36m?[0;34m(molecular_system, to_form, selection, structure_indices, syntax, verbose, **kwargs)[0m
+[1;32m     69[0m [0;34m[0m[0m
+[1;32m     70[0m         [0;32mif[0m [0mlen[0m[0;34m([0m[0mmissing_arguments[0m[0;34m)[0m[0;34m>[0m[0;36m0[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     71[0m             [0;32mraise[0m [0mNotCompatibleConversionError[0m[0;34m([0m[0mfrom_form[0m[0;34m,[0m [0mto_form[0m[0;34m,[0m [0mmissing_arguments[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     72[0m [0;34m[0m[0m
+[0;32m---> 73[0;31m         [0moutput[0m [0;34m=[0m [0mfunction[0m[0;34m([0m[0mmolecular_system[0m[0;34m,[0m [0;34m**[0m[0mconversion_arguments[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     74[0m [0;34m[0m[0m
+[1;32m     75[0m     [0;32melif[0m [0;34m([0m[0;34m'molsysmt.MolSys'[0m [0;32min[0m [0m_dict_modules[0m[0;34m[[0m[0mfrom_form[0m[0;34m][0m[0;34m.[0m[0m_convert_to[0m[0;34m)[0m [0;32mand[0m [0;34m([0m[0mto_form[0m [0;32min[0m [0m_dict_modules[0m[0;34m[[0m[0;34m'molsysmt.MolSys'[0m[0;34m][0m[0;34m.[0m[0m_convert_to[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     76[0m [0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py[0m in [0;36m?[0;34m(*args, **kwargs)[0m
+[1;32m    115[0m [0;34m[0m[0m
+[1;32m    116[0m             [0;32mif[0m [0;34m'self'[0m [0;32min[0m [0mall_args[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    117[0m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0mall_args[0m[0;34m[[0m[0;34m'self'[0m[0;34m][0m[0;34m,[0m [0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 119[0;31m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/form/molsysmt_MolSys/to_openmm_Context.py[0m in [0;36m?[0;34m(item, atom_indices, structure_indices, forcefield, water_model, implicit_solvent, non_bonded_method, constraints, switch_distance, dispersion_correction, ewald_error_tolerance, integrator, temperature, friction, time_step, platform)[0m
+[1;32m     14[0m [0;34m[0m[0m
+[1;32m     15[0m     [0mtmp_item[0m [0;34m=[0m [0mto_openmm_Topology[0m[0;34m([0m[0mitem[0m[0;34m,[0m [0matom_indices[0m[0;34m=[0m[0matom_indices[0m[0;34m,[0m [0mstructure_indices[0m[0;34m=[0m[0mstructure_indices[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m     [0mcoordinates[0m [0;34m=[0m [0mget_coordinates_from_atom[0m[0;34m([0m[0mitem[0m[0;34m,[0m [0mindices[0m[0;34m=[0m[0matom_indices[0m[0;34m,[0m [0mstructure_indices[0m[0;34m=[0m[0mstructure_indices[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     17[0m [0;34m[0m[0m
+[0;32m---> 18[0;31m     tmp_item = openmm_Topology_to_openmm_Context(tmp_item, coordinates=coordinates,
+[0m[1;32m     19[0m             [0mforcefield[0m[0;34m=[0m[0mforcefield[0m[0;34m,[0m [0mwater_model[0m[0;34m=[0m[0mwater_model[0m[0;34m,[0m [0mimplicit_solvent[0m[0;34m=[0m[0mimplicit_solvent[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m             [0mnon_bonded_method[0m[0;34m=[0m[0mnon_bonded_method[0m[0;34m,[0m [0mconstraints[0m[0;34m=[0m[0mconstraints[0m[0;34m,[0m [0mswitch_distance[0m[0;34m=[0m[0mswitch_distance[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     21[0m             [0mdispersion_correction[0m[0;34m=[0m[0mdispersion_correction[0m[0;34m,[0m [0mewald_error_tolerance[0m[0;34m=[0m[0mewald_error_tolerance[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py[0m in [0;36m?[0;34m(*args, **kwargs)[0m
+[1;32m    115[0m [0;34m[0m[0m
+[1;32m    116[0m             [0;32mif[0m [0;34m'self'[0m [0;32min[0m [0mall_args[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    117[0m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0mall_args[0m[0;34m[[0m[0;34m'self'[0m[0;34m][0m[0;34m,[0m [0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 119[0;31m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/form/openmm_Topology/to_openmm_Context.py[0m in [0;36m?[0;34m(item, atom_indices, coordinates, forcefield, water_model, implicit_solvent, non_bonded_method, constraints, switch_distance, dispersion_correction, ewald_error_tolerance, integrator, temperature, friction, time_step, platform)[0m
+[1;32m     14[0m             [0mwater_model[0m[0;34m=[0m[0mwater_model[0m[0;34m,[0m [0mimplicit_solvent[0m[0;34m=[0m[0mimplicit_solvent[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     15[0m             [0mnon_bonded_method[0m[0;34m=[0m[0mnon_bonded_method[0m[0;34m,[0m [0mconstraints[0m[0;34m=[0m[0mconstraints[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     16[0m             [0mswitch_distance[0m[0;34m=[0m[0mswitch_distance[0m[0;34m,[0m [0mdispersion_correction[0m[0;34m=[0m[0mdispersion_correction[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     17[0m             ewald_error_tolerance=ewald_error_tolerance)
+[0;32m---> 18[0;31m     context = openmm_System_to_openmm_Context(system, coordinates=coordinates,
+[0m[1;32m     19[0m             [0mintegrator[0m[0;34m=[0m[0mintegrator[0m[0;34m,[0m [0mtemperature[0m[0;34m=[0m[0mtemperature[0m[0;34m,[0m [0mfriction[0m[0;34m=[0m[0mfriction[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     20[0m             time_step=time_step, platform=platform)
+[1;32m     21[0m [0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py[0m in [0;36m?[0;34m(*args, **kwargs)[0m
+[1;32m    115[0m [0;34m[0m[0m
+[1;32m    116[0m             [0;32mif[0m [0;34m'self'[0m [0;32min[0m [0mall_args[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    117[0m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0mall_args[0m[0;34m[[0m[0;34m'self'[0m[0;34m][0m[0;34m,[0m [0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 119[0;31m                 [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0;34m**[0m[0mfinal_args[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/form/openmm_System/to_openmm_Context.py[0m in [0;36m?[0;34m(item, atom_indices, coordinates, integrator, temperature, friction, time_step, platform)[0m
+[1;32m     16[0m     [0;32mif[0m [0mintegrator[0m[0;34m==[0m[0;34m'Langevin'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     17[0m         [0mintegrator[0m [0;34m=[0m [0mmm[0m[0;34m.[0m[0mLangevinIntegrator[0m[0;34m([0m[0mtemperature[0m[0;34m,[0m [0mfriction[0m[0;34m,[0m [0mtime_step[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     18[0m [0;34m[0m[0m
+[1;32m     19[0m     [0;32mif[0m [0mplatform[0m[0;34m==[0m[0;34m'CUDA'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 20[0;31m         [0mplatform[0m    [0;34m=[0m [0mmm[0m[0;34m.[0m[0mPlatform[0m[0;34m.[0m[0mgetPlatformByName[0m[0;34m([0m[0;34m'CUDA'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     21[0m     [0;32melif[0m [0mplatform[0m[0;34m==[0m[0;34m'CPU'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     22[0m         [0mplatform[0m    [0;34m=[0m [0mmm[0m[0;34m.[0m[0mPlatform[0m[0;34m.[0m[0mgetPlatformByName[0m[0;34m([0m[0;34m'CPU'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     23[0m [0;34m[0m[0m
+
+[0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/openmm/openmm.py[0m in [0;36m?[0;34m(name)[0m
+[1;32m   7021[0m         r"""
+[1;32m   7022[0m         [0mgetPlatformByName[0m[0;34m([0m[0mname[0m[0;34m)[0m [0;34m->[0m [0mPlatform[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   7023[0m         [0mGet[0m [0mthe[0m [0mregistered[0m [0mPlatform[0m [0;32mwith[0m [0ma[0m [0mparticular[0m [0mname[0m[0;34m.[0m [0mIf[0m [0mno[0m [0mPlatform[0m [0;32mwith[0m [0mthat[0m [0mname[0m [0mhas[0m [0mbeen[0m [0mregistered[0m[0;34m,[0m [0mthis[0m [0mthrows[0m [0man[0m [0mexception[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   7024[0m         """
+[0;32m-> 7025[0;31m         [0;32mreturn[0m [0m_openmm[0m[0;34m.[0m[0mPlatform_getPlatformByName[0m[0;34m([0m[0mname[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mOpenMMException[0m: There is no registered Platform called "CUDA"
+

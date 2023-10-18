@@ -1,0 +1,117 @@
+molsysmt.form.openmm\_State package
+===================================
+
+Submodules
+----------
+
+molsysmt.form.openmm\_State.add module
+--------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.append\_structures module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.attributes module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.copy module
+---------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.extract module
+------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.get module
+--------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.has\_attribute module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.is\_form module
+-------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.iterators module
+--------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.merge module
+----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.set module
+--------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.to\_XYZ module
+------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.to_XYZ
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_State.to\_molsysmt\_Structures module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_State.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.openmm_State
+   :members:
+   :undoc-members:
+   :show-inheritance:

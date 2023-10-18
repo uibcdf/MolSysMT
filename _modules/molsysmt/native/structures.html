@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>molsysmt.native.structures &#8212; MolSysMT 0.8.3+0.g5c78ab65.dirty documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/tabs.js"></script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/molsysmt/native/structures';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/logo.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/showcase/index.html">
+                        Showcase
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/user/index.html">
+                        User guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/developer/index.html">
+                        Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api/index.html">
+                        API documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/about/index.html">
+                        About
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/showcase/index.html">
+                        Showcase
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/user/index.html">
+                        User guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../contents/developer/index.html">
+                        Developer guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../api/index.html">
+                        API documentation
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">molsysmt.nat...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for molsysmt.native.structures</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">molsysmt</span> <span class="kn">import</span> <span class="n">pyunitwizard</span> <span class="k">as</span> <span class="n">puw</span>
+<span class="kn">from</span> <span class="nn">molsysmt._private.variables</span> <span class="kn">import</span> <span class="n">is_all</span>
+<span class="kn">from</span> <span class="nn">molsysmt.basic</span> <span class="kn">import</span> <span class="n">get</span>
+<span class="kn">from</span> <span class="nn">molsysmt.pbc</span> <span class="kn">import</span> <span class="n">get_lengths_and_angles_from_box</span>
+<span class="kn">from</span> <span class="nn">molsysmt._private.exceptions</span> <span class="kn">import</span> <span class="n">IteratorError</span>
+<span class="kn">from</span> <span class="nn">molsysmt._private.digestion</span> <span class="kn">import</span> <span class="n">digest</span>
+
+<div class="viewcode-block" id="Structures"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures">[docs]</a><span class="k">class</span> <span class="nc">Structures</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Class to store the trajectory data of a molecular system</span>
+
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        box : pint.Quantity of shape (n_structures, 3, 3)</span>
+<span class="sd">            The box of the molecular system in nanometers.</span>
+
+<span class="sd">        coordinates : pint.Quantity of shape (n_structures, n_atoms, 3)</span>
+<span class="sd">            The coordinates of the trajectory for each frame.</span>
+
+<span class="sd">        velocities : pint.Quantity of shape (n_structures, n_atoms, 3)</span>
+<span class="sd">            The velocities of the trajectory for each frame.</span>
+
+<span class="sd">        n_atoms : int</span>
+<span class="sd">            Number of atoms in the trajectory.</span>
+
+<span class="sd">        n_structures : int</span>
+<span class="sd">            Number of structures or frames in the trajectory.</span>
+
+<span class="sd">        time :  pint.Quantity of shape (n_structures, )</span>
+<span class="sd">            The times of the trajectory in picoseconds.</span>
+
+<span class="sd">        structure_id :</span>
+
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@digest</span><span class="p">()</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coordinates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">velocities</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">occupancy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">b_factor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">alternate_location</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bioassembly</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span> <span class="o">=</span> <span class="n">structure_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="o">=</span> <span class="n">coordinates</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="o">=</span> <span class="n">velocities</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="n">box</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">occupancy</span> <span class="o">=</span> <span class="n">occupancy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b_factor</span> <span class="o">=</span> <span class="n">b_factor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alternate_location</span> <span class="o">=</span> <span class="n">alternate_location</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bioassembly</span> <span class="o">=</span> <span class="n">bioassembly</span>
+
+        <span class="k">if</span> <span class="n">coordinates</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">velocities</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">=</span> <span class="n">velocities</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="n">velocities</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_concatenate_arrays</span><span class="p">(</span><span class="n">array_1</span><span class="p">,</span> <span class="n">array_2</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Concatenates two arrays provided that they are not null.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">array_2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">array_1</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;The trajectory has no </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> array to append the new frame.&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">array_1</span><span class="p">,</span> <span class="n">array_2</span><span class="p">])</span>
+
+<div class="viewcode-block" id="Structures.append_structures"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.append_structures">[docs]</a>    <span class="nd">@digest</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">append_structures</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">structure_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coordinates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">velocities</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">box</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Append structures or frames to this object.</span>
+
+<span class="sd">             box : pint.Quantity of shape (n_structures, 3, 3)</span>
+<span class="sd">                The box of the structures</span>
+
+<span class="sd">             coordinates : pint.Quantity of shape (n_structures, n_atoms, 3)</span>
+<span class="sd">                The coordinates of the trajectory for each frame of it in nanometers.</span>
+
+<span class="sd">             time :  pint.Quantity of shape (n_structures, )</span>
+<span class="sd">                The times of the trajectory in picoseconds</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">n_structures</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">n_atoms</span> <span class="o">=</span> <span class="mi">0</span>
+    
+        <span class="k">if</span> <span class="n">structure_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">structure_id</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
+            <span class="n">structure_id</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">structure_id</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">standardize</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">coordinates</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">coordinates</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">standardize</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+            <span class="n">n_structures</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">n_atoms</span> <span class="o">=</span> <span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">velocities</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">velocities</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">standardize</span><span class="p">(</span><span class="n">velocities</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">box</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">standardize</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="o">=</span> <span class="n">coordinates</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="o">=</span> <span class="n">velocities</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span> <span class="o">=</span> <span class="n">structure_id</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">time</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="n">box</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">=</span> <span class="n">n_structures</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="n">n_atoms</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">n_atoms</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;The coordinates to be appended in the system &quot;</span>
+                    <span class="s2">&quot;need to have the same number of atoms.&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concatenate_arrays</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span><span class="p">,</span> <span class="n">structure_id</span><span class="p">,</span> <span class="s2">&quot;structure_ids&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concatenate_arrays</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concatenate_arrays</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">,</span> <span class="n">box</span><span class="p">,</span> <span class="s2">&quot;structure_ids&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concatenate_arrays</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="s2">&quot;coordinates&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concatenate_arrays</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocities</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="s2">&quot;velocities&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">+=</span> <span class="n">n_structures</span></div>
+
+<div class="viewcode-block" id="Structures.get_box_lengths"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.get_box_lengths">[docs]</a>    <span class="k">def</span> <span class="nf">get_box_lengths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lengths</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_lengths_and_angles_from_box</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lengths</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">lengths</span></div>
+
+<div class="viewcode-block" id="Structures.get_box_angles"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.get_box_angles">[docs]</a>    <span class="k">def</span> <span class="nf">get_box_angles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">angles</span> <span class="o">=</span> <span class="n">get_lengths_and_angles_from_box</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">angles</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">angles</span></div>
+
+<div class="viewcode-block" id="Structures.extract"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.extract">[docs]</a>    <span class="nd">@digest</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">extract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atom_indices</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">structure_indices</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a new Structures object with the specified atoms and/or</span>
+<span class="sd">            structures.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            atom_indices : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                The indices of the extracted atoms.</span>
+
+<span class="sd">            structure_indices : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                The indices of the extracted structures or frames.</span>
+
+<span class="sd">            Returns</span>
+<span class="sd">            -------</span>
+<span class="sd">            Structures</span>
+<span class="sd">                The new structures object with the extracted atoms and frames.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">is_all</span><span class="p">(</span><span class="n">atom_indices</span><span class="p">)</span> <span class="ow">and</span> <span class="n">is_all</span><span class="p">(</span><span class="n">structure_indices</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">extract_structures</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_all</span><span class="p">(</span><span class="n">structure_indices</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">extract_structures</span><span class="p">:</span>
+                <span class="n">structure_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span><span class="p">[</span><span class="n">structure_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">structure_id</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">structure_id</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">extract_structures</span><span class="p">:</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="n">structure_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">time</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">extract_structures</span><span class="p">:</span>
+                <span class="n">box</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">[</span><span class="n">structure_indices</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">box</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">box</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">is_all</span><span class="p">(</span><span class="n">atom_indices</span><span class="p">):</span>
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">[:,</span> <span class="n">atom_indices</span><span class="p">,</span> <span class="p">:]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">is_all</span><span class="p">(</span><span class="n">structure_indices</span><span class="p">):</span>
+                    <span class="n">coordinates</span> <span class="o">=</span> <span class="n">coordinates</span><span class="p">[</span><span class="n">structure_indices</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">coordinates</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">is_all</span><span class="p">(</span><span class="n">atom_indices</span><span class="p">):</span>
+                    <span class="n">velocities</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span><span class="p">[:,</span> <span class="n">atom_indices</span><span class="p">,</span> <span class="p">:]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">velocities</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocities</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">is_all</span><span class="p">(</span><span class="n">structure_indices</span><span class="p">):</span>
+                    <span class="n">velocities</span> <span class="o">=</span> <span class="n">velocities</span><span class="p">[</span><span class="n">structure_indices</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">velocities</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">return</span> <span class="n">Structures</span><span class="p">(</span><span class="n">structure_id</span><span class="o">=</span><span class="n">structure_id</span><span class="p">,</span>
+                          <span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span>
+                          <span class="n">coordinates</span><span class="o">=</span><span class="n">coordinates</span><span class="p">,</span>
+                          <span class="n">velocities</span><span class="o">=</span><span class="n">velocities</span><span class="p">,</span>
+                          <span class="n">box</span><span class="o">=</span><span class="n">box</span><span class="p">,</span>
+                          <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Structures.add"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.add">[docs]</a>    <span class="nd">@digest</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">structure_indices</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Adds the coordinates of another item to this.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+
+<span class="sd">            item : MolecularSystem</span>
+<span class="sd">                The molecular system whose coordinates will be added.</span>
+
+<span class="sd">            selection : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                Selects only these atoms from the given item.</span>
+
+<span class="sd">            structure_indices : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                Select only these structures from the given item</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+
+
+        <span class="n">n_structures</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span>
+                           <span class="n">element</span><span class="o">=</span><span class="s2">&quot;system&quot;</span><span class="p">,</span>
+                           <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span>
+                           <span class="n">n_structures</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                           <span class="p">)</span>
+
+        <span class="n">coordinates</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span>
+                          <span class="n">element</span><span class="o">=</span><span class="s2">&quot;atom&quot;</span><span class="p">,</span>
+                          <span class="n">selection</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span>
+                          <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span>
+                          <span class="n">coordinates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                          <span class="p">)</span>
+
+        <span class="n">velocities</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span>
+                          <span class="n">element</span><span class="o">=</span><span class="s2">&quot;atom&quot;</span><span class="p">,</span>
+                          <span class="n">selection</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span>
+                          <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span>
+                          <span class="n">velocities</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                          <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_structures</span> <span class="o">!=</span> <span class="n">n_structures</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Both items need to have the same n_structures&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">coordinates</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
+            <span class="n">value_coordinates</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">coordinates</span><span class="p">,</span> <span class="n">to_unit</span><span class="o">=</span><span class="n">unit</span><span class="p">)</span>
+            <span class="n">value_self_coordinates</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">value_self_coordinates</span><span class="p">,</span> <span class="n">value_coordinates</span><span class="p">])</span> <span class="o">*</span> <span class="n">unit</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">velocities</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_unit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocities</span><span class="p">)</span>
+            <span class="n">value_velocities</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="n">velocities</span><span class="p">,</span> <span class="n">to_unit</span><span class="o">=</span><span class="n">unit</span><span class="p">)</span>
+            <span class="n">value_self_velocities</span> <span class="o">=</span> <span class="n">puw</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">velocities</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">velocities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">value_self_velocities</span><span class="p">,</span> <span class="n">value_velocities</span><span class="p">])</span> <span class="o">*</span> <span class="n">unit</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_atoms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coordinates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="Structures.append"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.append">[docs]</a>    <span class="nd">@digest</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="n">structure_indices</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Appends the structure_id, time coordinates and box of the given item to this.</span>
+
+<span class="sd">            Parameters</span>
+<span class="sd">            ----------</span>
+<span class="sd">            item : MolecularSystem</span>
+<span class="sd">                The molecular system that will be appended.</span>
+
+<span class="sd">            selection : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                Selects only these atoms from the given item.</span>
+
+<span class="sd">            structure_indices : str or arraylike of int, default=&#39;all&#39;</span>
+<span class="sd">                Select only these structures from the given item</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">structure_id</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">box</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">item</span><span class="p">,</span>
+                                           <span class="n">selection</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span>
+                                           <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span>
+                                           <span class="n">structure_id</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                           <span class="n">time</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                           <span class="n">coordinates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                           <span class="n">velocities</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                           <span class="n">box</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                           <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">append_structures</span><span class="p">(</span><span class="n">structure_id</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">coordinates</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">box</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Structures.copy"><a class="viewcode-back" href="../../../molsysmt.native.html#molsysmt.native.structures.Structures.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Returns a copy of the structures.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div></div>
+
+<span class="c1">###    def get_structure_data(self, structure, selection=&quot;all&quot;, chunk_size=1):</span>
+<span class="c1">###        &quot;&quot;&quot; Returns the structure_ids, time, coordinates and box of the</span>
+<span class="c1">###            given structure</span>
+<span class="c1">###</span>
+<span class="c1">###            Parameters</span>
+<span class="c1">###            ----------</span>
+<span class="c1">###            structure : int</span>
+<span class="c1">###                The index of the structure</span>
+<span class="c1">###</span>
+<span class="c1">###            selection : arraylike of int, default=&quot;all&quot;</span>
+<span class="c1">###                The indices of the selected atoms.</span>
+<span class="c1">###</span>
+<span class="c1">###            chunk_size : int, default=1</span>
+<span class="c1">###                Amount of structures to return in each of the arrays.</span>
+<span class="c1">###</span>
+<span class="c1">###            Returns</span>
+<span class="c1">###            -------</span>
+<span class="c1">###            box : pint.Quantity of shape (3, 3)</span>
+<span class="c1">###                The box of the structure. If chunk_size is greater than one</span>
+<span class="c1">###                the shape will be (chunk_size, 3, 3)</span>
+<span class="c1">###</span>
+<span class="c1">###            coordinates : pint.Quantity of shape (n_atoms, 3)</span>
+<span class="c1">###                The coordinates of the structure. If chunk_size is greater than one</span>
+<span class="c1">###                the shape will be (chunk_size, n_atoms, 3)</span>
+<span class="c1">###</span>
+<span class="c1">###            time :  pint.Quantity</span>
+<span class="c1">###                The times of the structure. If chunk_size is greater than one</span>
+<span class="c1">###                the shape will be (chunk_size,)</span>
+<span class="c1">###        &quot;&quot;&quot;</span>
+<span class="c1">###        structure_end = structure + chunk_size</span>
+<span class="c1">###</span>
+<span class="c1">###        if self.structure_id is not None:</span>
+<span class="c1">###            structure_id = self.structure_id[structure: structure_end]</span>
+<span class="c1">###        else:</span>
+<span class="c1">###            structure_id = None</span>
+<span class="c1">###</span>
+<span class="c1">###        if self.time is not None:</span>
+<span class="c1">###            time = self.time[structure: structure_end]</span>
+<span class="c1">###        else:</span>
+<span class="c1">###            time = None</span>
+<span class="c1">###</span>
+<span class="c1">###        if self.coordinates is not None:</span>
+<span class="c1">###            if is_all(selection):</span>
+<span class="c1">###                # If chunk size is 1 we return a 2D array. If not coordinates will</span>
+<span class="c1">###                # be a 3D array</span>
+<span class="c1">###                if chunk_size == 1:</span>
+<span class="c1">###                    coordinates = self.coordinates[structure]</span>
+<span class="c1">###                else:</span>
+<span class="c1">###                    coordinates = self.coordinates[structure: structure_end]</span>
+<span class="c1">###            else:</span>
+<span class="c1">###                if chunk_size == 1:</span>
+<span class="c1">###                    coordinates = self.coordinates[structure, selection, :]</span>
+<span class="c1">###                else:</span>
+<span class="c1">###                    coordinates = self.coordinates[structure: structure_end, selection, :]</span>
+<span class="c1">###        else:</span>
+<span class="c1">###            coordinates = None</span>
+<span class="c1">###</span>
+<span class="c1">###        if self.velocities is not None:</span>
+<span class="c1">###            if is_all(selection):</span>
+<span class="c1">###                if chunk_size == 1:</span>
+<span class="c1">###                    velocities = self.velocities[structure]</span>
+<span class="c1">###                else:</span>
+<span class="c1">###                    velocities = self.velocities[structure: structure_end]</span>
+<span class="c1">###            else:</span>
+<span class="c1">###                if chunk_size == 1:</span>
+<span class="c1">###                    velocities = self.velocities[structure, selection, :]</span>
+<span class="c1">###                else:</span>
+<span class="c1">###                    velocities = self.velocities[structure: structure_end, selection, :]</span>
+<span class="c1">###        else:</span>
+<span class="c1">###            velocities = None</span>
+<span class="c1">###</span>
+<span class="c1">###        if self.box is not None:</span>
+<span class="c1">###            if chunk_size == 1:</span>
+<span class="c1">###                box = self.box[structure]</span>
+<span class="c1">###            else:</span>
+<span class="c1">###                box = self.box[structure: structure_end]</span>
+<span class="c1">###        else:</span>
+<span class="c1">###            box = None</span>
+<span class="c1">###</span>
+<span class="c1">###        return structure_id, time, coordinates, velocities, box</span>
+<span class="c1">###</span>
+<span class="c1">###    def _iterate_structures(self, start=0, stop=None,</span>
+<span class="c1">###                            interval=1, selection=&quot;all&quot;, chunk_size=1):</span>
+<span class="c1">###        &quot;&quot;&quot; Helper function for the iterate method.&quot;&quot;&quot;</span>
+<span class="c1">###        self._current_structure = start</span>
+<span class="c1">###        while self._current_structure &lt; self.n_structures:</span>
+<span class="c1">###            if self._current_structure &gt;= stop:</span>
+<span class="c1">###                break</span>
+<span class="c1">###</span>
+<span class="c1">###            yield self.get_structure_data(self._current_structure,</span>
+<span class="c1">###                                          selection,</span>
+<span class="c1">###                                          chunk_size)</span>
+<span class="c1">###</span>
+<span class="c1">###            if chunk_size &gt; 1:</span>
+<span class="c1">###                self._current_structure += chunk_size</span>
+<span class="c1">###            else:</span>
+<span class="c1">###                self._current_structure += interval</span>
+<span class="c1">###</span>
+<span class="c1">###    def iterate(self, start=0, stop=None,</span>
+<span class="c1">###                interval=1, selection=&quot;all&quot;, chunk_size=1):</span>
+<span class="c1">###        &quot;&quot;&quot; Generator to iterate over the structure_ids, time, coordinates and box</span>
+<span class="c1">###            of each structure (frame).</span>
+<span class="c1">###</span>
+<span class="c1">###            Parameters</span>
+<span class="c1">###            ----------</span>
+<span class="c1">###            start: int</span>
+<span class="c1">###                First structure index of the trajectory to start with.</span>
+<span class="c1">###</span>
+<span class="c1">###            stop: int, default=None</span>
+<span class="c1">###                The iteration finishes if the current structure index</span>
+<span class="c1">###                is larger than or equal to this integer.</span>
+<span class="c1">###</span>
+<span class="c1">###            interval : int, default=1</span>
+<span class="c1">###                Number of structure indices to skip in each iteration</span>
+<span class="c1">###</span>
+<span class="c1">###            selection : arraylike of int or &#39;all&#39;, default=&#39;all&#39;</span>
+<span class="c1">###                The indices of the selected atoms.</span>
+<span class="c1">###</span>
+<span class="c1">###            chunk_size : int, default=1</span>
+<span class="c1">###                Amount of structures in the output of each iteration.</span>
+<span class="c1">###</span>
+<span class="c1">###            Yields</span>
+<span class="c1">###            ------</span>
+<span class="c1">###            structure_id :</span>
+<span class="c1">###</span>
+<span class="c1">###            box : pint.Quantity of shape (3, 3)</span>
+<span class="c1">###                The box of the structure</span>
+<span class="c1">###</span>
+<span class="c1">###            coordinates : pint.Quantity of shape (n_atoms, 3)</span>
+<span class="c1">###                The coordinates of the structure.</span>
+<span class="c1">###</span>
+<span class="c1">###            time :  pint.Quantity</span>
+<span class="c1">###                The times of the structure</span>
+<span class="c1">###</span>
+<span class="c1">###        &quot;&quot;&quot;</span>
+<span class="c1">###        if start &lt; 0 or start &gt;= self.n_structures:</span>
+<span class="c1">###            raise IteratorError(</span>
+<span class="c1">###                f&quot;Start should be &gt; 0 and &lt; {self.n_structures}&quot;</span>
+<span class="c1">###            )</span>
+<span class="c1">###</span>
+<span class="c1">###        if interval &lt; 1 or interval &gt; self.n_structures:</span>
+<span class="c1">###            raise IteratorError(</span>
+<span class="c1">###                f&quot;Interval should be &gt; 0 and &lt; {self.n_structures}&quot;</span>
+<span class="c1">###            )</span>
+<span class="c1">###</span>
+<span class="c1">###        if chunk_size &lt; 1 or chunk_size &gt; self.n_structures:</span>
+<span class="c1">###            raise IteratorError(</span>
+<span class="c1">###                f&quot;Chunk size should be &gt; 0 and &lt; {self.n_structures}&quot;)</span>
+<span class="c1">###</span>
+<span class="c1">###        if interval != 1 and chunk_size != 1:</span>
+<span class="c1">###            # We cannot have an interval and a chunk size greater than 1 simultaneously</span>
+<span class="c1">###            raise IteratorError(</span>
+<span class="c1">###                &quot;Chunk size and interval cannot be greater than one simultaneously.&quot;)</span>
+<span class="c1">###</span>
+<span class="c1">###        if stop is None:</span>
+<span class="c1">###            stop = self.n_structures</span>
+<span class="c1">###</span>
+<span class="c1">###        if stop &lt; 1 or stop &gt; self.n_structures:</span>
+<span class="c1">###            raise IteratorError(</span>
+<span class="c1">###                f&quot;Stop should be &gt; 0 and &lt; {self.n_structures}&quot;</span>
+<span class="c1">###            )</span>
+<span class="c1">###</span>
+<span class="c1">###        return self._iterate_structures(start, stop, interval, selection, chunk_size)</span>
+<span class="c1">###</span>
+<span class="c1">###    def __iter__(self):</span>
+<span class="c1">###        self._current_structure = -1</span>
+<span class="c1">###        return self</span>
+<span class="c1">###</span>
+<span class="c1">###    def __next__(self):</span>
+<span class="c1">###        &quot;&quot;&quot; Iterate through the structure_ids, time, coordinates and box</span>
+<span class="c1">###            of each structure (frame).</span>
+<span class="c1">###        &quot;&quot;&quot;</span>
+<span class="c1">###        self._current_structure += 1</span>
+<span class="c1">###        if self._current_structure &gt;= self.n_structures:</span>
+<span class="c1">###            raise StopIteration</span>
+<span class="c1">###</span>
+<span class="c1">###        return self.get_structure_data(self._current_structure)</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+	&copy; 2023, <a href=contents/about/who.html>Liliana M. Moreno Vargas, Diego Prada Gracia
+		and contributors</a> | <a href="https://www.uibcdf.org/">UIBCDF Lab</a> 
+	at the <a href="http://himfg.com.mx">Children's Hospital of Mexico Federico Gómez</a><br />
+	<a href="https://github.com/uibcdf/MolSysMT">MolSysMT is an open source project</a> shared
+	under <a href="https://github.com/uibcdf/MolSysMT/blob/main/LICENSE">an MIT license</a>
+	with a structure based on the
+	<a href="https://github.com/MolSSI/cookiecutter-cms">Computational Molecular Science
+		Python Cookiecutter</a> version 1.5
+</div></div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0
+     | 
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.1
+    <br/>
+  </p>
+
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a href= "mailto:uibcdf@gmail.com">Contact us</a><br /></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

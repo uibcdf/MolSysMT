@@ -1,0 +1,125 @@
+molsysmt.form.file\_xtc package
+===============================
+
+Submodules
+----------
+
+molsysmt.form.file\_xtc.add module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.append\_structures module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.attributes module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.copy module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.extract module
+--------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.get module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.has\_attribute module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.is\_form module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.iterators module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.merge module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.set module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.to\_mdtraj\_Trajectory module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.to_mdtraj_Trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.to\_mdtraj\_XTCTrajectoryFile module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.to_mdtraj_XTCTrajectoryFile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_xtc.to\_molsysmt\_Structures module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_xtc.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_xtc
+   :members:
+   :undoc-members:
+   :show-inheritance:

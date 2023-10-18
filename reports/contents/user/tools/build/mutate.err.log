@@ -1,0 +1,91 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/docs/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+new_molecular_system = msm.build.mutate(molecular_system, mutations={'GLY':'ALA'}, keys='group_name', selection='group_id==[3,4,5]')
+
+for group_id, group_name in msm.Iterator(new_molecular_system, element='group', group_id=True, group_name=True):
+    print(group_id, group_name)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[9], line 3[0m
+[1;32m      1[0m new_molecular_system [38;5;241m=[39m msm[38;5;241m.[39mbuild[38;5;241m.[39mmutate(molecular_system, mutations[38;5;241m=[39m{[38;5;124m'[39m[38;5;124mGLY[39m[38;5;124m'[39m:[38;5;124m'[39m[38;5;124mALA[39m[38;5;124m'[39m}, keys[38;5;241m=[39m[38;5;124m'[39m[38;5;124mgroup_name[39m[38;5;124m'[39m, selection[38;5;241m=[39m[38;5;124m'[39m[38;5;124mgroup_id==[3,4,5][39m[38;5;124m'[39m)
+[0;32m----> 3[0m [38;5;28;01mfor[39;00m group_id, group_name [38;5;129;01min[39;00m [43mmsm[49m[38;5;241;43m.[39;49m[43mIterator[49m[43m([49m[43mnew_molecular_system[49m[43m,[49m[43m [49m[43melement[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mgroup[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mgroup_id[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mgroup_name[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m:
+[1;32m      4[0m     [38;5;28mprint[39m(group_id, group_name)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py:117[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    114[0m final_args [38;5;241m=[39m digested_args
+[1;32m    116[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m [38;5;129;01min[39;00m all_args:
+[0;32m--> 117[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[43mall_args[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mself[39;49m[38;5;124;43m'[39;49m[43m][49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+[1;32m    118[0m [38;5;28;01melse[39;00m:
+[1;32m    119[0m     [38;5;28;01mreturn[39;00m func([38;5;241m*[39m[38;5;241m*[39mfinal_args)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/basic/iterator.py:300[0m, in [0;36mIterator.__init__[0;34m(self, molecular_system, element, selection, structure_indices, start, stop, step, chunk, syntax, output_type, output_form, **kwargs)[0m
+[1;32m    296[0m             tmp_iterator [38;5;241m=[39m _dict_modules[aux_items_forms[item]][38;5;241m.[39mStructuresIterator(item, atom_indices[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mindices, start[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstart,
+[1;32m    297[0m                stop[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstop, step[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstep, chunk[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mchunk, structure_indices[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstructure_indices, output_type[38;5;241m=[39m[38;5;124m'[39m[38;5;124mdictionary[39m[38;5;124m'[39m,
+[1;32m    298[0m                [38;5;241m*[39m[38;5;241m*[39mtmp_arguments)
+[1;32m    299[0m     [38;5;28;01melse[39;00m:
+[0;32m--> 300[0m         tmp_iterator [38;5;241m=[39m [43m_dict_modules[49m[43m[[49m[43maux_items_forms[49m[43m[[49m[43mitem[49m[43m][49m[43m][49m[38;5;241;43m.[39;49m[43mTopologyIterator[49m[43m([49m[43mitem[49m[43m,[49m[43m [49m[43melement[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43melement[49m[43m,[49m[43m [49m[43mindices[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mindices[49m[43m,[49m[43m [49m[43mstart[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mstart[49m[43m,[49m
+[1;32m    301[0m [43m               [49m[43mstop[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mstop[49m[43m,[49m[43m [49m[43mstep[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mstep[49m[43m,[49m[43m [49m[43mchunk[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mchunk[49m[43m,[49m[43m [49m[43moutput_type[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mdictionary[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m    302[0m [43m               [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mtmp_arguments[49m[43m)[49m
+[1;32m    304[0m     [38;5;28mself[39m[38;5;241m.[39m_iterators[38;5;241m.[39mappend(tmp_iterator)
+[1;32m    306[0m [38;5;28;01mdel[39;00m(aux_items_forms, aux_items_arguments)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py:117[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    114[0m final_args [38;5;241m=[39m digested_args
+[1;32m    116[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m [38;5;129;01min[39;00m all_args:
+[0;32m--> 117[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[43mall_args[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mself[39;49m[38;5;124;43m'[39;49m[43m][49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+[1;32m    118[0m [38;5;28;01melse[39;00m:
+[1;32m    119[0m     [38;5;28;01mreturn[39;00m func([38;5;241m*[39m[38;5;241m*[39mfinal_args)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/form/molsysmt_MolSys/iterators.py:28[0m, in [0;36mTopologyIterator.__init__[0;34m(self, molecular_system, element, indices, start, step, stop, chunk, output_type, **kwargs)[0m
+[1;32m     22[0m [38;5;129m@digest[39m(form[38;5;241m=[39m[38;5;124m'[39m[38;5;124mmolsysmt.MolSys[39m[38;5;124m'[39m)
+[1;32m     23[0m [38;5;28;01mdef[39;00m [38;5;21m__init__[39m([38;5;28mself[39m, molecular_system, element[38;5;241m=[39m[38;5;124m'[39m[38;5;124matom[39m[38;5;124m'[39m, indices[38;5;241m=[39m[38;5;124m'[39m[38;5;124mall[39m[38;5;124m'[39m, start[38;5;241m=[39m[38;5;241m0[39m, step[38;5;241m=[39m[38;5;241m1[39m, stop[38;5;241m=[39m[38;5;28;01mNone[39;00m, chunk[38;5;241m=[39m[38;5;241m1[39m,
+[1;32m     24[0m         output_type[38;5;241m=[39m[38;5;124m'[39m[38;5;124mvalues[39m[38;5;124m'[39m, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     26[0m     molecular_system [38;5;241m=[39m to_molsysmt_Topology(molecular_system)
+[0;32m---> 28[0m     [38;5;28;43msuper[39;49m[43m([49m[43m)[49m[38;5;241;43m.[39;49m[38;5;21;43m__init__[39;49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43melement[49m[38;5;241;43m=[39;49m[43melement[49m[43m,[49m[43m [49m[43mindices[49m[38;5;241;43m=[39;49m[43mindices[49m[43m,[49m[43m [49m[43mstart[49m[38;5;241;43m=[39;49m[43mstart[49m[43m,[49m[43m [49m[43mstep[49m[38;5;241;43m=[39;49m[43mstep[49m[43m,[49m[43m [49m[43mstop[49m[38;5;241;43m=[39;49m[43mstop[49m[43m,[49m
+[1;32m     29[0m [43m            [49m[43mchunk[49m[38;5;241;43m=[39;49m[43mchunk[49m[43m,[49m[43m [49m[43moutput_type[49m[38;5;241;43m=[39;49m[43moutput_type[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py:117[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    114[0m final_args [38;5;241m=[39m digested_args
+[1;32m    116[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m [38;5;129;01min[39;00m all_args:
+[0;32m--> 117[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[43mall_args[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mself[39;49m[38;5;124;43m'[39;49m[43m][49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+[1;32m    118[0m [38;5;28;01melse[39;00m:
+[1;32m    119[0m     [38;5;28;01mreturn[39;00m func([38;5;241m*[39m[38;5;241m*[39mfinal_args)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/form/molsysmt_Topology/iterators.py:41[0m, in [0;36mTopologyIterator.__init__[0;34m(self, molecular_system, element, indices, start, stop, step, chunk, output_type, **kwargs)[0m
+[1;32m     37[0m         [38;5;28mself[39m[38;5;241m.[39mstop [38;5;241m=[39m [38;5;28mlen[39m(indices)
+[1;32m     39[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmolsysmt[39;00m [38;5;28;01mimport[39;00m get
+[0;32m---> 41[0m [38;5;28mself[39m[38;5;241m.[39m_get_result [38;5;241m=[39m [43mget[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mmolecular_system[49m[43m,[49m[43m [49m[43melement[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43melement[49m[43m,[49m[43m [49m[43mindices[49m[38;5;241;43m=[39;49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mindices[49m[43m,[49m[43m [49m[43moutput_type[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mdictionary[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     43[0m [38;5;28mself[39m[38;5;241m.[39m_indices_iterator [38;5;241m=[39m indices_iterator(start[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstart, stop[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstop, step[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mstep, chunk[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39mchunk)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/_private/digestion/digest.py:119[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    117[0m     [38;5;28;01mreturn[39;00m func(all_args[[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m], [38;5;241m*[39m[38;5;241m*[39mfinal_args)
+[1;32m    118[0m [38;5;28;01melse[39;00m:
+[0;32m--> 119[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.10/site-packages/molsysmt/basic/get.py:148[0m, in [0;36mget[0;34m(molecular_system, element, selection, structure_indices, mask, syntax, output_type, **kwargs)[0m
+[1;32m    146[0m in_attributes [38;5;241m=[39m []
+[1;32m    147[0m [38;5;28;01mfor[39;00m key [38;5;129;01min[39;00m kwargs[38;5;241m.[39mkeys():
+[0;32m--> 148[0m     [38;5;28;01mif[39;00m kwargs[key]:
+[1;32m    149[0m         in_attributes[38;5;241m.[39mappend(key)
+[1;32m    151[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(molecular_system, ([38;5;28mlist[39m, [38;5;28mtuple[39m)):
+
+[0;31mValueError[0m: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+

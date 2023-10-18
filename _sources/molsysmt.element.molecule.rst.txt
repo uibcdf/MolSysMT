@@ -1,0 +1,85 @@
+molsysmt.element.molecule package
+=================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   molsysmt.element.molecule.dna
+   molsysmt.element.molecule.ion
+   molsysmt.element.molecule.lipid
+   molsysmt.element.molecule.oligosaccharide
+   molsysmt.element.molecule.peptide
+   molsysmt.element.molecule.protein
+   molsysmt.element.molecule.rna
+   molsysmt.element.molecule.small_molecule
+   molsysmt.element.molecule.water
+
+Submodules
+----------
+
+molsysmt.element.molecule.get\_molecule\_id\_from\_molecule module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_id_from_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_molecule\_index\_from\_atom module
+-----------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_index_from_atom
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_molecule\_name\_from\_molecule module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_name_from_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_molecule\_type\_from\_group\_names module
+------------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_type_from_group_names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_molecule\_type\_from\_molecule module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_type_from_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_molecule\_type\_from\_sequence module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_molecule_type_from_sequence
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.molecule.get\_n\_molecules\_from\_system module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.element.molecule.get_n_molecules_from_system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
