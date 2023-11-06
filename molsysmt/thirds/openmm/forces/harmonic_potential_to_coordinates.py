@@ -3,10 +3,11 @@ from molsysmt import pyunitwizard as puw
 
 @digest()
 def harmonic_potential_to_coordinates(molecular_system=None, selection='all', force_constant=None,
-        coordinates_minimum=None, pbc=False, adding_force=False, syntax='MolSysMT'):
+        coordinates_minimum=None, pbc=True, center_of_atoms=False, weights=None, adding_force=False,
+        syntax='MolSysMT'):
 
     from molsysmt import select, get, get_form
-    from openmm import CustomExternalForce
+    from molsysmt.pbc import has_pbc
     from openmm import unit as u
 
     if molecular_system is not None:
@@ -14,33 +15,44 @@ def harmonic_potential_to_coordinates(molecular_system=None, selection='all', fo
     else:
         atom_indices = selection
 
-    if coordinates_minimum is None:
-        if molecular_system is not None:
-            coordinates_minimum = get(molecular_system, element='atom', selection=atom_indices,
-                    coordinates=True)[0]
-
-    force_constant = puw.convert(force_constant, to_unit=u.kilojoule_per_mole/(u.nanometer**2), to_form='openmm.unit')
-    coordinates_minimum = puw.convert(coordinates_minimum, to_unit=u.nanometer, to_form='openmm.unit')
-
     if pbc:
-        potential = "0.5*k*periodicdistance(x, y, z, x0, y0, z0)^2"
+        pbc = has_pbc(molecular_system)
+
+    if not center_of_atoms:
+
+        from openmm import CustomExternalForce
+
+        if coordinates_minimum is None:
+            if molecular_system is not None:
+                coordinates_minimum = get(molecular_system, element='atom', selection=atom_indices,
+                        coordinates=True)[0]
+
+        force_constant = puw.convert(force_constant, to_unit=u.kilojoule_per_mole/(u.nanometer**2), to_form='openmm.unit')
+        coordinates_minimum = puw.convert(coordinates_minimum, to_unit=u.nanometer, to_form='openmm.unit')
+
+        if pbc:
+            potential = "0.5*k*periodicdistance(x, y, z, x0, y0, z0)^2"
+        else:
+            potential = "0.5*k*((x-x0)^2 + (y-y0)^2 + (z-z0)^2)"
+
+        force = CustomExternalForce(potential)
+        force.addGlobalParameter('k', force_constant)
+        force.addPerParticleParameter('x0')
+        force.addPerParticleParameter('y0')
+        force.addPerParticleParameter('z0')
+
+        n_atoms_in_coordinates_minimum = coordinates_minimum.shape[0]
+
+        if n_atoms_in_coordinates_minimum == 1:
+            for ii, atom_index in enumerate(atom_indices):
+                force.addParticle(atom_index, coordinates_minimum[0])
+        else:
+            for ii, atom_index in enumerate(atom_indices):
+                force.addParticle(atom_index, coordinates_minimum[ii])
+
     else:
-        potential = "0.5*k*((x-x0)^2 + (y-y0)^2 + (z-z0)^2)"
 
-    force = CustomExternalForce(potential)
-    force.addGlobalParameter('k', force_constant)
-    force.addPerParticleParameter('x0')
-    force.addPerParticleParameter('y0')
-    force.addPerParticleParameter('z0')
-
-    n_atoms_in_coordinates_minimum = coordinates_minimum.shape[0]
-
-    if n_atoms_in_coordinates_minimum == 1:
-        for ii, atom_index in enumerate(atom_indices):
-            force.addParticle(atom_index, coordinates_minimum[0])
-    else:
-        for ii, atom_index in enumerate(atom_indices):
-            force.addParticle(atom_index, coordinates_minimum[ii])
+        pass
 
     if adding_force:
         form_in = get_form(molecular_system)
