@@ -1,0 +1,29 @@
+molsysmt.native.io.card package
+===============================
+
+Submodules
+----------
+
+molsysmt.native.io.card.file\_mmtf module
+-----------------------------------------
+
+.. automodule:: molsysmt.native.io.card.file_mmtf
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.io.card.id\_pdb module
+--------------------------------------
+
+.. automodule:: molsysmt.native.io.card.id_pdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.native.io.card
+   :members:
+   :undoc-members:
+   :show-inheritance:

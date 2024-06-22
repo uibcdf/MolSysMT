@@ -1,0 +1,21 @@
+molsysmt.element.chain package
+==============================
+
+Submodules
+----------
+
+molsysmt.element.chain.get\_chain\_type module
+----------------------------------------------
+
+.. automodule:: molsysmt.element.chain.get_chain_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.chain
+   :members:
+   :undoc-members:
+   :show-inheritance:

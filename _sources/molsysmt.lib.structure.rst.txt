@@ -1,0 +1,157 @@
+molsysmt.lib.structure package
+==============================
+
+Submodules
+----------
+
+molsysmt.lib.structure.flip module
+----------------------------------
+
+.. automodule:: molsysmt.lib.structure.flip
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_angles module
+-----------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_center module
+-----------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_center
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_dihedral\_angles module
+---------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_distances module
+--------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_distances
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_least\_rmsd module
+----------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_least_rmsd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_least\_rmsd\_rotation\_and\_translation module
+--------------------------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_least_rmsd_rotation_and_translation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_mic\_angles module
+----------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_mic_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_mic\_dihedral\_angles module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_mic_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_mic\_distances module
+-------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_mic_distances
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_principal\_geometric\_axes module
+-------------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_principal_geometric_axes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_principal\_inertia\_axes module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_principal_inertia_axes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.get\_rmsd module
+---------------------------------------
+
+.. automodule:: molsysmt.lib.structure.get_rmsd
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.principal\_component\_analysis module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.principal_component_analysis
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.set\_dihedral\_angles module
+---------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.set_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.set\_mic\_dihedral\_angles module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.set_mic_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.shift\_dihedral\_angles module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.shift_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.lib.structure.shift\_mic\_dihedral\_angles module
+----------------------------------------------------------
+
+.. automodule:: molsysmt.lib.structure.shift_mic_dihedral_angles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.lib.structure
+   :members:
+   :undoc-members:
+   :show-inheritance:

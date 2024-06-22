@@ -1,0 +1,29 @@
+molsysmt.element.entity.protein package
+=======================================
+
+Submodules
+----------
+
+molsysmt.element.entity.protein.get\_name\_from\_mmtf\_name module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.protein.get_name_from_mmtf_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.protein.names module
+--------------------------------------------
+
+.. automodule:: molsysmt.element.entity.protein.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity.protein
+   :members:
+   :undoc-members:
+   :show-inheritance:

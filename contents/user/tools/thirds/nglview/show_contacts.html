@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../../../../_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-124x124.png" sizes="124x124" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-128x128.png" sizes="128x128" rel="icon" type="image/png">
+    <link href="../../../../../_static/favicon-192x192.png" sizes="192x192" rel="icon" type="image/png">
+    <link href="../../../../../_static/icon.svg" rel="icon" type="image/svg+xml">
+    <title>Show contacts &#8212; MolSysMT 0.9.1+25.gc6df64de documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx_tabs.css?v=f45e19d3" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d5ef24d1" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d5ef24d1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=4cae6f8c"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nglview-js-widgets@3.1.0/dist/index.js"></script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"b9743d357f6b468a9d9bdf85a4c96318": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5e94faf7b03c42889b65d439689bb26b": {"model_name": "ColormakerRegistryModel", "model_module": "nglview-js-widgets", "model_module_version": "3.1.0", "state": {"_dom_classes": [], "_model_module": "nglview-js-widgets", "_model_module_version": "3.1.0", "_model_name": "ColormakerRegistryModel", "_msg_ar": [], "_msg_q": [], "_ready": false, "_view_count": null, "_view_module": "nglview-js-widgets", "_view_module_version": "3.1.0", "_view_name": "ColormakerRegistryView", "layout": "IPY_MODEL_b9743d357f6b468a9d9bdf85a4c96318", "tabbable": null, "tooltip": null}}, "b80c0440756a4f09a958c59d55c2d3fa": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9b2c1cce3790408fbd38f0284da550c1": {"model_name": "NGLModel", "model_module": "nglview-js-widgets", "model_module_version": "3.1.0", "state": {"_camera_orientation": [], "_camera_str": "orthographic", "_dom_classes": [], "_gui_theme": null, "_ibtn_fullscreen": "IPY_MODEL_5353166aae1f4b609e38b6edee037054", "_igui": null, "_iplayer": "IPY_MODEL_4c99f78079544ab9a1b83ccfb48cf94a", "_model_module": "nglview-js-widgets", "_model_module_version": "3.1.0", "_model_name": "NGLModel", "_ngl_color_dict": {}, "_ngl_coordinate_resource": {}, "_ngl_full_stage_parameters": {}, "_ngl_msg_archive": [{"target": "Stage", "type": "call_method", "methodName": "loadFile", "reconstruc_color_scheme": false, "args": [{"type": "blob", "data": "HEADER    MOLECULAR SYSTEM                        22-JUN-24       \nREMARK   1 Created by MolSysMT version 1.0 on 22-JUN-2024 at 23:06:04\nATOM      1 C    ACE 0  40       2.480  -9.938  -3.958  0.00  0.00           C\nATOM      2 O    ACE 0  40       2.977 -10.540  -4.910  0.00  0.00           O\nATOM      3 CH3  ACE 0  40       2.477  -8.705  -4.834  0.00  0.00           C\nATOM      4 H1   ACE 0  40       2.474  -8.918  -6.016  0.00  0.00           H\nATOM      5 H2   ACE 0  40       2.347  -7.512  -4.748  0.00  0.00           H\nATOM      6 H3   ACE 0  40       3.656  -8.585  -4.596  0.00  0.00           H\nATOM      7 N    MET 0  41       1.177 -10.035  -3.493  0.00  0.00           N\nATOM      8 H    MET 0  41       1.012 -11.153  -3.123  0.00  0.00           H\nATOM      9 CA   MET 0  41       0.292  -8.839  -3.377  0.00  0.00           C\nATOM     10 HA   MET 0  41       1.121  -8.035  -3.093  0.00  0.00           H\nATOM     11 C    MET 0  41      -0.488  -8.912  -2.063  0.00  0.00           C\nATOM     12 O    MET 0  41      -1.039  -9.937  -1.709  0.00  0.00           O\nATOM     13 CB   MET 0  41      -0.674  -8.793  -4.565  0.00  0.00           C\nATOM     14 HB2  MET 0  41      -1.818  -8.556  -4.319  0.00  0.00           H\nATOM     15 HB3  MET 0  41      -0.788  -9.868  -5.079  0.00  0.00           H\nATOM     16 CG   MET 0  41      -0.091  -7.889  -5.657  0.00  0.00           C\nATOM     17 HG2  MET 0  41       0.831  -7.422  -6.248  0.00  0.00           H\nATOM     18 HG3  MET 0  41      -0.682  -6.881  -5.385  0.00  0.00           H\nATOM     19 SD   MET 0  41      -0.153  -8.747  -7.255  0.00  0.00           S\nATOM     20 CE   MET 0  41      -0.971  -7.432  -8.193  0.00  0.00           C\nATOM     21 HE1  MET 0  41      -1.307  -8.225  -9.022  0.00  0.00           H\nATOM     22 HE2  MET 0  41      -0.230  -6.620  -8.659  0.00  0.00           H\nATOM     23 HE3  MET 0  41      -1.931  -6.879  -7.750  0.00  0.00           H\nATOM     24 N    LEU 0  42      -0.523  -7.832  -1.331  0.00  0.00           N\nATOM     25 H    LEU 0  42       0.057  -6.911  -1.810  0.00  0.00           H\nATOM     26 CA   LEU 0  42      -1.241  -7.824  -0.028  0.00  0.00           C\nATOM     27 HA   LEU 0  42      -0.783  -8.785   0.508  0.00  0.00           H\nATOM     28 C    LEU 0  42      -2.736  -8.045  -0.241  0.00  0.00           C\nATOM     29 O    LEU 0  42      -3.467  -7.134  -0.574  0.00  0.00           O\nATOM     30 CB   LEU 0  42      -1.019  -6.479   0.660  0.00  0.00           C\nATOM     31 HB2  LEU 0  42      -0.728  -5.938  -0.360  0.00  0.00           H\nATOM     32 HB3  LEU 0  42      -1.582  -5.574   1.166  0.00  0.00           H\nATOM     33 CG   LEU 0  42      -0.044  -6.671   1.819  0.00  0.00           C\nATOM     34 HG   LEU 0  42      -0.109  -7.711   2.405  0.00  0.00           H\nATOM     35 CD1  LEU 0  42       1.375  -6.825   1.270  0.00  0.00           C\nATOM     36 HD11 LEU 0  42       1.794  -5.905   0.627  0.00  0.00           H\nATOM     37 HD12 LEU 0  42       1.629  -7.675   0.457  0.00  0.00           H\nATOM     38 HD13 LEU 0  42       2.139  -7.264   2.081  0.00  0.00           H\nATOM     39 CD2  LEU 0  42      -0.107  -5.458   2.749  0.00  0.00           C\nATOM     40 HD21 LEU 0  42      -1.082  -5.818   3.318  0.00  0.00           H\nATOM     41 HD22 LEU 0  42       0.325  -4.521   2.158  0.00  0.00           H\nATOM     42 HD23 LEU 0  42       0.738  -5.813   3.511  0.00  0.00           H\nATOM     43 N    SER 0  43      -3.200  -9.245  -0.031  0.00  0.00           N\nATOM     44 H    SER 0  43      -2.601 -10.248  -0.264  0.00  0.00           H\nATOM     45 CA   SER 0  43      -4.651  -9.514  -0.199  0.00  0.00           C\nATOM     46 HA   SER 0  43      -4.937  -9.290  -1.337  0.00  0.00           H\nATOM     47 C    SER 0  43      -5.409  -8.677   0.829  0.00  0.00           C\nATOM     48 O    SER 0  43      -4.872  -8.326   1.858  0.00  0.00           O\nATOM     49 CB   SER 0  43      -4.927 -10.999   0.040  0.00  0.00           C\nATOM     50 HB2  SER 0  43      -6.011 -11.388   0.359  0.00  0.00           H\nATOM     51 HB3  SER 0  43      -4.806 -11.650  -0.962  0.00  0.00           H\nATOM     52 OG   SER 0  43      -3.870 -11.553   0.812  0.00  0.00           O\nATOM     53 HG   SER 0  43      -4.293 -11.989   1.829  0.00  0.00           H\nATOM     54 N    ASP 0  44      -6.640  -8.346   0.567  0.00  0.00           N\nATOM     55 H    ASP 0  44      -7.148  -8.707  -0.446  0.00  0.00           H\nATOM     56 CA   ASP 0  44      -7.413  -7.518   1.539  0.00  0.00           C\nATOM     57 HA   ASP 0  44      -7.260  -6.358   1.315  0.00  0.00           H\nATOM     58 C    ASP 0  44      -6.988  -7.854   2.975  0.00  0.00           C\nATOM     59 O    ASP 0  44      -6.282  -7.101   3.614  0.00  0.00           O\nATOM     60 CB   ASP 0  44      -8.906  -7.804   1.367  0.00  0.00           C\nATOM     61 HB2  ASP 0  44      -9.573  -7.431   2.289  0.00  0.00           H\nATOM     62 HB3  ASP 0  44      -9.393  -8.846   1.034  0.00  0.00           H\nATOM     63 CG   ASP 0  44      -9.451  -6.972   0.204  0.00  0.00           C\nATOM     64 OD1  ASP 0  44      -8.745  -6.836  -0.781  0.00  0.00           O\nATOM     65 OD2  ASP 0  44     -10.564  -6.485   0.319  0.00  0.00           O\nATOM     66 N    GLU 0  45      -7.424  -8.973   3.486  0.00  0.00           N\nATOM     67 H    GLU 0  45      -7.897  -9.806   2.785  0.00  0.00           H\nATOM     68 CA   GLU 0  45      -7.065  -9.365   4.887  0.00  0.00           C\nATOM     69 HA   GLU 0  45      -7.876  -8.898   5.624  0.00  0.00           H\nATOM     70 C    GLU 0  45      -5.631  -8.936   5.230  0.00  0.00           C\nATOM     71 O    GLU 0  45      -5.414  -8.125   6.108  0.00  0.00           O\nATOM     72 CB   GLU 0  45      -7.175 -10.885   5.044  0.00  0.00           C\nATOM     73 HB2  GLU 0  45      -6.820 -10.999   6.184  0.00  0.00           H\nATOM     74 HB3  GLU 0  45      -6.585 -11.787   4.522  0.00  0.00           H\nATOM     75 CG   GLU 0  45      -8.599 -11.341   4.738  0.00  0.00           C\nATOM     76 HG2  GLU 0  45      -9.559 -10.631   4.792  0.00  0.00           H\nATOM     77 HG3  GLU 0  45      -8.738 -12.016   3.756  0.00  0.00           H\nATOM     78 CD   GLU 0  45      -9.041 -12.354   5.797  0.00  0.00           C\nATOM     79 OE1  GLU 0  45      -8.236 -12.676   6.657  0.00  0.00           O\nATOM     80 OE2  GLU 0  45     -10.176 -12.792   5.728  0.00  0.00           O\nATOM     81 N    ASP 0  46      -4.648  -9.484   4.564  0.00  0.00           N\nATOM     82 H    ASP 0  46      -4.740 -10.562   4.079  0.00  0.00           H\nATOM     83 CA   ASP 0  46      -3.236  -9.113   4.886  0.00  0.00           C\nATOM     84 HA   ASP 0  46      -2.982  -9.617   5.939  0.00  0.00           H\nATOM     85 C    ASP 0  46      -3.114  -7.591   4.981  0.00  0.00           C\nATOM     86 O    ASP 0  46      -2.715  -7.058   5.995  0.00  0.00           O\nATOM     87 CB   ASP 0  46      -2.308  -9.640   3.788  0.00  0.00           C\nATOM     88 HB2  ASP 0  46      -2.310  -9.823   2.613  0.00  0.00           H\nATOM     89 HB3  ASP 0  46      -1.273  -9.161   4.144  0.00  0.00           H\nATOM     90 CG   ASP 0  46      -1.888 -11.074   4.117  0.00  0.00           C\nATOM     91 OD1  ASP 0  46      -2.768 -11.908   4.268  0.00  0.00           O\nATOM     92 OD2  ASP 0  46      -0.696 -11.315   4.213  0.00  0.00           O\nATOM     93 N    PHE 0  47      -3.473  -6.885   3.946  0.00  0.00           N\nATOM     94 H    PHE 0  47      -3.210  -7.321   2.877  0.00  0.00           H\nATOM     95 CA   PHE 0  47      -3.401  -5.399   4.003  0.00  0.00           C\nATOM     96 HA   PHE 0  47      -2.524  -4.619   3.862  0.00  0.00           H\nATOM     97 C    PHE 0  47      -3.924  -4.947   5.350  0.00  0.00           C\nATOM     98 O    PHE 0  47      -3.261  -4.261   6.100  0.00  0.00           O\nATOM     99 CB   PHE 0  47      -4.308  -4.823   2.927  0.00  0.00           C\nATOM    100 HB2  PHE 0  47      -5.499  -4.702   2.867  0.00  0.00           H\nATOM    101 HB3  PHE 0  47      -4.248  -5.376   1.868  0.00  0.00           H\nATOM    102 CG   PHE 0  47      -3.956  -3.376   2.699  0.00  0.00           C\nATOM    103 CD1  PHE 0  47      -2.968  -3.019   1.772  0.00  0.00           C\nATOM    104 HD1  PHE 0  47      -2.481  -3.867   1.122  0.00  0.00           H\nATOM    105 CD2  PHE 0  47      -4.615  -2.388   3.437  0.00  0.00           C\nATOM    106 HD2  PHE 0  47      -5.547  -2.615   4.135  0.00  0.00           H\nATOM    107 CE1  PHE 0  47      -2.647  -1.670   1.587  0.00  0.00           C\nATOM    108 HE1  PHE 0  47      -1.712  -1.070   1.179  0.00  0.00           H\nATOM    109 CE2  PHE 0  47      -4.289  -1.044   3.250  0.00  0.00           C\nATOM    110 HE2  PHE 0  47      -4.720  -0.276   4.038  0.00  0.00           H\nATOM    111 CZ   PHE 0  47      -3.305  -0.687   2.327  0.00  0.00           C\nATOM    112 HZ   PHE 0  47      -2.938   0.410   2.572  0.00  0.00           H\nATOM    113 N    LYS 0  48      -5.125  -5.331   5.634  0.00  0.00           N\nATOM    114 H    LYS 0  48      -6.069  -5.125   4.941  0.00  0.00           H\nATOM    115 CA   LYS 0  48      -5.767  -4.949   6.925  0.00  0.00           C\nATOM    116 HA   LYS 0  48      -6.056  -3.792   6.905  0.00  0.00           H\nATOM    117 C    LYS 0  48      -4.723  -4.927   8.050  0.00  0.00           C\nATOM    118 O    LYS 0  48      -4.461  -3.897   8.642  0.00  0.00           O\nATOM    119 CB   LYS 0  48      -6.869  -5.956   7.271  0.00  0.00           C\nATOM    120 HB2  LYS 0  48      -7.263  -6.587   6.343  0.00  0.00           H\nATOM    121 HB3  LYS 0  48      -6.723  -6.726   8.174  0.00  0.00           H\nATOM    122 CG   LYS 0  48      -8.076  -5.200   7.828  0.00  0.00           C\nATOM    123 HG2  LYS 0  48      -8.042  -5.133   9.025  0.00  0.00           H\nATOM    124 HG3  LYS 0  48      -8.150  -4.043   7.537  0.00  0.00           H\nATOM    125 CD   LYS 0  48      -9.377  -5.878   7.381  0.00  0.00           C\nATOM    126 HD2  LYS 0  48      -9.476  -6.264   6.252  0.00  0.00           H\nATOM    127 HD3  LYS 0  48      -9.538  -6.874   8.024  0.00  0.00           H\nATOM    128 CE   LYS 0  48     -10.520  -4.860   7.425  0.00  0.00           C\nATOM    129 HE2  LYS 0  48     -11.294  -5.062   6.533  0.00  0.00           H\nATOM    130 HE3  LYS 0  48     -10.396  -3.676   7.293  0.00  0.00           H\nATOM    131 NZ   LYS 0  48     -11.330  -5.058   8.661  0.00  0.00           N\nATOM    132 HZ1  LYS 0  48     -12.458  -4.679   8.494  0.00  0.00           H\nATOM    133 HZ2  LYS 0  48     -11.550  -6.135   9.141  0.00  0.00           H\nATOM    134 HZ3  LYS 0  48     -10.973  -4.386   9.588  0.00  0.00           H\nATOM    135 N    ALA 0  49      -4.130  -6.052   8.358  0.00  0.00           N\nATOM    136 H    ALA 0  49      -4.459  -7.166   8.121  0.00  0.00           H\nATOM    137 CA   ALA 0  49      -3.109  -6.090   9.450  0.00  0.00           C\nATOM    138 HA   ALA 0  49      -3.442  -5.490  10.428  0.00  0.00           H\nATOM    139 C    ALA 0  49      -1.767  -5.565   8.932  0.00  0.00           C\nATOM    140 O    ALA 0  49      -0.720  -6.085   9.262  0.00  0.00           O\nATOM    141 CB   ALA 0  49      -2.931  -7.534   9.928  0.00  0.00           C\nATOM    142 HB1  ALA 0  49      -2.568  -7.490  11.074  0.00  0.00           H\nATOM    143 HB2  ALA 0  49      -2.117  -8.286   9.469  0.00  0.00           H\nATOM    144 HB3  ALA 0  49      -3.886  -8.244  10.086  0.00  0.00           H\nATOM    145 N    VAL 0  50      -1.787  -4.543   8.123  0.00  0.00           N\nATOM    146 H    VAL 0  50      -2.155  -3.694   8.878  0.00  0.00           H\nATOM    147 CA   VAL 0  50      -0.514  -3.998   7.587  0.00  0.00           C\nATOM    148 HA   VAL 0  50       0.341  -4.127   8.412  0.00  0.00           H\nATOM    149 C    VAL 0  50      -0.582  -2.467   7.545  0.00  0.00           C\nATOM    150 O    VAL 0  50      -0.049  -1.793   8.404  0.00  0.00           O\nATOM    151 CB   VAL 0  50      -0.291  -4.552   6.183  0.00  0.00           C\nATOM    152 HB   VAL 0  50      -1.217  -4.441   5.463  0.00  0.00           H\nATOM    153 CG1  VAL 0  50       0.935  -3.888   5.559  0.00  0.00           C\nATOM    154 HG11 VAL 0  50       1.764  -4.583   6.064  0.00  0.00           H\nATOM    155 HG12 VAL 0  50       1.101  -2.765   5.935  0.00  0.00           H\nATOM    156 HG13 VAL 0  50       0.776  -3.616   4.413  0.00  0.00           H\nATOM    157 CG2  VAL 0  50      -0.064  -6.066   6.275  0.00  0.00           C\nATOM    158 HG21 VAL 0  50       0.809  -6.228   7.093  0.00  0.00           H\nATOM    159 HG22 VAL 0  50      -0.821  -6.855   6.765  0.00  0.00           H\nATOM    160 HG23 VAL 0  50       0.428  -6.832   5.493  0.00  0.00           H\nATOM    161 N    PHE 0  51      -1.236  -1.910   6.562  0.00  0.00           N\nATOM    162 H    PHE 0  51      -2.304  -2.347   6.310  0.00  0.00           H\nATOM    163 CA   PHE 0  51      -1.330  -0.424   6.489  0.00  0.00           C\nATOM    164 HA   PHE 0  51      -0.428   0.234   6.900  0.00  0.00           H\nATOM    165 C    PHE 0  51      -2.411   0.061   7.451  0.00  0.00           C\nATOM    166 O    PHE 0  51      -2.139   0.642   8.482  0.00  0.00           O\nATOM    167 CB   PHE 0  51      -1.736   0.011   5.084  0.00  0.00           C\nATOM    168 HB2  PHE 0  51      -2.905  -0.040   4.914  0.00  0.00           H\nATOM    169 HB3  PHE 0  51      -1.663   1.207   5.129  0.00  0.00           H\nATOM    170 CG   PHE 0  51      -0.689  -0.385   4.079  0.00  0.00           C\nATOM    171 CD1  PHE 0  51       0.391   0.463   3.821  0.00  0.00           C\nATOM    172 HD1  PHE 0  51       0.635   1.343   4.575  0.00  0.00           H\nATOM    173 CD2  PHE 0  51      -0.820  -1.585   3.379  0.00  0.00           C\nATOM    174 HD2  PHE 0  51      -1.466  -2.415   3.912  0.00  0.00           H\nATOM    175 CE1  PHE 0  51       1.344   0.107   2.863  0.00  0.00           C\nATOM    176 HE1  PHE 0  51       2.448   0.520   2.917  0.00  0.00           H\nATOM    177 CE2  PHE 0  51       0.126  -1.940   2.415  0.00  0.00           C\nATOM    178 HE2  PHE 0  51       0.115  -2.556   1.400  0.00  0.00           H\nATOM    179 CZ   PHE 0  51       1.210  -1.095   2.156  0.00  0.00           C\nATOM    180 HZ   PHE 0  51       1.875  -1.224   1.178  0.00  0.00           H\nATOM    181 N    GLY 0  52      -3.645  -0.171   7.096  0.00  0.00           N\nATOM    182 H    GLY 0  52      -4.138  -1.208   6.782  0.00  0.00           H\nATOM    183 CA   GLY 0  52      -4.783   0.272   7.945  0.00  0.00           C\nATOM    184 HA2  GLY 0  52      -4.625   1.309   8.518  0.00  0.00           H\nATOM    185 HA3  GLY 0  52      -5.100  -0.477   8.826  0.00  0.00           H\nATOM    186 C    GLY 0  52      -6.003   0.457   7.041  0.00  0.00           C\nATOM    187 O    GLY 0  52      -7.047  -0.126   7.258  0.00  0.00           O\nATOM    188 N    MET 0  53      -5.867   1.254   6.016  0.00  0.00           N\nATOM    189 H    MET 0  53      -4.932   1.987   6.013  0.00  0.00           H\nATOM    190 CA   MET 0  53      -7.005   1.470   5.080  0.00  0.00           C\nATOM    191 HA   MET 0  53      -8.089   1.304   5.558  0.00  0.00           H\nATOM    192 C    MET 0  53      -6.922   0.435   3.952  0.00  0.00           C\nATOM    193 O    MET 0  53      -6.919  -0.756   4.193  0.00  0.00           O\nATOM    194 CB   MET 0  53      -6.923   2.886   4.503  0.00  0.00           C\nATOM    195 HB2  MET 0  53      -6.053   3.468   3.928  0.00  0.00           H\nATOM    196 HB3  MET 0  53      -8.012   3.125   4.065  0.00  0.00           H\nATOM    197 CG   MET 0  53      -6.831   3.890   5.656  0.00  0.00           C\nATOM    198 HG2  MET 0  53      -5.802   4.238   6.147  0.00  0.00           H\nATOM    199 HG3  MET 0  53      -7.601   3.742   6.559  0.00  0.00           H\nATOM    200 SD   MET 0  53      -7.798   5.365   5.255  0.00  0.00           S\nATOM    201 CE   MET 0  53      -6.600   6.587   5.842  0.00  0.00           C\nATOM    202 HE1  MET 0  53      -6.516   6.635   7.032  0.00  0.00           H\nATOM    203 HE2  MET 0  53      -5.542   6.759   5.320  0.00  0.00           H\nATOM    204 HE3  MET 0  53      -7.349   7.454   5.501  0.00  0.00           H\nATOM    205 N    THR 0  54      -6.838   0.873   2.724  0.00  0.00           N\nATOM    206 H    THR 0  54      -6.367   1.924   2.463  0.00  0.00           H\nATOM    207 CA   THR 0  54      -6.738  -0.094   1.592  0.00  0.00           C\nATOM    208 HA   THR 0  54      -6.756  -1.218   1.980  0.00  0.00           H\nATOM    209 C    THR 0  54      -5.503   0.244   0.768  0.00  0.00           C\nATOM    210 O    THR 0  54      -4.976   1.331   0.860  0.00  0.00           O\nATOM    211 CB   THR 0  54      -7.985   0.011   0.708  0.00  0.00           C\nATOM    212 HB   THR 0  54      -7.947   0.308  -0.446  0.00  0.00           H\nATOM    213 OG1  THR 0  54      -8.899   0.934   1.280  0.00  0.00           O\nATOM    214 HG1  THR 0  54      -8.671   2.002   0.848  0.00  0.00           H\nATOM    215 CG2  THR 0  54      -8.652  -1.360   0.594  0.00  0.00           C\nATOM    216 HG21 THR 0  54      -8.189  -2.431   0.321  0.00  0.00           H\nATOM    217 HG22 THR 0  54      -9.512  -1.334  -0.248  0.00  0.00           H\nATOM    218 HG23 THR 0  54      -9.338  -1.575   1.557  0.00  0.00           H\nATOM    219 N    ARG 0  55      -5.033  -0.659  -0.047  0.00  0.00           N\nATOM    220 H    ARG 0  55      -5.656  -1.664  -0.167  0.00  0.00           H\nATOM    221 CA   ARG 0  55      -3.852  -0.344  -0.865  0.00  0.00           C\nATOM    222 HA   ARG 0  55      -2.832   0.027  -0.401  0.00  0.00           H\nATOM    223 C    ARG 0  55      -4.267   0.735  -1.866  0.00  0.00           C\nATOM    224 O    ARG 0  55      -3.572   1.710  -2.070  0.00  0.00           O\nATOM    225 CB   ARG 0  55      -3.395  -1.613  -1.580  0.00  0.00           C\nATOM    226 HB2  ARG 0  55      -4.306  -2.377  -1.688  0.00  0.00           H\nATOM    227 HB3  ARG 0  55      -3.293  -1.243  -2.716  0.00  0.00           H\nATOM    228 CG   ARG 0  55      -1.950  -1.930  -1.173  0.00  0.00           C\nATOM    229 HG2  ARG 0  55      -1.641  -2.849  -0.496  0.00  0.00           H\nATOM    230 HG3  ARG 0  55      -1.097  -1.101  -1.048  0.00  0.00           H\nATOM    231 CD   ARG 0  55      -1.181  -2.510  -2.362  0.00  0.00           C\nATOM    232 HD2  ARG 0  55      -0.207  -3.189  -2.220  0.00  0.00           H\nATOM    233 HD3  ARG 0  55      -0.715  -1.718  -3.133  0.00  0.00           H\nATOM    234 NE   ARG 0  55      -2.127  -3.218  -3.281  0.00  0.00           N\nATOM    235 HE   ARG 0  55      -1.909  -3.168  -4.453  0.00  0.00           H\nATOM    236 CZ   ARG 0  55      -2.969  -4.110  -2.831  0.00  0.00           C\nATOM    237 NH1  ARG 0  55      -2.873  -4.557  -1.609  0.00  0.00           N\nATOM    238 HH11 ARG 0  55      -2.379  -5.618  -1.854  0.00  0.00           H\nATOM    239 HH12 ARG 0  55      -3.911  -4.606  -1.014  0.00  0.00           H\nATOM    240 NH2  ARG 0  55      -3.874  -4.606  -3.630  0.00  0.00           N\nATOM    241 HH21 ARG 0  55      -3.971  -5.673  -4.155  0.00  0.00           H\nATOM    242 HH22 ARG 0  55      -4.745  -3.993  -4.169  0.00  0.00           H\nATOM    243 N    SER 0  56      -5.424   0.590  -2.458  0.00  0.00           N\nATOM    244 H    SER 0  56      -5.829  -0.466  -2.830  0.00  0.00           H\nATOM    245 CA   SER 0  56      -5.903   1.628  -3.412  0.00  0.00           C\nATOM    246 HA   SER 0  56      -5.226   1.630  -4.395  0.00  0.00           H\nATOM    247 C    SER 0  56      -5.852   2.984  -2.709  0.00  0.00           C\nATOM    248 O    SER 0  56      -5.160   3.888  -3.132  0.00  0.00           O\nATOM    249 CB   SER 0  56      -7.342   1.319  -3.829  0.00  0.00           C\nATOM    250 HB2  SER 0  56      -8.268   2.055  -3.655  0.00  0.00           H\nATOM    251 HB3  SER 0  56      -7.847   0.258  -3.609  0.00  0.00           H\nATOM    252 OG   SER 0  56      -7.410   1.228  -5.246  0.00  0.00           O\nATOM    253 HG   SER 0  56      -7.685   2.276  -5.728  0.00  0.00           H\nATOM    254 N    ALA 0  57      -6.563   3.127  -1.620  0.00  0.00           N\nATOM    255 H    ALA 0  57      -7.637   2.627  -1.567  0.00  0.00           H\nATOM    256 CA   ALA 0  57      -6.531   4.418  -0.879  0.00  0.00           C\nATOM    257 HA   ALA 0  57      -7.090   5.147  -1.643  0.00  0.00           H\nATOM    258 C    ALA 0  57      -5.098   4.662  -0.409  0.00  0.00           C\nATOM    259 O    ALA 0  57      -4.613   5.776  -0.400  0.00  0.00           O\nATOM    260 CB   ALA 0  57      -7.464   4.346   0.332  0.00  0.00           C\nATOM    261 HB1  ALA 0  57      -7.627   5.517   0.576  0.00  0.00           H\nATOM    262 HB2  ALA 0  57      -8.607   4.138   0.024  0.00  0.00           H\nATOM    263 HB3  ALA 0  57      -7.329   4.061   1.484  0.00  0.00           H\nATOM    264 N    PHE 0  58      -4.416   3.617  -0.022  0.00  0.00           N\nATOM    265 H    PHE 0  58      -4.955   3.456   1.026  0.00  0.00           H\nATOM    266 CA   PHE 0  58      -3.006   3.761   0.443  0.00  0.00           C\nATOM    267 HA   PHE 0  58      -3.062   4.414   1.440  0.00  0.00           H\nATOM    268 C    PHE 0  58      -2.204   4.557  -0.585  0.00  0.00           C\nATOM    269 O    PHE 0  58      -1.238   5.217  -0.260  0.00  0.00           O\nATOM    270 CB   PHE 0  58      -2.397   2.371   0.590  0.00  0.00           C\nATOM    271 HB2  PHE 0  58      -2.759   2.195   1.707  0.00  0.00           H\nATOM    272 HB3  PHE 0  58      -2.355   2.040  -0.544  0.00  0.00           H\nATOM    273 CG   PHE 0  58      -0.905   2.469   0.788  0.00  0.00           C\nATOM    274 CD1  PHE 0  58      -0.386   3.134   1.905  0.00  0.00           C\nATOM    275 HD1  PHE 0  58      -0.954   3.321   2.932  0.00  0.00           H\nATOM    276 CD2  PHE 0  58      -0.039   1.885  -0.144  0.00  0.00           C\nATOM    277 HD2  PHE 0  58      -0.287   1.605  -1.272  0.00  0.00           H\nATOM    278 CE1  PHE 0  58       1.000   3.215   2.088  0.00  0.00           C\nATOM    279 HE1  PHE 0  58       1.182   4.393   2.080  0.00  0.00           H\nATOM    280 CE2  PHE 0  58       1.345   1.967   0.038  0.00  0.00           C\nATOM    281 HE2  PHE 0  58       1.851   1.645  -0.987  0.00  0.00           H\nATOM    282 CZ   PHE 0  58       1.865   2.633   1.155  0.00  0.00           C\nATOM    283 HZ   PHE 0  58       2.908   3.066   1.490  0.00  0.00           H\nATOM    284 N    ALA 0  59      -2.591   4.491  -1.824  0.00  0.00           N\nATOM    285 H    ALA 0  59      -3.567   4.370  -2.466  0.00  0.00           H\nATOM    286 CA   ALA 0  59      -1.848   5.239  -2.878  0.00  0.00           C\nATOM    287 HA   ALA 0  59      -0.673   5.262  -2.697  0.00  0.00           H\nATOM    288 C    ALA 0  59      -2.368   6.679  -2.961  0.00  0.00           C\nATOM    289 O    ALA 0  59      -2.321   7.304  -4.002  0.00  0.00           O\nATOM    290 CB   ALA 0  59      -2.048   4.549  -4.228  0.00  0.00           C\nATOM    291 HB1  ALA 0  59      -1.187   4.976  -4.958  0.00  0.00           H\nATOM    292 HB2  ALA 0  59      -3.066   4.635  -4.864  0.00  0.00           H\nATOM    293 HB3  ALA 0  59      -1.666   3.407  -4.287  0.00  0.00           H\nATOM    294 N    ASN 0  60      -2.857   7.216  -1.873  0.00  0.00           N\nATOM    295 H    ASN 0  60      -2.890   6.957  -0.719  0.00  0.00           H\nATOM    296 CA   ASN 0  60      -3.367   8.618  -1.899  0.00  0.00           C\nATOM    297 HA   ASN 0  60      -3.431   9.172  -2.955  0.00  0.00           H\nATOM    298 C    ASN 0  60      -2.388   9.519  -1.142  0.00  0.00           C\nATOM    299 O    ASN 0  60      -2.412  10.726  -1.267  0.00  0.00           O\nATOM    300 CB   ASN 0  60      -4.746   8.682  -1.236  0.00  0.00           C\nATOM    301 HB2  ASN 0  60      -5.024   9.848  -1.209  0.00  0.00           H\nATOM    302 HB3  ASN 0  60      -5.060   8.429  -0.110  0.00  0.00           H\nATOM    303 CG   ASN 0  60      -5.773   7.988  -2.133  0.00  0.00           C\nATOM    304 OD1  ASN 0  60      -5.713   6.791  -2.328  0.00  0.00           O\nATOM    305 ND2  ASN 0  60      -6.720   8.699  -2.690  0.00  0.00           N\nATOM    306 HD21 ASN 0  60      -6.940   9.859  -2.846  0.00  0.00           H\nATOM    307 HD22 ASN 0  60      -7.616   8.161  -3.263  0.00  0.00           H\nATOM    308 N    LEU 0  61      -1.516   8.933  -0.365  0.00  0.00           N\nATOM    309 H    LEU 0  61      -0.892   8.117  -0.960  0.00  0.00           H\nATOM    310 CA   LEU 0  61      -0.519   9.746   0.388  0.00  0.00           C\nATOM    311 HA   LEU 0  61      -1.150  10.695   0.746  0.00  0.00           H\nATOM    312 C    LEU 0  61       0.613  10.128  -0.576  0.00  0.00           C\nATOM    313 O    LEU 0  61       0.644   9.653  -1.695  0.00  0.00           O\nATOM    314 CB   LEU 0  61       0.034   8.918   1.558  0.00  0.00           C\nATOM    315 HB2  LEU 0  61       0.832   8.291   0.941  0.00  0.00           H\nATOM    316 HB3  LEU 0  61       0.333   9.617   2.472  0.00  0.00           H\nATOM    317 CG   LEU 0  61      -1.085   8.074   2.174  0.00  0.00           C\nATOM    318 HG   LEU 0  61      -2.176   8.251   1.724  0.00  0.00           H\nATOM    319 CD1  LEU 0  61      -0.623   6.619   2.290  0.00  0.00           C\nATOM    320 HD11 LEU 0  61       0.434   6.410   1.790  0.00  0.00           H\nATOM    321 HD12 LEU 0  61      -1.571   6.115   1.775  0.00  0.00           H\nATOM    322 HD13 LEU 0  61      -0.785   6.203   3.399  0.00  0.00           H\nATOM    323 CD2  LEU 0  61      -1.413   8.614   3.568  0.00  0.00           C\nATOM    324 HD21 LEU 0  61      -2.533   8.283   3.866  0.00  0.00           H\nATOM    325 HD22 LEU 0  61      -0.908   8.318   4.617  0.00  0.00           H\nATOM    326 HD23 LEU 0  61      -1.577   9.788   3.774  0.00  0.00           H\nATOM    327 N    PRO 0  62       1.506  10.976  -0.131  0.00  0.00           N\nATOM    328 CA   PRO 0  62       2.631  11.430  -0.968  0.00  0.00           C\nATOM    329 HA   PRO 0  62       2.082  12.032  -1.843  0.00  0.00           H\nATOM    330 C    PRO 0  62       3.461  10.229  -1.425  0.00  0.00           C\nATOM    331 O    PRO 0  62       3.585   9.251  -0.721  0.00  0.00           O\nATOM    332 CB   PRO 0  62       3.453  12.350  -0.059  0.00  0.00           C\nATOM    333 HB2  PRO 0  62       4.500  12.221  -0.608  0.00  0.00           H\nATOM    334 HB3  PRO 0  62       3.252  13.454  -0.493  0.00  0.00           H\nATOM    335 CG   PRO 0  62       2.690  12.484   1.283  0.00  0.00           C\nATOM    336 HG2  PRO 0  62       2.315  13.628   1.334  0.00  0.00           H\nATOM    337 HG3  PRO 0  62       3.068  12.544   2.412  0.00  0.00           H\nATOM    338 CD   PRO 0  62       1.474  11.547   1.225  0.00  0.00           C\nATOM    339 HD2  PRO 0  62       0.589  12.313   0.933  0.00  0.00           H\nATOM    340 HD3  PRO 0  62       1.133  11.517   2.373  0.00  0.00           H\nATOM    341 N    LEU 0  63       4.021  10.291  -2.604  0.00  0.00           N\nATOM    342 H    LEU 0  63       3.782  11.225  -3.303  0.00  0.00           H\nATOM    343 CA   LEU 0  63       4.831   9.145  -3.107  0.00  0.00           C\nATOM    344 HA   LEU 0  63       3.897   8.472  -3.393  0.00  0.00           H\nATOM    345 C    LEU 0  63       5.927   8.797  -2.105  0.00  0.00           C\nATOM    346 O    LEU 0  63       6.191   7.640  -1.845  0.00  0.00           O\nATOM    347 CB   LEU 0  63       5.465   9.516  -4.450  0.00  0.00           C\nATOM    348 HB2  LEU 0  63       6.600   9.900  -4.484  0.00  0.00           H\nATOM    349 HB3  LEU 0  63       5.027  10.466  -5.038  0.00  0.00           H\nATOM    350 CG   LEU 0  63       5.424   8.305  -5.385  0.00  0.00           C\nATOM    351 HG   LEU 0  63       6.074   8.618  -6.342  0.00  0.00           H\nATOM    352 CD1  LEU 0  63       5.981   7.081  -4.657  0.00  0.00           C\nATOM    353 HD11 LEU 0  63       7.066   7.416  -4.280  0.00  0.00           H\nATOM    354 HD12 LEU 0  63       6.338   6.429  -5.610  0.00  0.00           H\nATOM    355 HD13 LEU 0  63       5.364   6.169  -4.208  0.00  0.00           H\nATOM    356 CD2  LEU 0  63       3.978   8.034  -5.803  0.00  0.00           C\nATOM    357 HD21 LEU 0  63       3.544   9.043  -6.305  0.00  0.00           H\nATOM    358 HD22 LEU 0  63       2.888   7.586  -5.587  0.00  0.00           H\nATOM    359 HD23 LEU 0  63       4.147   7.385  -6.806  0.00  0.00           H\nATOM    360 N    TRP 0  64       6.565   9.774  -1.525  0.00  0.00           N\nATOM    361 H    TRP 0  64       6.941  10.634  -2.256  0.00  0.00           H\nATOM    362 CA   TRP 0  64       7.623   9.455  -0.539  0.00  0.00           C\nATOM    363 HA   TRP 0  64       8.530   8.813  -0.976  0.00  0.00           H\nATOM    364 C    TRP 0  64       6.950   8.826   0.670  0.00  0.00           C\nATOM    365 O    TRP 0  64       7.508   7.981   1.340  0.00  0.00           O\nATOM    366 CB   TRP 0  64       8.367  10.724  -0.133  0.00  0.00           C\nATOM    367 HB2  TRP 0  64       9.200  10.601   0.717  0.00  0.00           H\nATOM    368 HB3  TRP 0  64       9.098  11.169  -0.973  0.00  0.00           H\nATOM    369 CG   TRP 0  64       7.396  11.800   0.212  0.00  0.00           C\nATOM    370 CD1  TRP 0  64       6.997  12.793  -0.613  0.00  0.00           C\nATOM    371 HD1  TRP 0  64       7.595  13.348  -1.480  0.00  0.00           H\nATOM    372 CD2  TRP 0  64       6.709  12.009   1.467  0.00  0.00           C\nATOM    373 NE1  TRP 0  64       6.102  13.602   0.066  0.00  0.00           N\nATOM    374 HE1  TRP 0  64       6.023  14.753  -0.226  0.00  0.00           H\nATOM    375 CE2  TRP 0  64       5.893  13.156   1.357  0.00  0.00           C\nATOM    376 CE3  TRP 0  64       6.720  11.311   2.676  0.00  0.00           C\nATOM    377 HE3  TRP 0  64       7.851  11.320   3.051  0.00  0.00           H\nATOM    378 CZ2  TRP 0  64       5.114  13.600   2.425  0.00  0.00           C\nATOM    379 HZ2  TRP 0  64       4.988  14.780   2.524  0.00  0.00           H\nATOM    380 CZ3  TRP 0  64       5.939  11.748   3.757  0.00  0.00           C\nATOM    381 HZ3  TRP 0  64       6.449  11.777   4.835  0.00  0.00           H\nATOM    382 CH2  TRP 0  64       5.136  12.893   3.632  0.00  0.00           C\nATOM    383 HH2  TRP 0  64       4.794  13.509   4.592  0.00  0.00           H\nATOM    384 N    LYS 0  65       5.735   9.212   0.931  0.00  0.00           N\nATOM    385 H    LYS 0  65       5.481  10.286   0.511  0.00  0.00           H\nATOM    386 CA   LYS 0  65       5.003   8.619   2.065  0.00  0.00           C\nATOM    387 HA   LYS 0  65       5.791   8.663   2.952  0.00  0.00           H\nATOM    388 C    LYS 0  65       4.625   7.193   1.682  0.00  0.00           C\nATOM    389 O    LYS 0  65       4.482   6.327   2.520  0.00  0.00           O\nATOM    390 CB   LYS 0  65       3.750   9.441   2.323  0.00  0.00           C\nATOM    391 HB2  LYS 0  65       2.933   8.608   2.057  0.00  0.00           H\nATOM    392 HB3  LYS 0  65       3.741  10.475   1.745  0.00  0.00           H\nATOM    393 CG   LYS 0  65       3.680   9.795   3.803  0.00  0.00           C\nATOM    394 HG2  LYS 0  65       3.114  10.820   4.057  0.00  0.00           H\nATOM    395 HG3  LYS 0  65       4.714  10.010   4.349  0.00  0.00           H\nATOM    396 CD   LYS 0  65       2.685   8.869   4.511  0.00  0.00           C\nATOM    397 HD2  LYS 0  65       2.144   9.573   5.324  0.00  0.00           H\nATOM    398 HD3  LYS 0  65       1.706   8.426   4.005  0.00  0.00           H\nATOM    399 CE   LYS 0  65       3.445   7.844   5.363  0.00  0.00           C\nATOM    400 HE2  LYS 0  65       4.096   7.161   4.648  0.00  0.00           H\nATOM    401 HE3  LYS 0  65       2.708   7.652   6.287  0.00  0.00           H\nATOM    402 NZ   LYS 0  65       4.521   8.535   6.129  0.00  0.00           N\nATOM    403 HZ1  LYS 0  65       4.315   9.593   6.666  0.00  0.00           H\nATOM    404 HZ2  LYS 0  65       5.699   8.585   5.906  0.00  0.00           H\nATOM    405 HZ3  LYS 0  65       4.634   7.925   7.164  0.00  0.00           H\nATOM    406 N    GLN 0  66       4.485   6.942   0.407  0.00  0.00           N\nATOM    407 H    GLN 0  66       4.704   7.646  -0.506  0.00  0.00           H\nATOM    408 CA   GLN 0  66       4.144   5.576  -0.045  0.00  0.00           C\nATOM    409 HA   GLN 0  66       3.168   5.346   0.593  0.00  0.00           H\nATOM    410 C    GLN 0  66       5.339   4.669   0.217  0.00  0.00           C\nATOM    411 O    GLN 0  66       5.362   3.913   1.164  0.00  0.00           O\nATOM    412 CB   GLN 0  66       3.848   5.590  -1.535  0.00  0.00           C\nATOM    413 HB2  GLN 0  66       4.716   5.473  -2.338  0.00  0.00           H\nATOM    414 HB3  GLN 0  66       3.362   4.503  -1.663  0.00  0.00           H\nATOM    415 CG   GLN 0  66       2.704   6.555  -1.799  0.00  0.00           C\nATOM    416 HG2  GLN 0  66       2.390   7.696  -1.704  0.00  0.00           H\nATOM    417 HG3  GLN 0  66       1.767   6.065  -1.241  0.00  0.00           H\nATOM    418 CD   GLN 0  66       2.181   6.345  -3.219  0.00  0.00           C\nATOM    419 OE1  GLN 0  66       1.451   7.167  -3.739  0.00  0.00           O\nATOM    420 NE2  GLN 0  66       2.526   5.269  -3.872  0.00  0.00           N\nATOM    421 HE21 GLN 0  66       3.147   4.968  -4.845  0.00  0.00           H\nATOM    422 HE22 GLN 0  66       1.741   4.371  -3.902  0.00  0.00           H\nATOM    423 N    GLN 0  67       6.341   4.759  -0.616  0.00  0.00           N\nATOM    424 H    GLN 0  67       6.767   5.827  -0.895  0.00  0.00           H\nATOM    425 CA   GLN 0  67       7.556   3.918  -0.427  0.00  0.00           C\nATOM    426 HA   GLN 0  67       7.653   2.845  -0.927  0.00  0.00           H\nATOM    427 C    GLN 0  67       7.865   3.793   1.064  0.00  0.00           C\nATOM    428 O    GLN 0  67       8.290   2.757   1.531  0.00  0.00           O\nATOM    429 CB   GLN 0  67       8.737   4.568  -1.148  0.00  0.00           C\nATOM    430 HB2  GLN 0  67       9.206   5.644  -0.922  0.00  0.00           H\nATOM    431 HB3  GLN 0  67       9.696   3.882  -0.978  0.00  0.00           H\nATOM    432 CG   GLN 0  67       8.470   4.571  -2.654  0.00  0.00           C\nATOM    433 HG2  GLN 0  67       8.354   3.526  -3.226  0.00  0.00           H\nATOM    434 HG3  GLN 0  67       7.635   5.273  -3.126  0.00  0.00           H\nATOM    435 CD   GLN 0  67       9.723   5.042  -3.397  0.00  0.00           C\nATOM    436 OE1  GLN 0  67      10.816   4.977  -2.871  0.00  0.00           O\nATOM    437 NE2  GLN 0  67       9.604   5.522  -4.606  0.00  0.00           N\nATOM    438 HE21 GLN 0  67       9.661   4.810  -5.560  0.00  0.00           H\nATOM    439 HE22 GLN 0  67      10.019   6.595  -4.911  0.00  0.00           H\nATOM    440 N    ASN 0  68       7.648   4.833   1.820  0.00  0.00           N\nATOM    441 H    ASN 0  68       8.414   5.672   1.464  0.00  0.00           H\nATOM    442 CA   ASN 0  68       7.931   4.758   3.280  0.00  0.00           C\nATOM    443 HA   ASN 0  68       9.007   4.307   3.528  0.00  0.00           H\nATOM    444 C    ASN 0  68       6.946   3.796   3.944  0.00  0.00           C\nATOM    445 O    ASN 0  68       7.300   2.697   4.312  0.00  0.00           O\nATOM    446 CB   ASN 0  68       7.791   6.146   3.901  0.00  0.00           C\nATOM    447 HB2  ASN 0  68       7.054   7.051   3.701  0.00  0.00           H\nATOM    448 HB3  ASN 0  68       7.855   6.055   5.095  0.00  0.00           H\nATOM    449 CG   ASN 0  68       9.154   6.839   3.894  0.00  0.00           C\nATOM    450 OD1  ASN 0  68      10.177   6.190   3.799  0.00  0.00           O\nATOM    451 ND2  ASN 0  68       9.210   8.138   3.986  0.00  0.00           N\nATOM    452 HD21 ASN 0  68       9.765   8.474   4.990  0.00  0.00           H\nATOM    453 HD22 ASN 0  68       9.442   9.025   3.229  0.00  0.00           H\nATOM    454 N    LEU 0  69       5.713   4.195   4.097  0.00  0.00           N\nATOM    455 H    LEU 0  69       5.636   5.287   4.549  0.00  0.00           H\nATOM    456 CA   LEU 0  69       4.717   3.288   4.737  0.00  0.00           C\nATOM    457 HA   LEU 0  69       5.011   3.444   5.875  0.00  0.00           H\nATOM    458 C    LEU 0  69       4.910   1.870   4.191  0.00  0.00           C\nATOM    459 O    LEU 0  69       4.598   0.893   4.837  0.00  0.00           O\nATOM    460 CB   LEU 0  69       3.300   3.763   4.411  0.00  0.00           C\nATOM    461 HB2  LEU 0  69       3.443   4.242   3.332  0.00  0.00           H\nATOM    462 HB3  LEU 0  69       2.549   2.852   4.592  0.00  0.00           H\nATOM    463 CG   LEU 0  69       2.863   4.798   5.447  0.00  0.00           C\nATOM    464 HG   LEU 0  69       3.702   5.470   5.956  0.00  0.00           H\nATOM    465 CD1  LEU 0  69       1.579   5.484   4.978  0.00  0.00           C\nATOM    466 HD11 LEU 0  69       1.003   6.130   5.813  0.00  0.00           H\nATOM    467 HD12 LEU 0  69       1.730   6.086   3.963  0.00  0.00           H\nATOM    468 HD13 LEU 0  69       0.685   4.692   4.855  0.00  0.00           H\nATOM    469 CD2  LEU 0  69       2.612   4.104   6.788  0.00  0.00           C\nATOM    470 HD21 LEU 0  69       3.403   3.545   7.494  0.00  0.00           H\nATOM    471 HD22 LEU 0  69       1.581   3.499   6.880  0.00  0.00           H\nATOM    472 HD23 LEU 0  69       2.341   4.916   7.641  0.00  0.00           H\nATOM    473 N    LYS 0  70       5.422   1.763   2.999  0.00  0.00           N\nATOM    474 H    LYS 0  70       6.025   2.500   2.308  0.00  0.00           H\nATOM    475 CA   LYS 0  70       5.645   0.426   2.377  0.00  0.00           C\nATOM    476 HA   LYS 0  70       4.718  -0.319   2.400  0.00  0.00           H\nATOM    477 C    LYS 0  70       6.797  -0.292   3.077  0.00  0.00           C\nATOM    478 O    LYS 0  70       6.593  -1.144   3.912  0.00  0.00           O\nATOM    479 CB   LYS 0  70       6.005   0.628   0.912  0.00  0.00           C\nATOM    480 HB2  LYS 0  70       6.987   0.966   0.334  0.00  0.00           H\nATOM    481 HB3  LYS 0  70       6.079  -0.541   0.657  0.00  0.00           H\nATOM    482 CG   LYS 0  70       4.808   1.254   0.187  0.00  0.00           C\nATOM    483 HG2  LYS 0  70       4.326   2.326   0.303  0.00  0.00           H\nATOM    484 HG3  LYS 0  70       3.949   0.422   0.227  0.00  0.00           H\nATOM    485 CD   LYS 0  70       5.129   1.475  -1.297  0.00  0.00           C\nATOM    486 HD2  LYS 0  70       5.928   2.086  -1.939  0.00  0.00           H\nATOM    487 HD3  LYS 0  70       4.142   1.899  -1.825  0.00  0.00           H\nATOM    488 CE   LYS 0  70       5.330   0.125  -1.987  0.00  0.00           C\nATOM    489 HE2  LYS 0  70       4.850  -0.915  -1.628  0.00  0.00           H\nATOM    490 HE3  LYS 0  70       6.485  -0.179  -2.129  0.00  0.00           H\nATOM    491 NZ   LYS 0  70       4.779   0.192  -3.370  0.00  0.00           N\nATOM    492 HZ1  LYS 0  70       3.600  -0.011  -3.470  0.00  0.00           H\nATOM    493 HZ2  LYS 0  70       5.209  -0.723  -4.023  0.00  0.00           H\nATOM    494 HZ3  LYS 0  70       4.988   1.065  -4.167  0.00  0.00           H\nATOM    495 N    LYS 0  71       8.012   0.034   2.745  0.00  0.00           N\nATOM    496 H    LYS 0  71       8.361   1.161   2.736  0.00  0.00           H\nATOM    497 CA   LYS 0  71       9.148  -0.655   3.421  0.00  0.00           C\nATOM    498 HA   LYS 0  71       9.197  -1.750   2.959  0.00  0.00           H\nATOM    499 C    LYS 0  71       8.888  -0.646   4.923  0.00  0.00           C\nATOM    500 O    LYS 0  71       9.399  -1.467   5.658  0.00  0.00           O\nATOM    501 CB   LYS 0  71      10.464   0.051   3.104  0.00  0.00           C\nATOM    502 HB2  LYS 0  71      11.265  -0.660   3.646  0.00  0.00           H\nATOM    503 HB3  LYS 0  71      10.816   1.071   3.625  0.00  0.00           H\nATOM    504 CG   LYS 0  71      10.801  -0.182   1.632  0.00  0.00           C\nATOM    505 HG2  LYS 0  71      12.000  -0.246   1.674  0.00  0.00           H\nATOM    506 HG3  LYS 0  71      10.648  -1.261   1.130  0.00  0.00           H\nATOM    507 CD   LYS 0  71      10.262   0.988   0.809  0.00  0.00           C\nATOM    508 HD2  LYS 0  71       9.370   0.531   0.172  0.00  0.00           H\nATOM    509 HD3  LYS 0  71      10.458   1.951   1.484  0.00  0.00           H\nATOM    510 CE   LYS 0  71      11.330   1.468  -0.178  0.00  0.00           C\nATOM    511 HE2  LYS 0  71      11.453   2.595  -0.566  0.00  0.00           H\nATOM    512 HE3  LYS 0  71      12.436   1.412   0.297  0.00  0.00           H\nATOM    513 NZ   LYS 0  71      11.379   0.553  -1.356  0.00  0.00           N\nATOM    514 HZ1  LYS 0  71      12.478   0.121  -1.583  0.00  0.00           H\nATOM    515 HZ2  LYS 0  71      11.214   1.231  -2.333  0.00  0.00           H\nATOM    516 HZ3  LYS 0  71      10.708  -0.405  -1.618  0.00  0.00           H\nATOM    517 N    GLU 0  72       8.053   0.249   5.381  0.00  0.00           N\nATOM    518 H    GLU 0  72       8.809   1.167   5.320  0.00  0.00           H\nATOM    519 CA   GLU 0  72       7.724   0.262   6.834  0.00  0.00           C\nATOM    520 HA   GLU 0  72       8.625  -0.021   7.569  0.00  0.00           H\nATOM    521 C    GLU 0  72       6.739  -0.886   7.066  0.00  0.00           C\nATOM    522 O    GLU 0  72       6.767  -1.557   8.079  0.00  0.00           O\nATOM    523 CB   GLU 0  72       7.066   1.588   7.248  0.00  0.00           C\nATOM    524 HB2  GLU 0  72       6.909   1.260   8.391  0.00  0.00           H\nATOM    525 HB3  GLU 0  72       6.095   2.267   7.155  0.00  0.00           H\nATOM    526 CG   GLU 0  72       8.092   2.728   7.208  0.00  0.00           C\nATOM    527 HG2  GLU 0  72       9.275   2.534   7.206  0.00  0.00           H\nATOM    528 HG3  GLU 0  72       7.964   3.736   6.585  0.00  0.00           H\nATOM    529 CD   GLU 0  72       8.185   3.395   8.586  0.00  0.00           C\nATOM    530 OE1  GLU 0  72       8.023   2.699   9.575  0.00  0.00           O\nATOM    531 OE2  GLU 0  72       8.416   4.593   8.625  0.00  0.00           O\nATOM    532 N    LYS 0  73       5.873  -1.115   6.110  0.00  0.00           N\nATOM    533 H    LYS 0  73       5.920  -0.117   5.493  0.00  0.00           H\nATOM    534 CA   LYS 0  73       4.881  -2.220   6.234  0.00  0.00           C\nATOM    535 HA   LYS 0  73       5.473  -3.126   6.741  0.00  0.00           H\nATOM    536 C    LYS 0  73       4.385  -2.646   4.857  0.00  0.00           C\nATOM    537 O    LYS 0  73       4.704  -2.054   3.848  0.00  0.00           O\nATOM    538 CB   LYS 0  73       3.673  -1.752   7.017  0.00  0.00           C\nATOM    539 HB2  LYS 0  73       2.762  -2.497   7.198  0.00  0.00           H\nATOM    540 HB3  LYS 0  73       4.145  -2.001   8.094  0.00  0.00           H\nATOM    541 CG   LYS 0  73       3.640  -0.245   6.975  0.00  0.00           C\nATOM    542 HG2  LYS 0  73       4.491   0.518   7.297  0.00  0.00           H\nATOM    543 HG3  LYS 0  73       2.989  -0.117   5.985  0.00  0.00           H\nATOM    544 CD   LYS 0  73       2.597   0.259   7.961  0.00  0.00           C\nATOM    545 HD2  LYS 0  73       1.984   1.248   7.702  0.00  0.00           H\nATOM    546 HD3  LYS 0  73       1.768  -0.551   8.228  0.00  0.00           H\nATOM    547 CE   LYS 0  73       3.246   0.435   9.331  0.00  0.00           C\nATOM    548 HE2  LYS 0  73       3.868  -0.432   9.878  0.00  0.00           H\nATOM    549 HE3  LYS 0  73       3.940   1.392   9.521  0.00  0.00           H\nATOM    550 NZ   LYS 0  73       2.184   0.683  10.342  0.00  0.00           N\nATOM    551 HZ1  LYS 0  73       2.680   0.849  11.427  0.00  0.00           H\nATOM    552 HZ2  LYS 0  73       1.515   1.678  10.287  0.00  0.00           H\nATOM    553 HZ3  LYS 0  73       1.416  -0.188  10.647  0.00  0.00           H\nATOM    554 N    GLY 0  74       3.574  -3.660   4.816  0.00  0.00           N\nATOM    555 H    GLY 0  74       3.859  -4.465   5.656  0.00  0.00           H\nATOM    556 CA   GLY 0  74       3.022  -4.120   3.518  0.00  0.00           C\nATOM    557 HA2  GLY 0  74       2.666  -3.320   2.716  0.00  0.00           H\nATOM    558 HA3  GLY 0  74       2.748  -5.225   3.859  0.00  0.00           H\nATOM    559 C    GLY 0  74       4.133  -4.723   2.665  0.00  0.00           C\nATOM    560 O    GLY 0  74       3.874  -5.345   1.657  0.00  0.00           O\nATOM    561 N    LEU 0  75       5.372  -4.562   3.049  0.00  0.00           N\nATOM    562 H    LEU 0  75       5.853  -4.277   4.092  0.00  0.00           H\nATOM    563 CA   LEU 0  75       6.459  -5.151   2.227  0.00  0.00           C\nATOM    564 HA   LEU 0  75       6.275  -5.090   1.047  0.00  0.00           H\nATOM    565 C    LEU 0  75       6.546  -6.658   2.513  0.00  0.00           C\nATOM    566 O    LEU 0  75       7.086  -7.414   1.728  0.00  0.00           O\nATOM    567 CB   LEU 0  75       7.784  -4.461   2.539  0.00  0.00           C\nATOM    568 HB2  LEU 0  75       7.466  -3.348   2.242  0.00  0.00           H\nATOM    569 HB3  LEU 0  75       8.549  -4.650   1.636  0.00  0.00           H\nATOM    570 CG   LEU 0  75       8.356  -5.093   3.781  0.00  0.00           C\nATOM    571 HG   LEU 0  75       7.827  -5.694   4.664  0.00  0.00           H\nATOM    572 CD1  LEU 0  75       9.441  -6.100   3.403  0.00  0.00           C\nATOM    573 HD11 LEU 0  75      10.378  -5.648   2.799  0.00  0.00           H\nATOM    574 HD12 LEU 0  75      10.055  -6.559   4.329  0.00  0.00           H\nATOM    575 HD13 LEU 0  75       9.308  -7.088   2.735  0.00  0.00           H\nATOM    576 CD2  LEU 0  75       8.939  -4.009   4.691  0.00  0.00           C\nATOM    577 HD21 LEU 0  75       9.858  -3.537   4.078  0.00  0.00           H\nATOM    578 HD22 LEU 0  75       9.503  -4.444   5.668  0.00  0.00           H\nATOM    579 HD23 LEU 0  75       8.099  -3.455   5.335  0.00  0.00           H\nATOM    580 N    PHE 0  76       5.995  -7.109   3.616  0.00  0.00           N\nATOM    581 H    PHE 0  76       5.261  -6.672   4.440  0.00  0.00           H\nATOM    582 CA   PHE 0  76       6.033  -8.575   3.923  0.00  0.00           C\nATOM    583 HA   PHE 0  76       6.883  -9.042   3.230  0.00  0.00           H\nATOM    584 C    PHE 0  76       4.678  -9.203   3.574  0.00  0.00           C\nATOM    585 O    PHE 0  76       3.672  -8.540   3.760  0.00  0.00           O\nATOM    586 CB   PHE 0  76       6.311  -8.794   5.413  0.00  0.00           C\nATOM    587 HB2  PHE 0  76       5.426  -9.249   6.080  0.00  0.00           H\nATOM    588 HB3  PHE 0  76       6.526  -7.866   6.137  0.00  0.00           H\nATOM    589 CG   PHE 0  76       7.511  -9.689   5.590  0.00  0.00           C\nATOM    590 CD1  PHE 0  76       7.383 -11.078   5.459  0.00  0.00           C\nATOM    591 HD1  PHE 0  76       6.594 -11.591   6.186  0.00  0.00           H\nATOM    592 CD2  PHE 0  76       8.749  -9.126   5.900  0.00  0.00           C\nATOM    593 HD2  PHE 0  76       8.917  -8.223   6.655  0.00  0.00           H\nATOM    594 CE1  PHE 0  76       8.501 -11.901   5.639  0.00  0.00           C\nATOM    595 HE1  PHE 0  76       8.468 -13.056   5.359  0.00  0.00           H\nATOM    596 CE2  PHE 0  76       9.865  -9.944   6.085  0.00  0.00           C\nATOM    597 HE2  PHE 0  76      10.945  -9.572   6.411  0.00  0.00           H\nATOM    598 CZ   PHE 0  76       9.742 -11.331   5.955  0.00  0.00           C\nATOM    599 HZ   PHE 0  76      10.680 -12.042   6.114  0.00  0.00           H\nATOM    600 N    NME 0  77       4.919 -10.519   3.986  0.00  0.00           N\nATOM    601 H    NME 0  77       5.708 -10.979   3.214  0.00  0.00           H\nATOM    602 C    NME 0  77       4.084 -11.762   3.973  0.00  0.00           C\nATOM    603 H1   NME 0  77       2.941 -11.426   4.093  0.00  0.00           H\nATOM    604 H2   NME 0  77       4.267 -12.531   4.872  0.00  0.00           H\nATOM    605 H3   NME 0  77       4.099 -12.443   2.985  0.00  0.00           H\nEND\n", "binary": false}], "kwargs": {"name": "nglview.adaptor.MolSysMTTrajectory", "skipDigestion": true, "defaultRepresentation": true, "ext": "pdb"}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "removeAllRepresentations", "reconstruc_color_scheme": false, "args": [], "kwargs": {}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "addRepresentation", "reconstruc_color_scheme": false, "args": ["cartoon"], "kwargs": {"sele": "@"}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "addRepresentation", "reconstruc_color_scheme": false, "args": ["cartoon"], "kwargs": {"sele": "@0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,318,319,320,321,322,323,324,325,326,327,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,357,358,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,378,379,380,381,382,383,384,385,386,387,388,389,390,391,392,393,394,395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436,437,438,439,440,441,442,443,444,445,446,447,448,449,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,471,472,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549,550,551,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,567,568,569,570,571,572,573,574,575,576,577,578,579,580,581,582,583,584,585,586,587,588,589,590,591,592,593,594,595,596,597,598,599,600,601,602,603,604"}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "addRepresentation", "reconstruc_color_scheme": false, "args": ["licorice"], "kwargs": {"sele": "@", "radius": 0.4}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "addRepresentation", "reconstruc_color_scheme": false, "args": ["licorice"], "kwargs": {"sele": "@", "radius": 0.4}}, {"component_index": 0, "target": "compList", "type": "call_method", "methodName": "addRepresentation", "reconstruc_color_scheme": false, "args": ["ball+stick"], "kwargs": {"sele": "@"}}], "_ngl_original_stage_parameters": {}, "_ngl_repr_dict": {}, "_ngl_serialize": false, "_ngl_version": "", "_ngl_view_id": [], "_player_dict": {}, "_scene_position": {}, "_scene_rotation": {}, "_synced_model_ids": [], "_synced_repr_model_ids": [], "_view_count": null, "_view_height": "", "_view_module": "nglview-js-widgets", "_view_module_version": "3.1.0", "_view_name": "NGLView", "_view_width": "", "background": "white", "frame": 0, "gui_style": null, "layout": "IPY_MODEL_b80c0440756a4f09a958c59d55c2d3fa", "max_frame": 0, "n_components": 0, "picked": {}, "tabbable": null, "tooltip": null}}, "e8d4280e365b4799afbb8a74e9d3c258": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5054309cc5da453b873c934096d107f7": {"model_name": "ImageModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ImageModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ImageView", "format": "png", "height": "", "layout": "IPY_MODEL_e8d4280e365b4799afbb8a74e9d3c258", "tabbable": null, "tooltip": null, "width": "900.0"}, "buffers": [{"data": "", "encoding": "base64", "path": ["value"]}]}, "97b66b7d63c948fd944df285384d4ddc": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "85036fa177894cf5b90b95f39a346cd3": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "cb7f7aa3074349f9a766726ad4b618b7": {"model_name": "PlayModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "PlayModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "PlayView", "description": "", "description_allow_html": false, "disabled": false, "interval": 100, "layout": "IPY_MODEL_97b66b7d63c948fd944df285384d4ddc", "max": 0, "min": 0, "playing": false, "repeat": false, "show_repeat": true, "step": 1, "style": "IPY_MODEL_85036fa177894cf5b90b95f39a346cd3", "tabbable": null, "tooltip": null, "value": 0}}, "d7bd8251018743fdbd2423816de568cf": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a7b8c45d6a9a477e8c264ed225d93467": {"model_name": "SliderStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "SliderStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": "", "handle_color": null}}, "bea7a7504cf145488334758ee9a47047": {"model_name": "IntSliderModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "IntSliderModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "IntSliderView", "behavior": "drag-tap", "continuous_update": true, "description": "", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_d7bd8251018743fdbd2423816de568cf", "max": 0, "min": 0, "orientation": "horizontal", "readout": true, "readout_format": "d", "step": 1, "style": "IPY_MODEL_a7b8c45d6a9a477e8c264ed225d93467", "tabbable": null, "tooltip": null, "value": 0}}, "1d51e80be7f34449b8eac0f667160511": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4c99f78079544ab9a1b83ccfb48cf94a": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_cb7f7aa3074349f9a766726ad4b618b7", "IPY_MODEL_bea7a7504cf145488334758ee9a47047"], "layout": "IPY_MODEL_1d51e80be7f34449b8eac0f667160511", "tabbable": null, "tooltip": null}}, "b841040f3bbb4bff91a81f356d474aa9": {"model_name": "LinkModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LinkModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": null, "source": ["IPY_MODEL_cb7f7aa3074349f9a766726ad4b618b7", "value"], "target": ["IPY_MODEL_bea7a7504cf145488334758ee9a47047", "value"]}}, "a0767f008f494f188e5ee171c4872b73": {"model_name": "LinkModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LinkModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": null, "source": ["IPY_MODEL_cb7f7aa3074349f9a766726ad4b618b7", "value"], "target": ["IPY_MODEL_9b2c1cce3790408fbd38f0284da550c1", "frame"]}}, "6d0cc18ae4264117bdb5576d19176944": {"model_name": "LinkModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LinkModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": null, "source": ["IPY_MODEL_cb7f7aa3074349f9a766726ad4b618b7", "max"], "target": ["IPY_MODEL_9b2c1cce3790408fbd38f0284da550c1", "max_frame"]}}, "dac51835659a4efdae3b23ce83fe8ae9": {"model_name": "LinkModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LinkModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": null, "source": ["IPY_MODEL_bea7a7504cf145488334758ee9a47047", "max"], "target": ["IPY_MODEL_9b2c1cce3790408fbd38f0284da550c1", "max_frame"]}}, "ec23c6a7292d4435a81d1ab43f7b377d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "34px"}}, "d1bb3492e9ac49bf9fd1601d92891167": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "5353166aae1f4b609e38b6edee037054": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "", "disabled": false, "icon": "compress", "layout": "IPY_MODEL_ec23c6a7292d4435a81d1ab43f7b377d", "style": "IPY_MODEL_d1bb3492e9ac49bf9fd1601d92891167", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/logo.svg" class="logo__image only-light" alt="MolSysMT 0.9.1+25.gc6df64de documentation - Home"/>
+    <script>document.write(`<img src="../../../../../_static/logo.svg" class="logo__image only-dark" alt="MolSysMT 0.9.1+25.gc6df64de documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../showcase/index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../showcase/index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Show contacts</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="show-contacts">
+<h1>Show contacts<a class="headerlink" href="#show-contacts" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">molsysmt</span> <span class="k">as</span> <span class="nn">msm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "5e94faf7b03c42889b65d439689bb26b"}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molsys</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">msm</span><span class="o">.</span><span class="n">systems</span><span class="p">[</span><span class="s1">&#39;chicken villin HP35&#39;</span><span class="p">][</span><span class="s1">&#39;chicken_villin_HP35.h5msm&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">molsys</span><span class="p">,</span> <span class="n">standard</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">msm</span><span class="o">.</span><span class="n">thirds</span><span class="o">.</span><span class="n">nglview</span><span class="o">.</span><span class="n">show_contacts</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;atom_name==&quot;CA&quot;&#39;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;9 angstroms&#39;</span><span class="p">)</span>
+<span class="n">view</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9b2c1cce3790408fbd38f0284da550c1"}</script></div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+	&copy; 2024, <a href=contents/about/who.html>Liliana M. Moreno Vargas, Diego Prada Gracia
+		and contributors</a> | <a href="https://www.uibcdf.org/">UIBCDF Lab</a> 
+	at the <a href="http://himfg.com.mx">Children's Hospital of Mexico Federico Gómez</a><br />
+	<a href="https://github.com/uibcdf/MolSysMT">MolSysMT is an open source project</a> shared
+	under <a href="https://github.com/uibcdf/MolSysMT/blob/main/LICENSE">an MIT license</a>
+	with a structure based on the
+	<a href="https://github.com/MolSSI/cookiecutter-cms">Computational Molecular Science
+		Python Cookiecutter</a> version 1.5
+</div></div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7
+     | 
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3
+    <br/>
+  </p>
+
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a href= "mailto:uibcdf@gmail.com">Contact us</a><br /></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

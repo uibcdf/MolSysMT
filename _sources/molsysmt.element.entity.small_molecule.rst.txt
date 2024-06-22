@@ -1,0 +1,37 @@
+molsysmt.element.entity.small\_molecule package
+===============================================
+
+Submodules
+----------
+
+molsysmt.element.entity.small\_molecule.get\_name\_from\_mmtf\_name module
+--------------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.small_molecule.get_name_from_mmtf_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.small\_molecule.names module
+----------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.small_molecule.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.small\_molecule.small\_molecule module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.small_molecule.small_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity.small_molecule
+   :members:
+   :undoc-members:
+   :show-inheritance:

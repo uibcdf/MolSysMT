@@ -1,0 +1,892 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../../../_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../../../../_static/favicon-124x124.png" sizes="124x124" rel="icon" type="image/png">
+    <link href="../../../../_static/favicon-128x128.png" sizes="128x128" rel="icon" type="image/png">
+    <link href="../../../../_static/favicon-192x192.png" sizes="192x192" rel="icon" type="image/png">
+    <link href="../../../../_static/icon.svg" rel="icon" type="image/svg+xml">
+    <title>Get contacts &#8212; MolSysMT 0.9.1+25.gc6df64de documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx_tabs.css?v=f45e19d3" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=d5ef24d1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=d5ef24d1" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=4cae6f8c"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nglview-js-widgets@3.1.0/dist/index.js"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Get dihedral angles" href="get_dihedral_angles.html" />
+    <link rel="prev" title="Get center" href="get_center.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo.svg" class="logo__image only-light" alt="MolSysMT 0.9.1+25.gc6df64de documentation - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo.svg" class="logo__image only-dark" alt="MolSysMT 0.9.1+25.gc6df64de documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../showcase/index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../showcase/index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../intro/index.html"><strong>Introduction</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/molsysmt.html">What’s MolSysMT?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/installation.html">Installation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../intro/molecular_systems/index.html">Molecular systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/molecular_systems/description.html">Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/molecular_systems/items.html">Items and forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/molecular_systems/forms.html">Forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/molecular_systems/elements.html">Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/molecular_systems/attributes.html">Attributes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/demo_systems.html">Demo systems</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../intro/native_forms/index.html">Native forms</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../intro/native_forms/file_h5msm.html">file:h5msm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/selection_syntaxes.html">Selection syntaxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/tools.html">Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/viewers.html">Viewers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/supported.html">Supported</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/memory_management.html">Memory management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/quantities_and_units.html">Quantities and units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../intro/configuration_options.html">Configuration options</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html"><strong>Tools</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../basic/index.html">Basic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../basic/add.html">Add</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/append_structures.html">Append structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/are_multiple_molecular_systems.html">Are multiple molecular systems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/compare.html">Compare</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/concatenate_structures.html">Concatenate structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/contains.html">Contains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/convert.html">Convert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/copy.html">Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/extract.html">Extract</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/get_attributes.html">Get attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/get_form.html">Get form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/get_label.html">Get label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/get.html">Get</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/has_attribute.html">Has attribute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/info.html">Info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/is_a_molecular_system.html">Is a molecular system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/is_composed_of.html">Is composed of</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/iterator.html">Iterator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/merge.html">Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/remove.html">Remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/select.html">Select</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/set.html">Set</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/view.html">View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../basic/where_is_attribute.html">Where is attribute</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../build/index.html">Build</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../build/add_missing_bonds.html">Add missing bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/add_missing_heavy_atoms.html">Add missing heavy atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/add_missing_hydrogens.html">Add missing hydrogens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/add_missing_terminal_cappings.html">Add missing terminal cappings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/build_peptide.html">Build peptide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/define_new_chain.html">Define new chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/get_missing_bonds.html">Get missing bonds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/get_missing_heavy_atoms.html">Get missing heavy atoms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/get_missing_residues.html">Get missing residues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/get_missing_terminal_cappings.html">Get missing terminals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/get_non_standard_residues.html">Get non standard residues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/is_solvated.html">Is solvated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/make_bioassembly.html">Make bioassembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/make_water_box.html">Make water box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/model_loop.html">Model loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/mutate.html">Mutate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/remove_overlapping_molecules.html">Remove overlapping molecules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/solvate.html">Solvate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../build/solve_atoms_with_alternate_locations.html">Solve atoms with alternate locations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../topology/index.html">Topology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_bondgraph.html">Get bondgraph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_covalent_blocks.html">Get covalent blocks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_covalent_chains.html">Get covalent chains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_dihedral_quartets.html">Get dihedral quartets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_sequence_alignment.html">Get sequence alignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../topology/get_sequence_identity.html">Get sequence identity</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Structure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="center.html">Center</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flip.html">Flip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_center.html">Get center</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Get contacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_dihedral_angles.html">Get dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_distances.html">Get distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_least_rmsd.html">Get least RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_maximum_distances.html">Get maximum distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_minimum_distances.html">Get minimum distances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_neighbors.html">Get neighbors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_principal_axes.html">Get geometric axis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_radius_of_gyration.html">Get radius of gyration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_rmsd.html">Get RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="least_rmsd_align.html">Least RMSD align</a></li>
+<li class="toctree-l3"><a class="reference internal" href="least_rmsd_fit.html">Least RMSD fit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="move_away.html">Move away</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principal_component_analysis.html">Principal component analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rotate.html">Rotate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="set_dihedral_angles.html">Set dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shift_dihedral_angles.html">Shift dihedral angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="translate.html">Translate</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pbc/index.html">Periodic boundary conditions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_angles_from_box.html">Get angles from vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_box_from_lengths_and_angles.html">Get boxfrom lengths and angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_lengths_and_angles_from_box.html">Get lengths and angles from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_lengths_from_box.html">Get lengths from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_shape_from_box.html">Get shape from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_shape_from_angles.html">Shape from angles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_volume_from_box.html">Angles from vectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/get_volume_from_lengths_and_angles.html">Get volume from box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/has_pbc.html">Has PBC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/unwrap.html">Unwrap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/wrap_to_mic.html">Wrap to MIC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pbc/wrap_to_pbc.html">Wrap to PBC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../physchem/index.html">Physical and chemical properties</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_area_buried.html">Get area buried</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_atomic_radius.html">Get atomic radius</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_buried_fraction.html">Get buried fraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_charge.html">Get charge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_hydrophobicity.html">Get hydrophobicity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_mass.html">Get mass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_polarity.html">Get polarity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_sasa.html">Get SASA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_surface_area.html">Get surface area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_transmembrane_tendency.html">Get transmembrane tendency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../physchem/get_volume.html">Get volume</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../molecular_mechanics/index.html">Molecular mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../molecular_mechanics/get_forces.html">Get forces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../molecular_mechanics/potential_energy_minimization.html">Potential energy minimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../molecular_mechanics/get_non_bonded_potential_energy.html">Get non bonded potential energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../molecular_mechanics/get_potential_energy.html">Get potential energy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../element/index.html">Element</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../form/index.html">Form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../form/get_attributes.html">Get attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../form/has_attribute.html">Has attribute</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../thirds/index.html">Thirds</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../thirds/nglview/index.html">NGLView</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../thirds/nglview/add_hbonds.html">Add hbonds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thirds/nglview/color_by_value.html">Color by value</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../thirds/openmm/index.html">OpenMM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../thirds/openmm/forces/index.html">Custom External Forces</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../cookbook/index.html"><strong>Cookbook</strong></a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cookbook/Barnase_Barstar.html">Barnase-Barstar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cookbook/OpenMM.html">Working with OpenMM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cookbook/NGLView.html">Working with NGLView</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">User guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Structure</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Get contacts</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">molsysmt</span> <span class="k">as</span> <span class="nn">msm</span>
+<span class="kn">from</span> <span class="nn">molsysmt</span> <span class="kn">import</span> <span class="n">pyunitwizard</span> <span class="k">as</span> <span class="n">puw</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "cb33ad8dce1a4c9a8c3fbaa85e4ff051"}</script></div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="get-contacts">
+<h1>Get contacts<a class="headerlink" href="#get-contacts" title="Link to this heading">#</a></h1>
+<p>A contact map is a logic matrix where the element (i-th,j-th) is True if the distance between i-th and j-th is lower, or equal, than a certain threshold. The contact map is a common tool, simple but effective, used to represent structural motifs from the protein-protein interaface of the protein folding, for example. MolSysMT includes a method, based on <code class="docutils literal notranslate"><span class="pre">molsysmt.distance()</span></code>, to obtain contact maps: <code class="docutils literal notranslate"><span class="pre">molsysmt.contact_map()</span></code>. As such, <code class="docutils literal notranslate"><span class="pre">molsysmt.contact_map</span></code> inherits many input arguments from <code class="docutils literal notranslate"><span class="pre">molsysmt.distance()</span></code>. Lets see a couple of examples in this section.</p>
+<p>Lets get the contact map obtained with the threshold 1.2 nm and the CA atoms from the dimer found in the system with pdb id 1TCD:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molecular_system</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;1TCD&#39;</span><span class="p">,</span> <span class="s1">&#39;molsysmt.MolSys&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CA_atoms</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;atom_name==&quot;CA&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_contacts</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">CA_atoms</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;1.2 nm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[ True,  True,  True, ..., False, False, False],
+        [ True,  True,  True, ..., False, False, False],
+        [ True,  True,  True, ..., False, False, False],
+        ...,
+        [False, False, False, ...,  True,  True,  True],
+        [False, False, False, ...,  True,  True,  True],
+        [False, False, False, ...,  True,  True,  True]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our molecular system has a single frame. That’s why the shape of the output is the following:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 497, 497)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Where 497 is the total number of CA atoms in our system:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s2">&quot;atom_name==&#39;CA&#39;&quot;</span><span class="p">,</span> <span class="n">n_atoms</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>497
+</pre></div>
+</div>
+</div>
+</div>
+<p>Usually the contact map is represented as a plot. The structural motifs can be then easily identify:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">contact_map</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/642ad0700cb87d79ec1a90586219703f9cba27fa6611d332e68b999d12012e4a.png" src="../../../../_images/642ad0700cb87d79ec1a90586219703f9cba27fa6611d332e68b999d12012e4a.png" />
+</div>
+</div>
+<p>The contact map can also be computed among elements from different sets. Lets get the contact map with the same threshold but this time between the CA atoms from both chains:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CA_atoms_chain_0</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s2">&quot;atom_name==&#39;CA&#39; and chain_index==0&quot;</span><span class="p">,</span> <span class="n">atom_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">CA_atoms_chain_1</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s2">&quot;atom_name==&#39;CA&#39; and chain_index==1&quot;</span><span class="p">,</span> <span class="n">atom_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_contacts</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">CA_atoms_chain_0</span><span class="p">,</span> <span class="n">selection_2</span><span class="o">=</span><span class="n">CA_atoms_chain_1</span><span class="p">,</span>
+                              <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;1.2 nm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">contact_map</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/89d903bee1504ba22f6136988f0065f0254e6234a6b81df3416088acd6987dcb.png" src="../../../../_images/89d903bee1504ba22f6136988f0065f0254e6234a6b81df3416088acd6987dcb.png" />
+</div>
+</div>
+<p>The molecular system is homodimeric, thereby the interface is symmetric as it can be seen in this last plot.</p>
+<p>Finnally, <code class="docutils literal notranslate"><span class="pre">molsysmt.contact_map()</span></code> can also work with atoms groups. Instead of getting the contact map between CA atoms, lets do it now with the geometric centers of the residues:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">atoms_in_residues_chain_0</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+                                    <span class="n">selection</span><span class="o">=</span><span class="s2">&quot;molecule_type==&#39;protein&#39; and chain_index==0&quot;</span><span class="p">,</span> <span class="n">atom_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">atoms_in_residues_chain_1</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+                                    <span class="n">selection</span><span class="o">=</span><span class="s2">&quot;molecule_type==&#39;protein&#39; and chain_index==1&quot;</span><span class="p">,</span> <span class="n">atom_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_contacts</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span>
+                              <span class="n">groups_of_atoms</span><span class="o">=</span><span class="n">atoms_in_residues_chain_0</span><span class="p">,</span> <span class="n">group_behavior</span><span class="o">=</span><span class="s1">&#39;geometric_center&#39;</span><span class="p">,</span>
+                              <span class="n">groups_of_atoms_2</span><span class="o">=</span><span class="n">atoms_in_residues_chain_1</span><span class="p">,</span> <span class="n">group_behavior_2</span><span class="o">=</span><span class="s1">&#39;geometric_center&#39;</span><span class="p">,</span>
+                              <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;1.2 nm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ArgumentError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">contact_map</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_contacts</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                               <span class="n">groups_of_atoms</span><span class="o">=</span><span class="n">atoms_in_residues_chain_0</span><span class="p">,</span> <span class="n">group_behavior</span><span class="o">=</span><span class="s1">&#39;geometric_center&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                               <span class="n">groups_of_atoms_2</span><span class="o">=</span><span class="n">atoms_in_residues_chain_1</span><span class="p">,</span> <span class="n">group_behavior_2</span><span class="o">=</span><span class="s1">&#39;geometric_center&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                               <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;1.2 nm&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.11/site-packages/molsysmt/_private/digestion/digest.py:109,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>     <span class="k">pass</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span> <span class="k">for</span> <span class="n">arg_name</span> <span class="ow">in</span> <span class="n">all_args</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">109</span>     <span class="n">gut</span><span class="p">(</span><span class="n">arg_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="k">for</span> <span class="n">arg_name</span> <span class="ow">in</span> <span class="n">not_digested_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">113</span>     <span class="k">if</span> <span class="n">arg_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;self&#39;</span><span class="p">]:</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.11/site-packages/molsysmt/_private/digestion/digest.py:100,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper.&lt;locals&gt;.gut</span><span class="nt">(arg_name)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>             <span class="n">parameters_dict</span><span class="p">[</span><span class="n">parameter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">100</span>     <span class="n">digested_args</span><span class="p">[</span><span class="n">arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">digestion_functions</span><span class="p">[</span><span class="n">arg_name</span><span class="p">](</span><span class="n">all_args</span><span class="p">[</span><span class="n">arg_name</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>                                                   <span class="n">caller</span><span class="o">=</span><span class="n">caller</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>                                                   <span class="o">**</span><span class="n">parameters_dict</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>     <span class="n">not_digested_args</span><span class="p">[</span><span class="n">arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">all_args</span><span class="p">[</span><span class="n">arg_name</span><span class="p">]</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.11/site-packages/molsysmt/_private/digestion/argument/group_behavior.py:12,</span> in <span class="ni">digest_group_behavior</span><span class="nt">(group_behavior, caller)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">if</span> <span class="n">group_behavior</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;center of mass&#39;</span><span class="p">,</span> <span class="s1">&#39;geometric center&#39;</span><span class="p">,</span> <span class="s1">&#39;closest&#39;</span><span class="p">,</span> <span class="s1">&#39;farthest&#39;</span><span class="p">]:</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="k">return</span> <span class="n">group_behavior</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="k">raise</span> <span class="n">ArgumentError</span><span class="p">(</span><span class="s1">&#39;group_behavior&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">group_behavior</span><span class="p">,</span> <span class="n">caller</span><span class="o">=</span><span class="n">caller</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="ne">ArgumentError</span>: Error in molsysmt.structure.get_contacts.get_contacts due to the group_behavior argument with value geometric_center.Check  for more information. If you still need help, open a new issue in https://github.com/uibcdf/MolSysMT/issues.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">contact_map</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greys&#39;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="get_center.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Get center</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="get_dihedral_angles.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Get dihedral angles</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+	&copy; 2024, <a href=contents/about/who.html>Liliana M. Moreno Vargas, Diego Prada Gracia
+		and contributors</a> | <a href="https://www.uibcdf.org/">UIBCDF Lab</a> 
+	at the <a href="http://himfg.com.mx">Children's Hospital of Mexico Federico Gómez</a><br />
+	<a href="https://github.com/uibcdf/MolSysMT">MolSysMT is an open source project</a> shared
+	under <a href="https://github.com/uibcdf/MolSysMT/blob/main/LICENSE">an MIT license</a>
+	with a structure based on the
+	<a href="https://github.com/MolSSI/cookiecutter-cms">Computational Molecular Science
+		Python Cookiecutter</a> version 1.5
+</div></div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7
+     | 
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3
+    <br/>
+  </p>
+
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a href= "mailto:uibcdf@gmail.com">Contact us</a><br /></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

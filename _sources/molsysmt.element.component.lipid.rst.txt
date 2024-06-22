@@ -1,0 +1,10 @@
+molsysmt.element.component.lipid package
+========================================
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.component.lipid
+   :members:
+   :undoc-members:
+   :show-inheritance:

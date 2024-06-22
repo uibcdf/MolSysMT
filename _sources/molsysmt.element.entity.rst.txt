@@ -1,0 +1,77 @@
+molsysmt.element.entity package
+===============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   molsysmt.element.entity.dna
+   molsysmt.element.entity.ion
+   molsysmt.element.entity.lipid
+   molsysmt.element.entity.oligosaccharide
+   molsysmt.element.entity.peptide
+   molsysmt.element.entity.protein
+   molsysmt.element.entity.rna
+   molsysmt.element.entity.small_molecule
+   molsysmt.element.entity.water
+
+Submodules
+----------
+
+molsysmt.element.entity.get\_entity\_id module
+----------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_id
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_index module
+-------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_index
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_name module
+------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_type module
+------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_type\_from\_MMTFDecoder\_entity module
+---------------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_type_from_MMTFDecoder_entity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_n\_entities module
+-----------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_n_entities
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity
+   :members:
+   :undoc-members:
+   :show-inheritance:

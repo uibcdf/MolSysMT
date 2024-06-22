@@ -1,0 +1,21 @@
+molsysmt.native.io package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   molsysmt.native.io.card
+   molsysmt.native.io.structures
+   molsysmt.native.io.topology
+   molsysmt.native.io.trajectory_file
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.native.io
+   :members:
+   :undoc-members:
+   :show-inheritance:

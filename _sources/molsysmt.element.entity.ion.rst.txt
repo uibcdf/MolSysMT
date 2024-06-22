@@ -1,0 +1,29 @@
+molsysmt.element.entity.ion package
+===================================
+
+Submodules
+----------
+
+molsysmt.element.entity.ion.get\_name\_from\_mmtf\_name module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.ion.get_name_from_mmtf_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.ion.names module
+----------------------------------------
+
+.. automodule:: molsysmt.element.entity.ion.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity.ion
+   :members:
+   :undoc-members:
+   :show-inheritance:

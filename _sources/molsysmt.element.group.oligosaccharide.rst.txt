@@ -1,0 +1,29 @@
+molsysmt.element.group.oligosaccharide package
+==============================================
+
+Submodules
+----------
+
+molsysmt.element.group.oligosaccharide.is\_oligosaccharide module
+-----------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.oligosaccharide.is_oligosaccharide
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.group.oligosaccharide.oligosaccharide\_names module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.element.group.oligosaccharide.oligosaccharide_names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.group.oligosaccharide
+   :members:
+   :undoc-members:
+   :show-inheritance:
