@@ -1,0 +1,45 @@
+molsysmt.supported package
+==========================
+
+Submodules
+----------
+
+molsysmt.supported.engines module
+---------------------------------
+
+.. automodule:: molsysmt.supported.engines
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.supported.supported module
+-----------------------------------
+
+.. automodule:: molsysmt.supported.supported
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.supported.syntaxes module
+----------------------------------
+
+.. automodule:: molsysmt.supported.syntaxes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.supported.viewers module
+---------------------------------
+
+.. automodule:: molsysmt.supported.viewers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.supported
+   :members:
+   :undoc-members:
+   :show-inheritance:

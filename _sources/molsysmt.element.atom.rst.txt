@@ -1,0 +1,61 @@
+molsysmt.element.atom package
+=============================
+
+Submodules
+----------
+
+molsysmt.element.atom.acceptors module
+--------------------------------------
+
+.. automodule:: molsysmt.element.atom.acceptors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.atom.charges module
+------------------------------------
+
+.. automodule:: molsysmt.element.atom.charges
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.atom.donors module
+-----------------------------------
+
+.. automodule:: molsysmt.element.atom.donors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.atom.get\_atom\_type\_from\_atom\_name module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.element.atom.get_atom_type_from_atom_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.atom.names module
+----------------------------------
+
+.. automodule:: molsysmt.element.atom.names
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.atom.names\_cg module
+--------------------------------------
+
+.. automodule:: molsysmt.element.atom.names_cg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.atom
+   :members:
+   :undoc-members:
+   :show-inheritance:

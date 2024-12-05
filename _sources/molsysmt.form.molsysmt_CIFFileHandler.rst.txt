@@ -1,0 +1,101 @@
+molsysmt.form.molsysmt\_CIFFileHandler package
+==============================================
+
+Submodules
+----------
+
+molsysmt.form.molsysmt\_CIFFileHandler.add module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.append\_structures module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.attributes module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.copy module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.extract module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.get module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.has\_attribute module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.is\_form module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.iterators module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.merge module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_CIFFileHandler.set module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.molsysmt_CIFFileHandler
+   :members:
+   :undoc-members:
+   :show-inheritance:

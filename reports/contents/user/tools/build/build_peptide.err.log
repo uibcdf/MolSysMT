@@ -1,0 +1,66 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/docs/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+molecular_system = msm.build.solvate(molecular_system, box_shape='truncated octahedral', clearance='14.0 angstroms')
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[9], line 1[0m
+[0;32m----> 1[0m molecular_system [38;5;241m=[39m [43mmsm[49m[38;5;241;43m.[39;49m[43mbuild[49m[38;5;241;43m.[39;49m[43msolvate[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43mbox_shape[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mtruncated octahedral[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mclearance[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m14.0 angstroms[39;49m[38;5;124;43m'[39;49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.11/site-packages/molsysmt/_private/digestion/digest.py:122[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    120[0m     [38;5;28;01mreturn[39;00m func(all_args[[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m], [38;5;241m*[39m[38;5;241m*[39mfinal_args)
+[1;32m    121[0m [38;5;28;01melse[39;00m:
+[0;32m--> 122[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.11/site-packages/molsysmt/build/solvate.py:101[0m, in [0;36msolvate[0;34m(molecular_system, box_shape, clearance, anion, n_anions, cation, n_cations, ionic_strength, water_model, engine, to_form, verbose)[0m
+[1;32m     98[0m     vectors [38;5;241m=[39m Vec3([38;5;241m1.0[39m, [38;5;241m0[39m, [38;5;241m0[39m), Vec3([38;5;241m1.0[39m[38;5;241m/[39m[38;5;241m3.0[39m, [38;5;241m2.0[39m[38;5;241m*[39mnp[38;5;241m.[39msqrt([38;5;241m2.0[39m)[38;5;241m/[39m[38;5;241m3.0[39m,[38;5;241m0.0[39m), Vec3([38;5;241m-[39m[38;5;241m1.0[39m[38;5;241m/[39m[38;5;241m3.0[39m, np[38;5;241m.[39msqrt([38;5;241m2.0[39m)[38;5;241m/[39m[38;5;241m3.0[39m, np[38;5;241m.[39msqrt([38;5;241m6.0[39m)[38;5;241m/[39m[38;5;241m3.0[39m)
+[1;32m     99[0m     box_vectors [38;5;241m=[39m [(max_size[38;5;241m+[39mclearance)[38;5;241m*[39mv [38;5;28;01mfor[39;00m v [38;5;129;01min[39;00m vectors]
+[0;32m--> 101[0m     [43mmodeller[49m[38;5;241;43m.[39;49m[43maddSolvent[49m[43m([49m[43mopenmm_forcefield[49m[43m,[49m[43m [49m[43mmodel[49m[38;5;241;43m=[39;49m[43msolvent_model[49m[43m,[49m[43m [49m[43mboxVectors[49m[43m [49m[38;5;241;43m=[39;49m[43m [49m[43mbox_vectors[49m[43m,[49m[43m [49m[43mionicStrength[49m[38;5;241;43m=[39;49m[43mionic_strength[49m[43m,[49m
+[1;32m    102[0m [43m                        [49m[43mpositiveIon[49m[38;5;241;43m=[39;49m[43mcation[49m[43m,[49m[43m [49m[43mnegativeIon[49m[38;5;241;43m=[39;49m[43manion[49m[43m)[49m
+[1;32m    104[0m [38;5;28;01melif[39;00m box_shape[38;5;241m==[39m[38;5;124m"[39m[38;5;124mrhombic dodecahedral[39m[38;5;124m"[39m:
+[1;32m    106[0m     max_size [38;5;241m=[39m [38;5;28mmax[39m([38;5;28mmax[39m((pos[i] [38;5;28;01mfor[39;00m pos [38;5;129;01min[39;00m modeller[38;5;241m.[39mpositions))[38;5;241m-[39m[38;5;28mmin[39m((pos[i] [38;5;28;01mfor[39;00m pos [38;5;129;01min[39;00m modeller[38;5;241m.[39mpositions)) [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;241m3[39m))
+
+File [0;32m~/micromamba/envs/docs/lib/python3.11/site-packages/openmm/app/modeller.py:519[0m, in [0;36mModeller.addSolvent[0;34m(self, forcefield, model, boxSize, boxVectors, padding, numAdded, boxShape, positiveIon, negativeIon, ionicStrength, neutralize, residueTemplates)[0m
+[1;32m    515[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m'[39m[38;5;124mNeither the box size, box vectors, nor padding was specified, and the Topology does not define unit cell dimensions[39m[38;5;124m'[39m)
+[1;32m    517[0m [38;5;66;03m# Have the ForceField build a System for the solute from which we can determine van der Waals radii.[39;00m
+[0;32m--> 519[0m system [38;5;241m=[39m [43mforcefield[49m[38;5;241;43m.[39;49m[43mcreateSystem[49m[43m([49m[38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mtopology[49m[43m,[49m[43m [49m[43mresidueTemplates[49m[38;5;241;43m=[39;49m[43mresidueTemplates[49m[43m)[49m
+[1;32m    520[0m nonbonded [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[1;32m    521[0m [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m [38;5;28mrange[39m(system[38;5;241m.[39mgetNumForces()):
+
+File [0;32m~/micromamba/envs/docs/lib/python3.11/site-packages/openmm/app/forcefield.py:1257[0m, in [0;36mForceField.createSystem[0;34m(self, topology, nonbondedMethod, nonbondedCutoff, constraints, rigidWater, removeCMMotion, hydrogenMass, residueTemplates, ignoreExternalBonds, switchDistance, flexibleConstraints, drudeMass, **args)[0m
+[1;32m   1253[0m rigidResidue [38;5;241m=[39m [[38;5;28;01mFalse[39;00m][38;5;241m*[39mtopology[38;5;241m.[39mgetNumResidues()
+[1;32m   1255[0m [38;5;66;03m# Find the template matching each residue and assign atom types.[39;00m
+[0;32m-> 1257[0m templateForResidue [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43m_matchAllResiduesToTemplates[49m[43m([49m[43mdata[49m[43m,[49m[43m [49m[43mtopology[49m[43m,[49m[43m [49m[43mresidueTemplates[49m[43m,[49m[43m [49m[43mignoreExternalBonds[49m[43m)[49m
+[1;32m   1258[0m [38;5;28;01mfor[39;00m res [38;5;129;01min[39;00m topology[38;5;241m.[39mresidues():
+[1;32m   1259[0m     [38;5;28;01mif[39;00m res[38;5;241m.[39mname [38;5;241m==[39m [38;5;124m'[39m[38;5;124mHOH[39m[38;5;124m'[39m:
+[1;32m   1260[0m         [38;5;66;03m# Determine whether this should be a rigid water.[39;00m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.11/site-packages/openmm/app/forcefield.py:1472[0m, in [0;36mForceField._matchAllResiduesToTemplates[0;34m(self, data, topology, residueTemplates, ignoreExternalBonds, ignoreExtraParticles, recordParameters)[0m
+[1;32m   1470[0m                 [38;5;28;01mbreak[39;00m
+[1;32m   1471[0m [38;5;28;01mif[39;00m matches [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m-> 1472[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m'[39m[38;5;124mNo template found for residue [39m[38;5;132;01m%d[39;00m[38;5;124m ([39m[38;5;132;01m%s[39;00m[38;5;124m).  [39m[38;5;132;01m%s[39;00m[38;5;124m  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#template[39m[38;5;124m'[39m [38;5;241m%[39m (res[38;5;241m.[39mindex[38;5;241m+[39m[38;5;241m1[39m, res[38;5;241m.[39mname, _findMatchErrors([38;5;28mself[39m, res)))
+[1;32m   1473[0m [38;5;28;01melse[39;00m:
+[1;32m   1474[0m     [38;5;28;01mif[39;00m recordParameters:
+
+[0;31mValueError[0m: No template found for residue 1 (ACE).  The set of atoms is similar to ACE, but it is missing 3 hydrogen atoms.  For more information, see https://github.com/openmm/openmm/wiki/Frequently-Asked-Questions#template
+
