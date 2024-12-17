@@ -1,0 +1,133 @@
+molsysmt.form.molsysmt\_PDBFileHandler package
+==============================================
+
+Submodules
+----------
+
+molsysmt.form.molsysmt\_PDBFileHandler.add module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.append\_structures module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.attributes module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.copy module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.extract module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.get module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.has\_attribute module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.is\_form module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.iterators module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.merge module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.set module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.to\_molsysmt\_MolSys module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.to\_molsysmt\_Structures module
+----------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.to\_molsysmt\_Topology module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_PDBFileHandler.to\_nglview\_NGLWidget module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler.to_nglview_NGLWidget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.molsysmt_PDBFileHandler
+   :members:
+   :undoc-members:
+   :show-inheritance:

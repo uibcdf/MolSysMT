@@ -1,0 +1,53 @@
+molsysmt.element.entity package
+===============================
+
+Submodules
+----------
+
+molsysmt.element.entity.get\_entity\_id module
+----------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_id
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_index module
+-------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_index
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_name module
+------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_name
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_entity\_type module
+------------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_entity_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.element.entity.get\_n\_entities module
+-----------------------------------------------
+
+.. automodule:: molsysmt.element.entity.get_n_entities
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.element.entity
+   :members:
+   :undoc-members:
+   :show-inheritance:

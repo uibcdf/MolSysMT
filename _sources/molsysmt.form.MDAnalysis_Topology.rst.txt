@@ -1,0 +1,101 @@
+molsysmt.form.MDAnalysis\_Topology package
+==========================================
+
+Submodules
+----------
+
+molsysmt.form.MDAnalysis\_Topology.add module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.append\_structures module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.attributes module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.copy module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.extract module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.get module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.has\_attribute module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.is\_form module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.iterators module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.merge module
+-----------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Topology.set module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
