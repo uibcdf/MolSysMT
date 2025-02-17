@@ -1,0 +1,125 @@
+molsysmt.form.file\_bcif\_gz package
+====================================
+
+Submodules
+----------
+
+molsysmt.form.file\_bcif\_gz.add module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.append\_structures module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.attributes module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.copy module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.download module
+--------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.download
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.extract module
+-------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.get module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.has\_attribute module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.is\_form module
+--------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.iterators module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.merge module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.set module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.to\_mmcif\_PdbxContainers\_DataContainer module
+----------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.to_mmcif_PdbxContainers_DataContainer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_bcif\_gz.to\_molsysmt\_MolSys module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_bcif_gz.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_bcif_gz
+   :members:
+   :undoc-members:
+   :show-inheritance:

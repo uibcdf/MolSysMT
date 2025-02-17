@@ -1,0 +1,61 @@
+molsysmt package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   molsysmt.attribute
+   molsysmt.basic
+   molsysmt.build
+   molsysmt.element
+   molsysmt.file
+   molsysmt.form
+   molsysmt.hbonds
+   molsysmt.lib
+   molsysmt.molecular_dynamics
+   molsysmt.molecular_mechanics
+   molsysmt.native
+   molsysmt.pbc
+   molsysmt.physchem
+   molsysmt.structure
+   molsysmt.supported
+   molsysmt.thirds
+   molsysmt.topology
+
+Submodules
+----------
+
+molsysmt.config module
+----------------------
+
+.. automodule:: molsysmt.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.dependencies module
+----------------------------
+
+.. automodule:: molsysmt.dependencies
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.systems module
+-----------------------
+
+.. automodule:: molsysmt.systems
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt
+   :members:
+   :undoc-members:
+   :show-inheritance:

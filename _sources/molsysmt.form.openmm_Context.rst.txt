@@ -1,0 +1,117 @@
+molsysmt.form.openmm\_Context package
+=====================================
+
+Submodules
+----------
+
+molsysmt.form.openmm\_Context.add module
+----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.append\_structures module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.attributes module
+-----------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.copy module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.extract module
+--------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.get module
+----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.has\_attribute module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.is\_form module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.iterators module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.merge module
+------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.set module
+----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.to\_molsysmt\_Structures module
+-------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Context.to\_openmm\_System module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Context.to_openmm_System
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.openmm_Context
+   :members:
+   :undoc-members:
+   :show-inheritance:

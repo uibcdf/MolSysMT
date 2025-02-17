@@ -1,0 +1,149 @@
+molsysmt.form.MDAnalysis\_Universe package
+==========================================
+
+Submodules
+----------
+
+molsysmt.form.MDAnalysis\_Universe.add module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.append\_structures module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.attributes module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.copy module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.extract module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.get module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.has\_attribute module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.is\_form module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.iterators module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.merge module
+-----------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.set module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_file\_pdb module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_file_pdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_mdtraj\_Trajectory module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_mdtraj_Trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_molsysmt\_MolSys module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_molsysmt\_Structures module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_molsysmt\_Topology module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.MDAnalysis\_Universe.to\_nglview\_NGLWidget module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe.to_nglview_NGLWidget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.MDAnalysis_Universe
+   :members:
+   :undoc-members:
+   :show-inheritance:

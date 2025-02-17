@@ -1,0 +1,141 @@
+molsysmt.form.file\_msmpk package
+=================================
+
+Submodules
+----------
+
+molsysmt.form.file\_msmpk.add module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.append\_structures module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.attributes module
+-------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.copy module
+-------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.extract module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.get module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.has\_attribute module
+-----------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.is\_form module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.iterators module
+------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.merge module
+--------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.set module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.to\_molsysmt\_MolSys module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.to\_molsysmt\_Structures module
+---------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.to\_molsysmt\_Topology module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.to\_nglview\_NGLWidget module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.to_nglview_NGLWidget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_msmpk.update\_file module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_msmpk.update_file
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_msmpk
+   :members:
+   :undoc-members:
+   :show-inheritance:

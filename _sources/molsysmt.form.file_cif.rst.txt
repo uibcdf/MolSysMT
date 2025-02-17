@@ -1,0 +1,109 @@
+molsysmt.form.file\_cif package
+===============================
+
+Submodules
+----------
+
+molsysmt.form.file\_cif.add module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_cif.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.append\_structures module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.attributes module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.copy module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_cif.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.extract module
+--------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.get module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_cif.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.has\_attribute module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.is\_form module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.iterators module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.merge module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.set module
+----------------------------------
+
+.. automodule:: molsysmt.form.file_cif.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_cif.to\_molsysmt\_CIFFileHandler module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_cif.to_molsysmt_CIFFileHandler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_cif
+   :members:
+   :undoc-members:
+   :show-inheritance:

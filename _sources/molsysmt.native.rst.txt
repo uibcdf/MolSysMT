@@ -1,0 +1,165 @@
+molsysmt.native package
+=======================
+
+Submodules
+----------
+
+molsysmt.native.card module
+---------------------------
+
+.. automodule:: molsysmt.native.card
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.cif\_file\_handler module
+-----------------------------------------
+
+.. automodule:: molsysmt.native.cif_file_handler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.file\_tng module
+--------------------------------
+
+.. automodule:: molsysmt.native.file_tng
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.file\_xtc module
+--------------------------------
+
+.. automodule:: molsysmt.native.file_xtc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.gro\_file\_handler module
+-----------------------------------------
+
+.. automodule:: molsysmt.native.gro_file_handler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.h5msm\_file\_handler module
+-------------------------------------------
+
+.. automodule:: molsysmt.native.h5msm_file_handler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.molecular\_mechanics module
+-------------------------------------------
+
+.. automodule:: molsysmt.native.molecular_mechanics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.molecular\_mechanics\_dict module
+-------------------------------------------------
+
+.. automodule:: molsysmt.native.molecular_mechanics_dict
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.molsys module
+-----------------------------
+
+.. automodule:: molsysmt.native.molsys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.pdb\_atomic\_coordinate\_entry module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.native.pdb_atomic_coordinate_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.pdb\_file\_handler module
+-----------------------------------------
+
+.. automodule:: molsysmt.native.pdb_file_handler
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.reporter module
+-------------------------------
+
+.. automodule:: molsysmt.native.reporter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.simulation module
+---------------------------------
+
+.. automodule:: molsysmt.native.simulation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.simulation\_dict module
+---------------------------------------
+
+.. automodule:: molsysmt.native.simulation_dict
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.structures module
+---------------------------------
+
+.. automodule:: molsysmt.native.structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.structures\_dict module
+---------------------------------------
+
+.. automodule:: molsysmt.native.structures_dict
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.topography module
+---------------------------------
+
+.. automodule:: molsysmt.native.topography
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.topology module
+-------------------------------
+
+.. automodule:: molsysmt.native.topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.native.trajectory\_file module
+---------------------------------------
+
+.. automodule:: molsysmt.native.trajectory_file
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.native
+   :members:
+   :undoc-members:
+   :show-inheritance:

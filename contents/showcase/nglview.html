@@ -1,0 +1,937 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../_static/favicon-16x16.png" sizes="16x16" rel="icon" type="image/png">
+    <link href="../../_static/favicon-124x124.png" sizes="124x124" rel="icon" type="image/png">
+    <link href="../../_static/favicon-128x128.png" sizes="128x128" rel="icon" type="image/png">
+    <link href="../../_static/favicon-192x192.png" sizes="192x192" rel="icon" type="image/png">
+    <link href="../../_static/icon.svg" rel="icon" type="image/svg+xml">
+    <title>Working with NGLView &#8212; MolSysMT 0.9.8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx_tabs.css?v=f45e19d3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5ef24d1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d5ef24d1" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=1a282f62"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nglview-js-widgets@3.1.0/dist/index.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="User guide" href="../user/index.html" />
+    <link rel="prev" title="Working with OpenMM" href="openmm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.9.8" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.svg" class="logo__image only-light" alt="MolSysMT 0.9.8 documentation - Home"/>
+    <img src="../../_static/logo.svg" class="logo__image only-dark pst-js-only" alt="MolSysMT 0.9.8 documentation - Home"/>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about/index.html">
+    About
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Showcase
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user/index.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../developer/index.html">
+    Developer guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API documentation
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/uibcdf/MolSysMT" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="barnase_barstar.html">Barnase-Barstar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dialanine_montecarlo.html">Dialanine Monte Carlo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="md_trajectory.html">MD Trajectory analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="membrane.html">Membrane analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmm.html">Working with OpenMM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Working with NGLView</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Showcase</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Working with NGLView</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="working-with-nglview">
+<h1>Working with NGLView<a class="headerlink" href="#working-with-nglview" title="Link to this heading">#</a></h1>
+<p>MolSysMT can handle nglview.NGLWidget objects in the same way that it handles other molecular systems. Therefore, any MolSysMT tool can accept NGLView views as input systems.</p>
+<section id="the-nglview-nglwidget-as-any-other-molecular-system-s-form">
+<h2>The nglview.NGLWidget as any other molecular system’s form<a class="headerlink" href="#the-nglview-nglwidget-as-any-other-molecular-system-s-form" title="Link to this heading">#</a></h2>
+<p>Before we show some examples of how MolSysMT works with NGLView native objects, let’s create an nglview.NGLWidget to play with. Let’s work with the demo system from NGLView:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">molsysmt</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">msm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nglview</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "099eae35d12b42d98961b6ae21c297cd"}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">demo</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "11e06be0997145e5824cb2a09e818f62"}</script></div>
+</div>
+<p>Now that we have an nglview.NGLWidget object, let’s see if MolSysMT can get an information summary of the molecular system straight from it as first test:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning! The group name LRT is reserved in the Protein Data Bank for a small molecule, not for an amino acid.
+Warning! The group name YPL is reserved in the Protein Data Bank for a small molecule, not for an amino acid.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning! The group name LRT is reserved in the Protein Data Bank for a small molecule, not for an amino acid.
+Warning! The group name YPL is reserved in the Protein Data Bank for a small molecule, not for an amino acid.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: No max bond length defined between atom types C and CL in group type amino acid. The bond between atoms [17, 18] was defined by max_bond_length=0.2 nanometer.
+Warning: No max bond length defined between atom types CL and C in group type amino acid. The bond between atoms [18, 19] was defined by max_bond_length=0.2 nanometer.
+Warning: No max bond length defined between atom types C and CL in group type amino acid. The bond between atoms [17, 18] was defined by max_bond_length=0.2 nanometer.
+Warning: No max bond length defined between atom types CL and C in group type amino acid. The bond between atoms [18, 19] was defined by max_bond_length=0.2 nanometer.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:122,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">all_args</span><span class="p">[</span><span class="s1">&#39;self&#39;</span><span class="p">],</span> <span class="o">**</span><span class="n">final_args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">122</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="n">final_args</span><span class="p">)</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/info.py:295,</span> in <span class="ni">info</span><span class="nt">(molecular_system, element, selection, syntax)</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="k">return</span> <span class="n">df</span><span class="p">({</span><span class="s1">&#39;index&#39;</span><span class="p">:</span> <span class="n">entity_index</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">entity_name</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">entity_type</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>                <span class="s1">&#39;n atoms&#39;</span><span class="p">:</span> <span class="n">n_atoms</span><span class="p">,</span> <span class="s1">&#39;n groups&#39;</span><span class="p">:</span> <span class="n">n_groups</span><span class="p">,</span> <span class="s1">&#39;n components&#39;</span><span class="p">:</span> <span class="n">n_components</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span>                <span class="s1">&#39;n chains&#39;</span><span class="p">:</span> <span class="n">n_chains</span><span class="p">,</span> <span class="s1">&#39;n molecules&#39;</span><span class="p">:</span> <span class="n">n_molecules</span>
+<span class="g g-Whitespace">    </span><span class="mi">289</span>                <span class="p">})</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="k">elif</span> <span class="n">element</span> <span class="o">==</span> <span class="s1">&#39;system&#39;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span>     <span class="n">n_atoms</span><span class="p">,</span> <span class="n">n_groups</span><span class="p">,</span> <span class="n">n_components</span><span class="p">,</span> <span class="n">n_chains</span><span class="p">,</span> <span class="n">n_molecules</span><span class="p">,</span> <span class="n">n_entities</span><span class="p">,</span> <span class="n">n_structures</span><span class="p">,</span> \
+<span class="g g-Whitespace">    </span><span class="mi">294</span>     <span class="n">n_ions</span><span class="p">,</span> <span class="n">n_waters</span><span class="p">,</span> <span class="n">n_small_molecules</span><span class="p">,</span> <span class="n">n_peptides</span><span class="p">,</span> <span class="n">n_proteins</span><span class="p">,</span> <span class="n">n_dnas</span><span class="p">,</span> \
+<span class="ne">--&gt; </span><span class="mi">295</span>     <span class="n">n_rnas</span><span class="p">,</span> <span class="n">n_lipids</span><span class="p">,</span> <span class="n">n_oligosaccharides</span><span class="p">,</span> <span class="n">n_saccharides</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">element</span><span class="p">,</span> <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">296</span>             <span class="n">n_atoms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_groups</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">297</span>             <span class="n">n_components</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_chains</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_molecules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_entities</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_structures</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_ions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">298</span>             <span class="n">n_waters</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_small_molecules</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_peptides</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_proteins</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_dnas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">299</span>             <span class="n">n_rnas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_lipids</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_oligosaccharides</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">n_saccharides</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">attributes_filter</span><span class="p">[</span><span class="s1">&#39;n_atoms&#39;</span><span class="p">]:</span> <span class="n">n_atoms</span><span class="o">=</span><span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">302</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">attributes_filter</span><span class="p">[</span><span class="s1">&#39;n_groups&#39;</span><span class="p">]:</span> <span class="n">n_groups</span><span class="o">=</span><span class="kc">None</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;skip_digestion&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">52</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="c1"># Define caller</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">caller</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__module__</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/get.py:179,</span> in <span class="ni">get</span><span class="nt">(molecular_system, element, selection, structure_indices, mask, syntax, get_missing_bonds, output_type, skip_digestion, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span>         <span class="n">indices</span> <span class="o">=</span> <span class="n">select</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">element</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">syntax</span><span class="o">=</span><span class="n">syntax</span><span class="p">,</span> <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">179</span> <span class="n">piped_molecular_systems</span><span class="p">,</span> <span class="n">piped_attributes</span> <span class="o">=</span> <span class="n">_piped_molecular_system</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">in_attributes</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="k">if</span> <span class="n">piped_molecular_systems</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span>     <span class="n">output</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/get.py:353,</span> in <span class="ni">_piped_molecular_system</span><span class="nt">(molecular_system, element, in_attributes)</span>
+<span class="g g-Whitespace">    </span><span class="mi">349</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">351</span>     <span class="k">if</span> <span class="n">n_any_pipes</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">353</span>         <span class="n">aux_molecular_system</span> <span class="o">=</span> <span class="n">convert</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">to_form</span><span class="o">=</span><span class="n">aux_any_pipes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="g g-Whitespace">    </span><span class="mi">354</span>                                        <span class="n">get_missing_bonds</span><span class="o">=</span><span class="n">bonds_required_by_attributes</span><span class="p">,</span> <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">356</span>         <span class="n">output_systems</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aux_molecular_system</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">357</span>         <span class="n">output_attributes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">aux_topological_attributes</span><span class="o">+</span><span class="n">aux_structural_attributes</span><span class="p">)</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;skip_digestion&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">52</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="c1"># Define caller</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">caller</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__module__</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/convert.py:530,</span> in <span class="ni">convert</span><span class="nt">(molecular_system, to_form, selection, structure_indices, syntax, verbose, skip_digestion, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="c1"># If one to one</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">from_form</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+<span class="ne">--&gt; </span><span class="mi">530</span>     <span class="n">output</span> <span class="o">=</span> <span class="n">_convert_one_to_one</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">from_form</span><span class="p">,</span> <span class="n">to_form</span><span class="o">=</span><span class="n">to_form</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span> <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span>             <span class="n">syntax</span><span class="o">=</span><span class="n">syntax</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">,</span> <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="c1"># If multiple to one</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span> 
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> 
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="c1"># conversions in private shortcuts</span>
+<span class="g g-Whitespace">    </span><span class="mi">538</span>     <span class="k">if</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">from_form</span><span class="p">))</span> <span class="ow">in</span> <span class="n">_multiple_conversion_shortcuts</span><span class="p">:</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/convert.py:87,</span> in <span class="ni">_convert_one_to_one</span><span class="nt">(molecular_system, from_form, to_form, selection, structure_indices, syntax, verbose, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing_arguments</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>             <span class="k">raise</span> <span class="n">NotCompatibleConversionError</span><span class="p">(</span><span class="n">from_form</span><span class="p">,</span> <span class="n">to_form</span><span class="p">,</span> <span class="n">missing_arguments</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">87</span>     <span class="n">output</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="o">**</span><span class="n">conversion_arguments</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span> <span class="k">elif</span> <span class="p">(</span><span class="s1">&#39;molsysmt.MolSys&#39;</span> <span class="ow">in</span> <span class="n">_dict_modules</span><span class="p">[</span><span class="n">from_form</span><span class="p">]</span><span class="o">.</span><span class="n">_convert_to</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">to_form</span> <span class="ow">in</span> <span class="n">_dict_modules</span><span class="p">[</span><span class="s1">&#39;molsysmt.MolSys&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">_convert_to</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span>     <span class="n">output</span> <span class="o">=</span> <span class="n">_convert_one_to_one</span><span class="p">(</span><span class="n">molecular_system</span><span class="p">,</span> <span class="n">from_form</span><span class="p">,</span> <span class="n">to_form</span><span class="o">=</span><span class="s1">&#39;molsysmt.MolSys&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="n">selection</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">92</span>             <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span> <span class="n">syntax</span><span class="o">=</span><span class="n">syntax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;skip_digestion&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">52</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="c1"># Define caller</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">caller</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__module__</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/form/nglview_NGLWidget/to_molsysmt_MolSys.py:14,</span> in <span class="ni">to_molsysmt_MolSys</span><span class="nt">(item, atom_indices, structure_indices, get_missing_bonds, skip_digestion)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">tmp_item</span> <span class="o">=</span> <span class="n">MolSys</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">tmp_item</span><span class="o">.</span><span class="n">topology</span> <span class="o">=</span> <span class="n">to_molsysmt_Topology</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">atom_indices</span><span class="o">=</span><span class="n">atom_indices</span><span class="p">,</span> <span class="n">get_missing_bonds</span><span class="o">=</span><span class="n">get_missing_bonds</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>                                          <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="n">tmp_item</span><span class="o">.</span><span class="n">structures</span> <span class="o">=</span> <span class="n">to_molsysmt_Structures</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">atom_indices</span><span class="o">=</span><span class="n">atom_indices</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>                                              <span class="n">structure_indices</span><span class="o">=</span><span class="n">structure_indices</span><span class="p">,</span> <span class="n">skip_digestion</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="k">return</span> <span class="n">tmp_item</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52,</span> in <span class="ni">digest.&lt;locals&gt;.digestor.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;skip_digestion&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">52</span>         <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span>     <span class="c1"># Define caller</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">caller</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="vm">__module__</span><span class="o">+</span><span class="s1">&#39;.&#39;</span><span class="o">+</span><span class="n">func</span><span class="o">.</span><span class="vm">__name__</span>
+
+<span class="nn">File ~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/form/nglview_NGLWidget/to_molsysmt_Structures.py:23,</span> in <span class="ni">to_molsysmt_Structures</span><span class="nt">(item, atom_indices, structure_indices, skip_digestion)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="n">structure_indices</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="k">if</span> <span class="n">is_all</span><span class="p">(</span><span class="n">atom_indices</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">23</span>         <span class="n">coordinates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_coordinates</span><span class="p">(</span><span class="n">ii</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>         <span class="n">coordinates</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_coordinates</span><span class="p">(</span><span class="n">ii</span><span class="p">)[</span><span class="n">atom_indices</span><span class="p">,:])</span>
+
+<span class="ne">AttributeError</span>: &#39;ComponentViewer&#39; object has no attribute &#39;get_coordinates&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Attributes such as atom names, number of structures or atom coordinates can be retrieved with the function <a class="reference internal" href="../../molsysmt.basic.html#module-molsysmt.basic.get" title="molsysmt.basic.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">molsysmt.basic.get()</span></code></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="p">[</span><span class="mi">81</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">83</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;system&#39;</span><span class="p">,</span> <span class="n">n_structures</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;atom&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;atom_name==&quot;CA&quot;&#39;</span><span class="p">,</span> <span class="n">coordinates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Element’s selections can also be made on NGLView native objects with MolSysMT:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;atom_name==&quot;CA&quot; and group_name==&quot;LYS&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>And in addition, MolSysMT can help you to get selection strings to be used in NGLView:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;atom_name==&quot;CA&quot; and group_name==&quot;LYS&quot;&#39;</span><span class="p">,</span> <span class="n">to_syntax</span><span class="o">=</span><span class="s1">&#39;nglview&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;group_name==&quot;LYS&quot;&#39;</span><span class="p">,</span> <span class="n">to_syntax</span><span class="o">=</span><span class="s1">&#39;nglview&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally we can wonder, can MolSysMT convert an nglview.NGLWidget to other molecular system forms? Have a look to this couple of examples:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">to_form</span><span class="o">=</span><span class="s1">&#39;string:aminoacids3&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">openmm_Topology</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">to_form</span><span class="o">=</span><span class="s1">&#39;openmm.Topology&#39;</span><span class="p">)</span>
+<span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">openmm_Topology</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that it has been demonstrated that MolSysMT recognizes nglview.NGLWidget objects as any other molecular form. Let’s show a couple of examples more appealing than the previous cells.</p>
+</section>
+<section id="example-1-getting-contact-maps-from-a-trajectory-view">
+<h2>Example 1: Getting contact maps from a trajectory view<a class="headerlink" href="#example-1-getting-contact-maps-from-a-trajectory-view" title="Link to this heading">#</a></h2>
+<p>Given the visualization of a molecular dynamics trajectory, let’s compute the contact maps between all alpha carbons from all frames.</p>
+<p>First, the view needs to be produced by NGLView. This let’s do it straight with MolSysMT:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">convert</span><span class="p">([</span><span class="n">nv</span><span class="o">.</span><span class="n">datafiles</span><span class="o">.</span><span class="n">GRO</span><span class="p">,</span> <span class="n">nv</span><span class="o">.</span><span class="n">datafiles</span><span class="o">.</span><span class="n">XTC</span><span class="p">],</span> <span class="n">to_form</span><span class="o">=</span><span class="s1">&#39;nglview.NGLWidget&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We could have used the function :func:<code class="docutils literal notranslate"><span class="pre">molsysmt.basic.view</span></code> instead also. Have a look to <a class="reference internal" href="#../tools/basic/view.ipynb"><span class="xref myst">User guide &gt; Tools &gt; Basic &gt; View</span></a>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s get the contact maps from the 51 structures with a 12 angstroms threshold:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_contacts</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_type==&quot;protein&quot; and atom_name==&quot;CA&quot;&#39;</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;12 angstroms&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each contact map is a boolean matrix:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">contact_map</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can make with Plotly an animated representation of these contact maps. But before, let’s get the x and y ticks labels for our contacts:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CA_labels</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">get_label</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_type==&quot;protein&quot; and atom_name==&quot;CA&quot;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">{group_name}</span><span class="s1">-</span><span class="si">{group_id}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CA_labels</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Time to show how the CA contacts evolves:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="o">~</span><span class="n">contact_map</span><span class="p">,</span> <span class="n">animation_frame</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">binary_string</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">tickmode</span> <span class="o">=</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span>
+        <span class="n">tickvals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">contact_map</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">25</span><span class="p">)),</span>
+        <span class="n">ticktext</span> <span class="o">=</span> <span class="n">CA_labels</span><span class="p">[::</span><span class="mi">25</span><span class="p">],</span>
+        <span class="n">tickangle</span> <span class="o">=</span> <span class="mi">45</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">tickmode</span> <span class="o">=</span> <span class="s1">&#39;array&#39;</span><span class="p">,</span>
+        <span class="n">tickvals</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">contact_map</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">25</span><span class="p">)),</span>
+        <span class="n">ticktext</span> <span class="o">=</span> <span class="n">CA_labels</span><span class="p">[::</span><span class="mi">25</span><span class="p">],</span>
+        <span class="n">tickangle</span> <span class="o">=</span> <span class="mi">45</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-2-getting-distances-between-geometric-centers-of-different-views">
+<h2>Example 2: Getting distances between geometric centers of different views<a class="headerlink" href="#example-2-getting-distances-between-geometric-centers-of-different-views" title="Link to this heading">#</a></h2>
+<p>As second example let’s suppose we have two peptides:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">molsys_A</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">build_peptide</span><span class="p">(</span><span class="s1">&#39;AceAlaNME&#39;</span><span class="p">)</span>
+<span class="n">molsys_B</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">build</span><span class="o">.</span><span class="n">build_peptide</span><span class="p">(</span><span class="s1">&#39;AceProNME&#39;</span><span class="p">)</span>
+<span class="n">molsys_B</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">molsys_B</span><span class="p">,</span> <span class="n">translation</span><span class="o">=</span><span class="s1">&#39;[1.0, 0.0, 0.0] nm&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>But each peptide has its own visualization. Notice that this time the views are produced with a different approach than before:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view1</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">show_molsysmt</span><span class="p">(</span><span class="n">molsys_A</span><span class="p">)</span>
+<span class="n">view2</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">show_molsysmt</span><span class="p">(</span><span class="n">molsys_B</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">view1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">view2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we are interested in the distance between the geometrical center of each peptide, we can merge the views in a new one to extract the observable from a unique molecular system:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">msm</span><span class="o">.</span><span class="n">merge</span><span class="p">([</span><span class="n">view1</span><span class="p">,</span> <span class="n">view2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">view</span><span class="o">.</span><span class="n">add_licorice</span><span class="p">()</span>
+<span class="n">view</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_distances</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_index==0&#39;</span><span class="p">,</span> <span class="n">selection_2</span><span class="o">=</span><span class="s1">&#39;molecule_index==1&#39;</span><span class="p">,</span>
+                            <span class="n">group_behavior</span><span class="o">=</span><span class="s1">&#39;geometric center&#39;</span><span class="p">,</span> <span class="n">group_behavior_2</span><span class="o">=</span><span class="s1">&#39;geometric center&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It can be proved looking at the geometric centers that the distance is correct:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_geometric_center</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_index==0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_geometric_center</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;molecule_index==1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or we can do it from both views, without merging them in a new one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msm</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">get_distances</span><span class="p">(</span><span class="n">view1</span><span class="p">,</span> <span class="n">group_behavior</span><span class="o">=</span><span class="s1">&#39;geometric center&#39;</span><span class="p">,</span>
+                            <span class="n">molecular_system_2</span><span class="o">=</span><span class="n">view2</span><span class="p">,</span> <span class="n">group_behavior_2</span><span class="o">=</span><span class="s1">&#39;geometric center&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../user/tools/basic/info.html"><span class="std std-doc">User guide &gt; Tools &gt; Basic &gt; Info</span></a>: Printing out summary information of a molecular system.<br />
+<a class="reference internal" href="../user/tools/basic/get.html"><span class="std std-doc">User guide &gt; Tools &gt; Basic &gt; Get</span></a>:<br />
+<a class="reference internal" href="../user/tools/basic/select.html"><span class="std std-doc">User guide &gt; Tools &gt; Basic &gt; Select</span></a>:<br />
+<a class="reference internal" href="../user/tools/basic/view.html"><span class="std std-doc">User guide &gt; Tools &gt; Basic &gt; View</span></a>: Showing a molecular system.<br />
+<a class="reference internal" href="../user/tools/basic/merge.html"><span class="std std-doc">User guide &gt; Tools &gt; Basic &gt; Merge</span></a>: Merging the elements of different molecular systems.<br />
+<a class="reference internal" href="../user/tools/build/build_peptide.html"><span class="std std-doc">User guide &gt; Tools &gt; Build &gt; Build peptide</span></a>:<br />
+<a class="reference internal" href="../user/tools/structure/translate.html"><span class="std std-doc">User guide &gt; Tools &gt; Structure &gt; Translate</span></a>:<br />
+<a class="reference internal" href="../user/tools/structure/get_distances.html"><span class="std std-doc">User guide &gt; Tools &gt; Structure &gt; Get distances</span></a>:<br />
+<a class="reference internal" href="#../user/tools/structure/get_geometric_center.ipynb"><span class="xref myst">User guide &gt; Tools &gt; Structure &gt; Get geometric center</span></a>:</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="openmm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Working with OpenMM</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../user/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">User guide</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-nglview-nglwidget-as-any-other-molecular-system-s-form">The nglview.NGLWidget as any other molecular system’s form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-getting-contact-maps-from-a-trajectory-view">Example 1: Getting contact maps from a trajectory view</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-getting-distances-between-geometric-centers-of-different-views">Example 2: Getting distances between geometric centers of different views</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><div>
+	&copy; 2024, <a href=contents/about/who.html>Liliana M. Moreno Vargas, Diego Prada Gracia
+		and contributors</a> | <a href="https://www.uibcdf.org/">UIBCDF Lab</a> 
+	at the <a href="http://himfg.com.mx">Children's Hospital of Mexico Federico Gómez</a><br />
+	<a href="https://github.com/uibcdf/MolSysMT">MolSysMT is an open source project</a> shared
+	under <a href="https://github.com/uibcdf/MolSysMT/blob/main/LICENSE">an MIT license</a>
+	with a structure based on the
+	<a href="https://github.com/MolSSI/cookiecutter-cms">Computational Molecular Science
+		Python Cookiecutter</a> version 1.5
+</div></div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3
+     | 
+    Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1
+    <br/>
+  </p>
+
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><a href= "mailto:uibcdf@gmail.com">Contact us</a><br /></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

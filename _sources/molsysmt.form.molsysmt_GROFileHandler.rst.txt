@@ -1,0 +1,133 @@
+molsysmt.form.molsysmt\_GROFileHandler package
+==============================================
+
+Submodules
+----------
+
+molsysmt.form.molsysmt\_GROFileHandler.add module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.append\_structures module
+----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.attributes module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.copy module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.extract module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.get module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.has\_attribute module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.is\_form module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.iterators module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.merge module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.set module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.to\_molsysmt\_MolSys module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.to\_molsysmt\_Structures module
+----------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.to\_molsysmt\_Topology module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.molsysmt\_GROFileHandler.to\_nglview\_NGLWidget module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler.to_nglview_NGLWidget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.molsysmt_GROFileHandler
+   :members:
+   :undoc-members:
+   :show-inheritance:

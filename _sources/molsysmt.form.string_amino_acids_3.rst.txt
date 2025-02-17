@@ -1,0 +1,125 @@
+molsysmt.form.string\_amino\_acids\_3 package
+=============================================
+
+Submodules
+----------
+
+molsysmt.form.string\_amino\_acids\_3.add module
+------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.append\_structures module
+---------------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.attributes module
+-------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.copy module
+-------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.extract module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.get module
+------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.has\_attribute module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.is\_form module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.iterators module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.merge module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.set module
+------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.to\_biopython\_Seq module
+---------------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.to_biopython_Seq
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.to\_biopython\_SeqRecord module
+---------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.to_biopython_SeqRecord
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.string\_amino\_acids\_3.to\_string\_amino\_acids\_1 module
+------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3.to_string_amino_acids_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.string_amino_acids_3
+   :members:
+   :undoc-members:
+   :show-inheritance:

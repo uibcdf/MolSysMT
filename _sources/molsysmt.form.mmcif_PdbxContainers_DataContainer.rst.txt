@@ -1,0 +1,205 @@
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer package
+==========================================================
+
+Submodules
+----------
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.add module
+-------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.append\_structures module
+----------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.attributes module
+--------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.copy module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.extract module
+-----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.get module
+-------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.get\_structural\_attributes module
+-------------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.get_structural_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.get\_topological\_attributes module
+--------------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.get_topological_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.has\_attribute module
+------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.is\_form module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.iterators module
+-------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.merge module
+---------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.set module
+-------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_file\_pdb module
+-----------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_file_pdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_mdtraj\_Trajectory module
+--------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_mdtraj_Trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_molsysmt\_MolSys module
+------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_molsysmt\_MolecularMechanics module
+------------------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_molsysmt_MolecularMechanics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_molsysmt\_Structures module
+----------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_molsysmt\_Topology module
+--------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_openmm\_Topology module
+------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_openmm_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_string\_amino\_acids\_1 module
+-------------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_string_amino_acids_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_string\_amino\_acids\_3 module
+-------------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_string_amino_acids_3
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_string\_pdb\_id module
+-----------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_string_pdb_id
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.mmcif\_PdbxContainers\_DataContainer.to\_string\_pdb\_text module
+-------------------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer.to_string_pdb_text
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.mmcif_PdbxContainers_DataContainer
+   :members:
+   :undoc-members:
+   :show-inheritance:

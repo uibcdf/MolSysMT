@@ -1,0 +1,197 @@
+molsysmt.form.file\_mmtf package
+================================
+
+Submodules
+----------
+
+molsysmt.form.file\_mmtf.add module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.append\_structures module
+--------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.attributes module
+------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.copy module
+------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.download module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.download
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.extract module
+---------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.get module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.get
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.has\_attribute module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.is\_form module
+----------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.iterators module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.merge module
+-------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.set module
+-----------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_MDAnalysis\_Universe module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_MDAnalysis_Universe
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_file\_pdb module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_file_pdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_mdtraj module
+------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_mdtraj
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_mmtf\_MMTFDecoder module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_mmtf_MMTFDecoder
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_molsysmt\_MolSys module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_molsysmt\_Structures module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_molsysmt\_Topology module
+------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_openmm\_Topology module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_openmm_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_string\_amino\_acids\_1 module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_string_amino_acids_1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_string\_amino\_acids\_3 module
+-----------------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_string_amino_acids_3
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.file\_mmtf.to\_string\_pdb\_text module
+-----------------------------------------------------
+
+.. automodule:: molsysmt.form.file_mmtf.to_string_pdb_text
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.file_mmtf
+   :members:
+   :undoc-members:
+   :show-inheritance:

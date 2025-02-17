@@ -1,0 +1,124 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+msm.info(molecular_system)
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+Cell [0;32mIn[5], line 1[0m
+[0;32m----> 1[0m [43mmsm[49m[38;5;241;43m.[39;49m[43minfo[49m[43m([49m[43mmolecular_system[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:122[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    120[0m     [38;5;28;01mreturn[39;00m func(all_args[[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m], [38;5;241m*[39m[38;5;241m*[39mfinal_args)
+[1;32m    121[0m [38;5;28;01melse[39;00m:
+[0;32m--> 122[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/info.py:295[0m, in [0;36minfo[0;34m(molecular_system, element, selection, syntax)[0m
+[1;32m    286[0m     [38;5;28;01mreturn[39;00m df({[38;5;124m'[39m[38;5;124mindex[39m[38;5;124m'[39m: entity_index, [38;5;124m'[39m[38;5;124mname[39m[38;5;124m'[39m: entity_name, [38;5;124m'[39m[38;5;124mtype[39m[38;5;124m'[39m: entity_type,
+[1;32m    287[0m                [38;5;124m'[39m[38;5;124mn atoms[39m[38;5;124m'[39m: n_atoms, [38;5;124m'[39m[38;5;124mn groups[39m[38;5;124m'[39m: n_groups, [38;5;124m'[39m[38;5;124mn components[39m[38;5;124m'[39m: n_components,
+[1;32m    288[0m                [38;5;124m'[39m[38;5;124mn chains[39m[38;5;124m'[39m: n_chains, [38;5;124m'[39m[38;5;124mn molecules[39m[38;5;124m'[39m: n_molecules
+[1;32m    289[0m                })[38;5;241m.[39mstyle[38;5;241m.[39mhide(axis[38;5;241m=[39m[38;5;124m'[39m[38;5;124mindex[39m[38;5;124m'[39m)
+[1;32m    291[0m [38;5;28;01melif[39;00m element [38;5;241m==[39m [38;5;124m'[39m[38;5;124msystem[39m[38;5;124m'[39m:
+[1;32m    293[0m     n_atoms, n_groups, n_components, n_chains, n_molecules, n_entities, n_structures, \
+[1;32m    294[0m     n_ions, n_waters, n_small_molecules, n_peptides, n_proteins, n_dnas, \
+[0;32m--> 295[0m     n_rnas, n_lipids, n_oligosaccharides, n_saccharides [38;5;241m=[39m [43mget[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43melement[49m[38;5;241;43m=[39;49m[43melement[49m[43m,[49m[43m [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m    296[0m [43m            [49m[43mn_atoms[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_groups[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m    297[0m [43m            [49m[43mn_components[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_chains[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_molecules[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_entities[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_structures[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_ions[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m    298[0m [43m            [49m[43mn_waters[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_small_molecules[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_peptides[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_proteins[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_dnas[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m    299[0m [43m            [49m[43mn_rnas[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_lipids[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_oligosaccharides[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m[43m [49m[43mn_saccharides[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m    301[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m attributes_filter[[38;5;124m'[39m[38;5;124mn_atoms[39m[38;5;124m'[39m]: n_atoms[38;5;241m=[39m[38;5;28;01mNone[39;00m
+[1;32m    302[0m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m attributes_filter[[38;5;124m'[39m[38;5;124mn_groups[39m[38;5;124m'[39m]: n_groups[38;5;241m=[39m[38;5;28;01mNone[39;00m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/get.py:179[0m, in [0;36mget[0;34m(molecular_system, element, selection, structure_indices, mask, syntax, get_missing_bonds, output_type, skip_digestion, **kwargs)[0m
+[1;32m    176[0m     [38;5;28;01melse[39;00m:
+[1;32m    177[0m         indices [38;5;241m=[39m select(molecular_system, element[38;5;241m=[39melement, selection[38;5;241m=[39mmask, syntax[38;5;241m=[39msyntax, skip_digestion[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[0;32m--> 179[0m piped_molecular_systems, piped_attributes [38;5;241m=[39m [43m_piped_molecular_system[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43melement[49m[43m,[49m[43m [49m[43min_attributes[49m[43m)[49m
+[1;32m    181[0m [38;5;28;01mif[39;00m piped_molecular_systems [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[1;32m    183[0m     output [38;5;241m=[39m []
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/get.py:295[0m, in [0;36m_piped_molecular_system[0;34m(molecular_system, element, in_attributes)[0m
+[1;32m    293[0m                 aux_any_pipes[38;5;241m.[39mappend(any_pipes[aux_form])
+[1;32m    294[0m [38;5;28;01melif[39;00m is_structural_attribute(in_attribute, skip_digestion[38;5;241m=[39m[38;5;28;01mTrue[39;00m):
+[0;32m--> 295[0m     _, aux_form [38;5;241m=[39m [43mwhere_is_attribute[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43min_attribute[49m[43m)[49m
+[1;32m    296[0m     aux_structural_attributes[38;5;241m.[39mappend(in_attribute)
+[1;32m    297[0m     [38;5;28;01mif[39;00m aux_form [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:109[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    105[0m     [38;5;28;01mpass[39;00m
+[1;32m    108[0m [38;5;28;01mfor[39;00m arg_name [38;5;129;01min[39;00m all_args:
+[0;32m--> 109[0m     [43mgut[49m[43m([49m[43marg_name[49m[43m)[49m
+[1;32m    112[0m [38;5;28;01mfor[39;00m arg_name [38;5;129;01min[39;00m not_digested_args:
+[1;32m    113[0m     [38;5;28;01mif[39;00m arg_name [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m [[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m]:
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:100[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper.<locals>.gut[0;34m(arg_name)[0m
+[1;32m     98[0m         [38;5;28;01melse[39;00m:
+[1;32m     99[0m             parameters_dict[parameter] [38;5;241m=[39m [38;5;28;01mNone[39;00m
+[0;32m--> 100[0m     digested_args[arg_name] [38;5;241m=[39m [43mdigestion_functions[49m[43m[[49m[43marg_name[49m[43m][49m[43m([49m[43mall_args[49m[43m[[49m[43marg_name[49m[43m][49m[43m,[49m
+[1;32m    101[0m [43m                                                  [49m[43mcaller[49m[38;5;241;43m=[39;49m[43mcaller[49m[43m,[49m
+[1;32m    102[0m [43m                                                  [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mparameters_dict[49m[43m)[49m
+[1;32m    103[0m [38;5;28;01melse[39;00m:
+[1;32m    104[0m     not_digested_args[arg_name] [38;5;241m=[39m all_args[arg_name]
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/argument/molecular_system.py:41[0m, in [0;36mdigest_molecular_system[0;34m(molecular_system, caller)[0m
+[1;32m     38[0m     [38;5;28;01melif[39;00m are_multiple_molecular_systems(molecular_system):
+[1;32m     39[0m         [38;5;28;01mreturn[39;00m merge(molecular_system, to_form[38;5;241m=[39m[38;5;124m'[39m[38;5;124mmolsysmt.MolSys[39m[38;5;124m'[39m)
+[0;32m---> 41[0m [38;5;28;01mif[39;00m [43mis_a_molecular_system[49m[43m([49m[43mmolecular_system[49m[43m)[49m:
+[1;32m     42[0m     [38;5;28;01mreturn[39;00m molecular_system
+[1;32m     44[0m [38;5;28;01mraise[39;00m ArgumentError([38;5;124m'[39m[38;5;124mmolecular_system[39m[38;5;124m'[39m, value[38;5;241m=[39mmolecular_system, caller[38;5;241m=[39mcaller, message[38;5;241m=[39m[38;5;28;01mNone[39;00m)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/is_a_molecular_system.py:86[0m, in [0;36mis_a_molecular_system[0;34m(molecular_system)[0m
+[1;32m     83[0m [38;5;28;01mfor[39;00m item [38;5;129;01min[39;00m molecular_system:
+[1;32m     85[0m     form_in [38;5;241m=[39m get_form(item)
+[0;32m---> 86[0m     list_n_atoms[38;5;241m.[39mappend([43m_dict_modules[49m[43m[[49m[43mform_in[49m[43m][49m[38;5;241;43m.[39;49m[43mget_n_atoms_from_system[49m[43m([49m[43mitem[49m[43m)[49m)
+[1;32m     88[0m set_n_atoms [38;5;241m=[39m [38;5;28mset[39m([ii [38;5;28;01mfor[39;00m ii [38;5;129;01min[39;00m list_n_atoms [38;5;28;01mif[39;00m ii [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m])
+[1;32m     90[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(set_n_atoms)[38;5;241m>[39m[38;5;241m1[39m:
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:122[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    120[0m     [38;5;28;01mreturn[39;00m func(all_args[[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m], [38;5;241m*[39m[38;5;241m*[39mfinal_args)
+[1;32m    121[0m [38;5;28;01melse[39;00m:
+[0;32m--> 122[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/form/string_pdb_id/get_topological_attributes.py:4157[0m, in [0;36mget_n_atoms_from_system[0;34m(item, skip_digestion)[0m
+[1;32m   4154[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01m.[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmolsysmt_Topology[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m get_n_atoms_from_system [38;5;28;01mas[39;00m aux_get
+[1;32m   4156[0m bonds_required [38;5;241m=[39m bonds_are_required_to_get_attribute([38;5;124m'[39m[38;5;124mn_atoms[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124msystem[39m[38;5;124m'[39m)
+[0;32m-> 4157[0m tmp_item [38;5;241m=[39m [43mto_molsysmt_Topology[49m[43m([49m[43mitem[49m[43m,[49m[43m [49m[43mget_missing_bonds[49m[38;5;241;43m=[39;49m[43mbonds_required[49m[43m,[49m[43m [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m   4158[0m output [38;5;241m=[39m aux_get(tmp_item, skip_digestion[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[1;32m   4160[0m [38;5;28;01mreturn[39;00m output
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+[0;31mTypeError[0m: to_molsysmt_Topology() got an unexpected keyword argument 'get_missing_bonds'
+

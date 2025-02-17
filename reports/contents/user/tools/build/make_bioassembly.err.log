@@ -1,0 +1,107 @@
+Traceback (most recent call last):
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/micromamba/envs/docs/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+molecular_system = msm.build.make_bioassembly(molecular_system, bioassembly='1')
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mIndexError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[9], line 1[0m
+[0;32m----> 1[0m molecular_system [38;5;241m=[39m [43mmsm[49m[38;5;241;43m.[39;49m[43mbuild[49m[38;5;241;43m.[39;49m[43mmake_bioassembly[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43mbioassembly[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m1[39;49m[38;5;124;43m'[39;49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:122[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m    120[0m     [38;5;28;01mreturn[39;00m func(all_args[[38;5;124m'[39m[38;5;124mself[39m[38;5;124m'[39m], [38;5;241m*[39m[38;5;241m*[39mfinal_args)
+[1;32m    121[0m [38;5;28;01melse[39;00m:
+[0;32m--> 122[0m     [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mfinal_args[49m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/build/make_bioassembly.py:66[0m, in [0;36mmake_bioassembly[0;34m(molecular_system, bioassembly, structure_indices, to_form, skip_digestion)[0m
+[1;32m     63[0m [38;5;28;01mif[39;00m [38;5;28misinstance[39m(chains, [38;5;28mint[39m):
+[1;32m     64[0m     chains [38;5;241m=[39m [chains]
+[0;32m---> 66[0m subsystem [38;5;241m=[39m [43mextract[49m[43m([49m[43mmolecular_system[49m[43m,[49m[43m [49m[43mstructure_indices[49m[38;5;241;43m=[39;49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m[43m,[49m[43m [49m[43mselection[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mchain_index in @chains[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     67[0m [43m                    [49m[43msyntax[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mMolSysMT[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m     69[0m [38;5;28;01mfor[39;00m rotation, translation [38;5;129;01min[39;00m [38;5;28mzip[39m(aux_rotations, aux_translations):
+[1;32m     71[0m     unit [38;5;241m=[39m copy(subsystem, skip_digestion[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/basic/extract.py:120[0m, in [0;36mextract[0;34m(molecular_system, selection, structure_indices, to_form, syntax, copy_if_all, skip_digestion)[0m
+[1;32m    117[0m output [38;5;241m=[39m []
+[1;32m    119[0m [38;5;28;01mfor[39;00m form_in, item [38;5;129;01min[39;00m [38;5;28mzip[39m(forms_in, molecular_system):
+[0;32m--> 120[0m     output_item [38;5;241m=[39m [43m_dict_modules[49m[43m[[49m[43mform_in[49m[43m][49m[38;5;241;43m.[39;49m[43mextract[49m[43m([49m[43mitem[49m[43m,[49m[43m [49m[43matom_indices[49m[38;5;241;43m=[39;49m[43matom_indices[49m[43m,[49m
+[1;32m    121[0m [43m                                                 [49m[43mstructure_indices[49m[38;5;241;43m=[39;49m[43mstructure_indices[49m[43m,[49m[43m [49m[43mcopy_if_all[49m[38;5;241;43m=[39;49m[43mcopy_if_all[49m[43m,[49m
+[1;32m    122[0m [43m                                                 [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m    123[0m     output[38;5;241m.[39mappend(output_item)
+[1;32m    125[0m [38;5;28;01mif[39;00m [38;5;28mlen[39m(output)[38;5;241m==[39m[38;5;241m1[39m:
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/form/molsysmt_MolSys/extract.py:7[0m, in [0;36mextract[0;34m(item, atom_indices, structure_indices, copy_if_all, skip_digestion)[0m
+[1;32m      4[0m [38;5;129m@digest[39m(form[38;5;241m=[39m[38;5;124m'[39m[38;5;124mmolsysmt.MolSys[39m[38;5;124m'[39m)
+[1;32m      5[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mextract[39m(item, atom_indices[38;5;241m=[39m[38;5;124m'[39m[38;5;124mall[39m[38;5;124m'[39m, structure_indices[38;5;241m=[39m[38;5;124m'[39m[38;5;124mall[39m[38;5;124m'[39m, copy_if_all[38;5;241m=[39m[38;5;28;01mTrue[39;00m, skip_digestion[38;5;241m=[39m[38;5;28;01mFalse[39;00m):
+[0;32m----> 7[0m     [38;5;28;01mreturn[39;00m [43mitem[49m[38;5;241;43m.[39;49m[43mextract[49m[43m([49m[43matom_indices[49m[38;5;241;43m=[39;49m[43matom_indices[49m[43m,[49m[43m [49m[43mstructure_indices[49m[38;5;241;43m=[39;49m[43mstructure_indices[49m[43m,[49m[43m [49m[43mcopy_if_all[49m[38;5;241;43m=[39;49m[43mcopy_if_all[49m[43m,[49m
+[1;32m      8[0m [43m                        [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/native/molsys.py:35[0m, in [0;36mMolSys.extract[0;34m(self, atom_indices, structure_indices, copy_if_all, skip_digestion)[0m
+[1;32m     33[0m tmp_item [38;5;241m=[39m MolSys()
+[1;32m     34[0m tmp_item[38;5;241m.[39mtopology [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mtopology[38;5;241m.[39mextract(atom_indices[38;5;241m=[39matom_indices, copy_if_all[38;5;241m=[39m[38;5;28;01mTrue[39;00m, skip_digestion[38;5;241m=[39m[38;5;28;01mTrue[39;00m)
+[0;32m---> 35[0m tmp_item[38;5;241m.[39mstructures [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mstructures[49m[38;5;241;43m.[39;49m[43mextract[49m[43m([49m[43matom_indices[49m[38;5;241;43m=[39;49m[43matom_indices[49m[43m,[49m
+[1;32m     36[0m [43m                                              [49m[43mstructure_indices[49m[38;5;241;43m=[39;49m[43mstructure_indices[49m[43m,[49m[43m [49m[43mcopy_if_all[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m,[49m
+[1;32m     37[0m [43m                                              [49m[43mskip_digestion[49m[38;5;241;43m=[39;49m[38;5;28;43;01mTrue[39;49;00m[43m)[49m
+[1;32m     38[0m tmp_item[38;5;241m.[39mmolecular_mechanics [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mmolecular_mechanics[38;5;241m.[39mcopy()
+[1;32m     40[0m [38;5;28;01mreturn[39;00m tmp_item
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/_private/digestion/digest.py:52[0m, in [0;36mdigest.<locals>.digestor.<locals>.wrapper[0;34m(*args, **kwargs)[0m
+[1;32m     48[0m [38;5;129m@functools[39m[38;5;241m.[39mwraps(func)
+[1;32m     49[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mwrapper[39m([38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwargs):
+[1;32m     51[0m     [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mget([38;5;124m'[39m[38;5;124mskip_digestion[39m[38;5;124m'[39m, [38;5;28;01mFalse[39;00m):
+[0;32m---> 52[0m         [38;5;28;01mreturn[39;00m [43mfunc[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+[1;32m     54[0m     [38;5;66;03m# Define caller[39;00m
+[1;32m     56[0m     caller [38;5;241m=[39m func[38;5;241m.[39m[38;5;18m__module__[39m[38;5;241m+[39m[38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m[38;5;241m+[39mfunc[38;5;241m.[39m[38;5;18m__name__[39m
+
+File [0;32m~/micromamba/envs/docs/lib/python3.12/site-packages/molsysmt/native/structures.py:715[0m, in [0;36mStructures.extract[0;34m(self, atom_indices, structure_indices, copy_if_all, skip_digestion)[0m
+[1;32m    713[0m [38;5;28;01mfor[39;00m tmp_atom_index [38;5;129;01min[39;00m tmp_alt_loc[38;5;241m.[39mkeys():
+[1;32m    714[0m     [38;5;28;01mif[39;00m tmp_atom_index [38;5;129;01min[39;00m atom_indices:
+[0;32m--> 715[0m         new_atom_index [38;5;241m=[39m [43mnp[49m[38;5;241;43m.[39;49m[43mwhere[49m[43m([49m[43matom_indices[49m[43m [49m[38;5;241;43m==[39;49m[43m [49m[43mtmp_atom_index[49m[43m)[49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m[43m[[49m[38;5;241;43m0[39;49m[43m][49m
+[1;32m    716[0m         aux_dict[new_atom_index] [38;5;241m=[39m tmp_alt_loc[tmp_atom_index]
+[1;32m    717[0m alternate_location[38;5;241m.[39mappend(aux_dict)
+
+[0;31mIndexError[0m: index 0 is out of bounds for axis 0 with size 0
+

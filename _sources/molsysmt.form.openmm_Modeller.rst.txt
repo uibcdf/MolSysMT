@@ -1,0 +1,197 @@
+molsysmt.form.openmm\_Modeller package
+======================================
+
+Submodules
+----------
+
+molsysmt.form.openmm\_Modeller.add module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.add
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.append\_structures module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.append_structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.attributes module
+------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.copy module
+------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.copy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.extract module
+---------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.get\_structural\_attributes module
+-----------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.get_structural_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.get\_topological\_attributes module
+------------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.get_topological_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.has\_attribute module
+----------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.has_attribute
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.is\_form module
+----------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.is_form
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.iterators module
+-----------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.iterators
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.merge module
+-------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.merge
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.set module
+-----------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.set
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_file\_pdb module
+---------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_file_pdb
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_mdtraj\_Topology module
+----------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_mdtraj_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_mdtraj\_Trajectory module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_mdtraj_Trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_molsysmt\_MolSys module
+----------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_molsysmt_MolSys
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_molsysmt\_Structures module
+--------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_molsysmt_Structures
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_molsysmt\_Topology module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_molsysmt_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_nglview\_NGLWidget module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_nglview_NGLWidget
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_openmm\_Simulation module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_openmm_Simulation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_openmm\_System module
+--------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_openmm_System
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_openmm\_Topology module
+----------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_openmm_Topology
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+molsysmt.form.openmm\_Modeller.to\_pdbfixer\_PDBFixer module
+------------------------------------------------------------
+
+.. automodule:: molsysmt.form.openmm_Modeller.to_pdbfixer_PDBFixer
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: molsysmt.form.openmm_Modeller
+   :members:
+   :undoc-members:
+   :show-inheritance:
